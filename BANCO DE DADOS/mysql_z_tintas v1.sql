@@ -11,6 +11,20 @@ quantidade int,
 preco double(7,2)
 );
 
+CREATE TABLE tb_funcionario(
+id_fucnionario INT,
+nome VARCHAR(45),
+cargo VARCHAR(45),
+);
+
+CREATE TABLE tb_produto_venda(
+quantidade_venda INT,
+produto_id_produto INT,
+venda_id_produto INT
+);
+
+
+
 
 
 
