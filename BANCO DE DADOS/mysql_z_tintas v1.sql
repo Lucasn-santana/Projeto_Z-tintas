@@ -14,7 +14,7 @@ create table tb_produto(
 CREATE TABLE tb_funcionario(
 	id_fucnionario INT,
 	nome VARCHAR(45),
-	cargo VARCHAR(45),
+	cargo VARCHAR(45)
 );
 
 CREATE TABLE tb_produto_venda(
