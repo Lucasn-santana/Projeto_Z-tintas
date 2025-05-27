@@ -33,6 +33,19 @@ create table tb_venda(
     foreign key (id_funcionario) references tb_funcionario(id_funcionario)
     );
     
+create table cliente(
+	id_cliente int primary key auto_increment,
+    nome varchar(45) not null,
+    dt_nascimento date not null,
+    cpf varchar(11) not null unique,
+    cnpj varchar(14) not null unique,
+    cep varchar(8) not null,
+    uf char(2) not null,
+    cidade varchar(45) not null,
+    rua varchar(45) not null,
+    numero varchar(45) not null
+);
+    
 
 
 
