@@ -26,21 +26,103 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jFileChooser1 = new javax.swing.JFileChooser();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        Botao_Menu_Principal_Cliente = new javax.swing.JButton();
+        Botao_Menu_Principal_Catalogo = new javax.swing.JButton();
+        Botao_Menu_Principal_Funcionario = new javax.swing.JButton();
+        Botao_Menu_Principal_Vendas = new javax.swing.JButton();
+        Botao_Menu_Principal_Sair = new javax.swing.JButton();
+        Botao_Menu_Principal_Estoque = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1440, 1024));
+        setPreferredSize(new java.awt.Dimension(1440, 1024));
+        setSize(new java.awt.Dimension(1440, 1024));
+        getContentPane().setLayout(null);
+
+        jPanel2.setBackground(new java.awt.Color(7, 25, 82));
+        jPanel2.setLayout(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoMenu.png"))); // NOI18N
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(25, 25, 226, 95);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LOGO_MENU.png"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(1265, 25, 150, 150);
+
+        Botao_Menu_Principal_Cliente.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Cliente.setForeground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoCliente.png"))); // NOI18N
+        Botao_Menu_Principal_Cliente.setBorder(null);
+        jPanel2.add(Botao_Menu_Principal_Cliente);
+        Botao_Menu_Principal_Cliente.setBounds(70, 271, 400, 210);
+
+        Botao_Menu_Principal_Catalogo.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Catalogo.setForeground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Catalogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoCatálogo.png"))); // NOI18N
+        Botao_Menu_Principal_Catalogo.setBorder(null);
+        Botao_Menu_Principal_Catalogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_Menu_Principal_CatalogoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Botao_Menu_Principal_Catalogo);
+        Botao_Menu_Principal_Catalogo.setBounds(520, 271, 400, 210);
+
+        Botao_Menu_Principal_Funcionario.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Funcionario.setForeground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Funcionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoFuncionário.png"))); // NOI18N
+        Botao_Menu_Principal_Funcionario.setBorder(null);
+        jPanel2.add(Botao_Menu_Principal_Funcionario);
+        Botao_Menu_Principal_Funcionario.setBounds(295, 531, 400, 210);
+
+        Botao_Menu_Principal_Vendas.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Vendas.setForeground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Vendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoVendas.png"))); // NOI18N
+        Botao_Menu_Principal_Vendas.setBorder(null);
+        jPanel2.add(Botao_Menu_Principal_Vendas);
+        Botao_Menu_Principal_Vendas.setBounds(745, 531, 410, 210);
+
+        Botao_Menu_Principal_Sair.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Sair.setForeground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoSair.png"))); // NOI18N
+        Botao_Menu_Principal_Sair.setBorder(null);
+        jPanel2.add(Botao_Menu_Principal_Sair);
+        Botao_Menu_Principal_Sair.setBounds(25, 900, 75, 75);
+
+        Botao_Menu_Principal_Estoque.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Estoque.setForeground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Estoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoEstoque.png"))); // NOI18N
+        Botao_Menu_Principal_Estoque.setBorder(null);
+        Botao_Menu_Principal_Estoque.setPreferredSize(new java.awt.Dimension(400, 210));
+        jPanel2.add(Botao_Menu_Principal_Estoque);
+        Botao_Menu_Principal_Estoque.setBounds(970, 271, 400, 210);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Botao_Menu_Principal_CatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_Menu_Principal_CatalogoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Botao_Menu_Principal_CatalogoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +160,16 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Botao_Menu_Principal_Catalogo;
+    private javax.swing.JButton Botao_Menu_Principal_Cliente;
+    private javax.swing.JButton Botao_Menu_Principal_Estoque;
+    private javax.swing.JButton Botao_Menu_Principal_Funcionario;
+    private javax.swing.JButton Botao_Menu_Principal_Sair;
+    private javax.swing.JButton Botao_Menu_Principal_Vendas;
+    private javax.swing.JFileChooser jFileChooser1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
