@@ -144,7 +144,7 @@ public class Tela_Cliente extends javax.swing.JFrame {
         jLabel3.setBounds(106, 412, 506, 506);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(40, 0, 1440, 1024);
+        jPanel1.setBounds(0, 0, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
