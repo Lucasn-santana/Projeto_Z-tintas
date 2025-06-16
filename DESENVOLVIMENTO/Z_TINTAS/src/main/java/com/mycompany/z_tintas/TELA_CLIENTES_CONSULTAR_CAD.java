@@ -27,10 +27,25 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -42,15 +57,6 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CAMPO_CADASTRO_CLIENTES.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(110, 339, 1184, 527);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BUSCA_CLIENTES.png"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(110, 205, 1184, 104);
-
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LOGO_MENU.png"))); // NOI18N
         jLabel3.setText("jLabel3");
         jPanel1.add(jLabel3);
@@ -59,6 +65,79 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Identificador consultar cadastro.png"))); // NOI18N
         jPanel1.add(jLabel4);
         jLabel4.setBounds(31, 26, 520, 88);
+
+        jButton1.setBackground(new java.awt.Color(7, 25, 82));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jPanel1.add(jButton1);
+        jButton1.setBounds(25, 900, 53, 54);
+
+        jButton3.setBackground(new java.awt.Color(235, 244, 246));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botao_buscar_cons_cad.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jPanel1.add(jButton3);
+        jButton3.setBounds(856, 227, 320, 60);
+
+        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(144, 257, 400, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BUSCA_CLIENTES.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(110, 205, 1184, 104);
+
+        jTextField2.setText("jTextField1");
+        jPanel1.add(jTextField2);
+        jTextField2.setBounds(180, 270, 71, 22);
+
+        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField3);
+        jTextField3.setBounds(144, 257, 400, 40);
+
+        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField4);
+        jTextField4.setBounds(144, 257, 400, 40);
+
+        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField6);
+        jTextField6.setBounds(144, 408, 400, 40);
+
+        jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField7);
+        jTextField7.setBounds(834, 408, 400, 40);
+
+        jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField8);
+        jTextField8.setBounds(144, 505, 400, 40);
+
+        jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField9);
+        jTextField9.setBounds(144, 666, 320, 40);
+
+        jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField10);
+        jTextField10.setBounds(144, 769, 320, 40);
+
+        jTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField11);
+        jTextField11.setBounds(539, 666, 320, 40);
+
+        jTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField12);
+        jTextField12.setBounds(539, 769, 320, 40);
+
+        jTextField13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField13);
+        jTextField13.setBounds(934, 662, 320, 40);
+
+        jTextField14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jTextField14);
+        jTextField14.setBounds(940, 769, 320, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CAMPO_CADASTRO_CLIENTES.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(110, 339, 1184, 527);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
@@ -102,10 +181,25 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
