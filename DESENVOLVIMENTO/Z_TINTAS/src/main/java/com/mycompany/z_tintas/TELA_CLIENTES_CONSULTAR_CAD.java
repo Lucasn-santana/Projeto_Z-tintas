@@ -29,26 +29,28 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        bt_voltar_cliente = new javax.swing.JButton();
+        bt_busca_cliente = new javax.swing.JButton();
+        Cliente_Busca = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
+        Cliente_CPFCNPJ = new javax.swing.JTextField();
+        Cliente_telefone = new javax.swing.JTextField();
+        Cliente_dt_nasc = new javax.swing.JTextField();
+        Cliente_CEP = new javax.swing.JTextField();
+        Cliente_Cidade = new javax.swing.JTextField();
+        Cliente_Rua = new javax.swing.JTextField();
+        Cliente_UF = new javax.swing.JTextField();
+        Cliente_Bairro = new javax.swing.JTextField();
+        Cliente_Numero = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        bt_editar_cliente = new javax.swing.JButton();
+        bt_excluir_cliente = new javax.swing.JButton();
+        bt_salvar_alt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1440, 1024));
         setMinimumSize(new java.awt.Dimension(1440, 1024));
         getContentPane().setLayout(null);
 
@@ -66,21 +68,24 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(31, 26, 520, 88);
 
-        jButton1.setBackground(new java.awt.Color(7, 25, 82));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jPanel1.add(jButton1);
-        jButton1.setBounds(25, 900, 53, 54);
+        bt_voltar_cliente.setBackground(new java.awt.Color(7, 25, 82));
+        bt_voltar_cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
+        bt_voltar_cliente.setBorder(null);
+        jPanel1.add(bt_voltar_cliente);
+        bt_voltar_cliente.setBounds(25, 900, 53, 54);
 
-        jButton3.setBackground(new java.awt.Color(235, 244, 246));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botao_buscar_cons_cad.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jPanel1.add(jButton3);
-        jButton3.setBounds(856, 227, 320, 60);
+        bt_busca_cliente.setBackground(new java.awt.Color(235, 244, 246));
+        bt_busca_cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botao_buscar_cons_cad.png"))); // NOI18N
+        bt_busca_cliente.setBorder(null);
+        jPanel1.add(bt_busca_cliente);
+        bt_busca_cliente.setBounds(856, 227, 320, 60);
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(144, 257, 400, 40);
+        Cliente_Busca.setBackground(new java.awt.Color(25, 59, 122));
+        Cliente_Busca.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        Cliente_Busca.setForeground(new java.awt.Color(235, 244, 246));
+        Cliente_Busca.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(Cliente_Busca);
+        Cliente_Busca.setBounds(144, 257, 400, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BUSCA_CLIENTES.png"))); // NOI18N
         jPanel1.add(jLabel2);
@@ -98,46 +103,94 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
         jPanel1.add(jTextField4);
         jTextField4.setBounds(144, 257, 400, 40);
 
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField6);
-        jTextField6.setBounds(144, 408, 400, 40);
+        Cliente_CPFCNPJ.setBackground(new java.awt.Color(25, 59, 122));
+        Cliente_CPFCNPJ.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        Cliente_CPFCNPJ.setForeground(new java.awt.Color(235, 244, 246));
+        Cliente_CPFCNPJ.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(Cliente_CPFCNPJ);
+        Cliente_CPFCNPJ.setBounds(144, 408, 400, 40);
 
-        jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField7);
-        jTextField7.setBounds(834, 408, 400, 40);
+        Cliente_telefone.setBackground(new java.awt.Color(25, 59, 122));
+        Cliente_telefone.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        Cliente_telefone.setForeground(new java.awt.Color(235, 244, 246));
+        Cliente_telefone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(Cliente_telefone);
+        Cliente_telefone.setBounds(834, 408, 400, 40);
 
-        jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField8);
-        jTextField8.setBounds(144, 505, 400, 40);
+        Cliente_dt_nasc.setBackground(new java.awt.Color(25, 59, 122));
+        Cliente_dt_nasc.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        Cliente_dt_nasc.setForeground(new java.awt.Color(235, 244, 246));
+        Cliente_dt_nasc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(Cliente_dt_nasc);
+        Cliente_dt_nasc.setBounds(144, 505, 400, 40);
 
-        jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField9);
-        jTextField9.setBounds(144, 666, 320, 40);
+        Cliente_CEP.setBackground(new java.awt.Color(25, 59, 122));
+        Cliente_CEP.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        Cliente_CEP.setForeground(new java.awt.Color(235, 244, 246));
+        Cliente_CEP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(Cliente_CEP);
+        Cliente_CEP.setBounds(144, 666, 320, 40);
 
-        jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField10);
-        jTextField10.setBounds(144, 769, 320, 40);
+        Cliente_Cidade.setBackground(new java.awt.Color(25, 59, 122));
+        Cliente_Cidade.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        Cliente_Cidade.setForeground(new java.awt.Color(235, 244, 246));
+        Cliente_Cidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(Cliente_Cidade);
+        Cliente_Cidade.setBounds(144, 769, 320, 40);
 
-        jTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField11);
-        jTextField11.setBounds(539, 666, 320, 40);
+        Cliente_Rua.setBackground(new java.awt.Color(25, 59, 122));
+        Cliente_Rua.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        Cliente_Rua.setForeground(new java.awt.Color(235, 244, 246));
+        Cliente_Rua.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(Cliente_Rua);
+        Cliente_Rua.setBounds(539, 666, 320, 40);
 
-        jTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField12);
-        jTextField12.setBounds(539, 769, 320, 40);
+        Cliente_UF.setBackground(new java.awt.Color(25, 59, 122));
+        Cliente_UF.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        Cliente_UF.setForeground(new java.awt.Color(235, 244, 246));
+        Cliente_UF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(Cliente_UF);
+        Cliente_UF.setBounds(539, 769, 320, 40);
 
-        jTextField13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField13);
-        jTextField13.setBounds(934, 662, 320, 40);
+        Cliente_Bairro.setBackground(new java.awt.Color(25, 59, 122));
+        Cliente_Bairro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Cliente_Bairro.setForeground(new java.awt.Color(235, 244, 246));
+        Cliente_Bairro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(Cliente_Bairro);
+        Cliente_Bairro.setBounds(934, 662, 320, 40);
 
-        jTextField14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField14);
-        jTextField14.setBounds(940, 769, 320, 40);
+        Cliente_Numero.setBackground(new java.awt.Color(25, 59, 122));
+        Cliente_Numero.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        Cliente_Numero.setForeground(new java.awt.Color(235, 244, 246));
+        Cliente_Numero.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(Cliente_Numero);
+        Cliente_Numero.setBounds(940, 769, 320, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CAMPO_CADASTRO_CLIENTES.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(110, 339, 1184, 527);
+
+        bt_editar_cliente.setBackground(new java.awt.Color(7, 25, 82));
+        bt_editar_cliente.setForeground(new java.awt.Color(7, 25, 82));
+        bt_editar_cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BotaoEditar.png"))); // NOI18N
+        bt_editar_cliente.setBorder(null);
+        jPanel1.add(bt_editar_cliente);
+        bt_editar_cliente.setBounds(220, 906, 320, 60);
+
+        bt_excluir_cliente.setBackground(new java.awt.Color(7, 25, 82));
+        bt_excluir_cliente.setForeground(new java.awt.Color(7, 25, 82));
+        bt_excluir_cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botaoexluir.png"))); // NOI18N
+        bt_excluir_cliente.setBorder(null);
+        jPanel1.add(bt_excluir_cliente);
+        bt_excluir_cliente.setBounds(834, 906, 320, 60);
+
+        bt_salvar_alt.setBackground(new java.awt.Color(7, 25, 82));
+        bt_salvar_alt.setForeground(new java.awt.Color(7, 25, 82));
+        bt_salvar_alt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vetor salvar.png"))); // NOI18N
+        bt_salvar_alt.setBorder(null);
+        jPanel1.add(bt_salvar_alt);
+        bt_salvar_alt.setBounds(1364, 900, 53, 54);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
@@ -181,25 +234,28 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JTextField Cliente_Bairro;
+    private javax.swing.JTextField Cliente_Busca;
+    private javax.swing.JTextField Cliente_CEP;
+    private javax.swing.JTextField Cliente_CPFCNPJ;
+    private javax.swing.JTextField Cliente_Cidade;
+    private javax.swing.JTextField Cliente_Numero;
+    private javax.swing.JTextField Cliente_Rua;
+    private javax.swing.JTextField Cliente_UF;
+    private javax.swing.JTextField Cliente_dt_nasc;
+    private javax.swing.JTextField Cliente_telefone;
+    private javax.swing.JButton bt_busca_cliente;
+    private javax.swing.JButton bt_editar_cliente;
+    private javax.swing.JButton bt_excluir_cliente;
+    private javax.swing.JButton bt_salvar_alt;
+    private javax.swing.JButton bt_voltar_cliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
