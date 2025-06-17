@@ -60,13 +60,14 @@ public class Tela_Consultar_Funcionario extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(235, 244, 246));
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botao_buscar_cons_cad.png"))); // NOI18N
+        jButton5.setBorder(null);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(889, 363, 320, 72);
+        jButton5.setBounds(889, 363, 320, 61);
 
         jTextField1.setBackground(new java.awt.Color(7, 25, 82));
         jTextField1.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
@@ -139,7 +140,7 @@ public class Tela_Consultar_Funcionario extends javax.swing.JFrame {
         jLabel4.setBounds(128, 505, 1184, 125);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1440, 1024);
+        jPanel1.setBounds(0, 10, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
