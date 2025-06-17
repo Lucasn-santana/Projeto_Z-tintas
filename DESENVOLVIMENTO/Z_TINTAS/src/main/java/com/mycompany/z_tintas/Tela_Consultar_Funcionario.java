@@ -28,21 +28,141 @@ public class Tela_Consultar_Funcionario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1440, 1024));
+        setMinimumSize(new java.awt.Dimension(1440, 1024));
+        setPreferredSize(new java.awt.Dimension(1440, 1024));
+        getContentPane().setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(7, 25, 82));
+        jPanel1.setMaximumSize(new java.awt.Dimension(1440, 1024));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1440, 1024));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1440, 1024));
+        jPanel1.setLayout(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/consultar cadastro.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(25, 25, 591, 88);
+
+        jButton5.setBackground(new java.awt.Color(235, 244, 246));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botao_buscar_cons_cad.png"))); // NOI18N
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5);
+        jButton5.setBounds(889, 363, 320, 72);
+
+        jTextField1.setBackground(new java.awt.Color(7, 25, 82));
+        jTextField1.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        jTextField1.setBorder(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(162, 397, 500, 45);
+
+        jTextField2.setBackground(new java.awt.Color(7, 25, 82));
+        jTextField2.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        jTextField2.setBorder(null);
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField2);
+        jTextField2.setBounds(160, 570, 500, 45);
+
+        jTextField3.setBackground(new java.awt.Color(7, 25, 82));
+        jTextField3.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        jTextField3.setBorder(null);
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField3);
+        jTextField3.setBounds(850, 570, 430, 45);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LOGO_MENU.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(1265, 25, 150, 150);
+
+        jButton1.setBackground(new java.awt.Color(7, 25, 82));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
+        jPanel1.add(jButton1);
+        jButton1.setBounds(25, 900, 63, 65);
+
+        jButton2.setBackground(new java.awt.Color(7, 25, 82));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BotaoEditar.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(360, 887, 330, 72);
+
+        jButton3.setBackground(new java.awt.Color(7, 25, 82));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vetor salvar.png"))); // NOI18N
+        jPanel1.add(jButton3);
+        jButton3.setBounds(1340, 900, 63, 65);
+
+        jButton4.setBackground(new java.awt.Color(7, 25, 82));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botaoexluir.png"))); // NOI18N
+        jPanel1.add(jButton4);
+        jButton4.setBounds(867, 887, 330, 72);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/MATRICULA.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(128, 330, 1184, 125);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CAMPO_NOME_CARGO.png"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(128, 505, 1184, 125);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +190,18 @@ public class Tela_Consultar_Funcionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }

@@ -8,14 +8,14 @@ package com.mycompany.z_tintas;
  *
  * @author f.martins
  */
-public class Tela_Cliente extends javax.swing.JFrame {
+public class TELA_LOGIN extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Tela_Cliente.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TELA_LOGIN.class.getName());
 
     /**
      * Creates new form Tela_Cliente
      */
-    public Tela_Cliente() {
+    public TELA_LOGIN() {
         initComponents();
     }
 
@@ -179,7 +179,7 @@ public class Tela_Cliente extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Tela_Cliente().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new TELA_LOGIN().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
