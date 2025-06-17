@@ -9,7 +9,7 @@ package com.mycompany.z_tintas;
  * @author m.targa
  */
 public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form TELA_CLIENTES_CONSULTAR_CAD
      */
@@ -29,7 +29,7 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        bt_voltar_cliente = new javax.swing.JButton();
+        bt_voltar_cliente_consult = new javax.swing.JButton();
         bt_busca_cliente = new javax.swing.JButton();
         Cliente_Busca = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -68,11 +68,11 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(31, 26, 520, 88);
 
-        bt_voltar_cliente.setBackground(new java.awt.Color(7, 25, 82));
-        bt_voltar_cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
-        bt_voltar_cliente.setBorder(null);
-        jPanel1.add(bt_voltar_cliente);
-        bt_voltar_cliente.setBounds(25, 900, 53, 54);
+        bt_voltar_cliente_consult.setBackground(new java.awt.Color(7, 25, 82));
+        bt_voltar_cliente_consult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
+        bt_voltar_cliente_consult.setBorder(null);
+        jPanel1.add(bt_voltar_cliente_consult);
+        bt_voltar_cliente_consult.setBounds(25, 900, 53, 54);
 
         bt_busca_cliente.setBackground(new java.awt.Color(235, 244, 246));
         bt_busca_cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botao_buscar_cons_cad.png"))); // NOI18N
@@ -248,7 +248,7 @@ public class TELA_CLIENTES_CONSULTAR_CAD extends javax.swing.JFrame {
     private javax.swing.JButton bt_editar_cliente;
     private javax.swing.JButton bt_excluir_cliente;
     private javax.swing.JButton bt_salvar_alt;
-    private javax.swing.JButton bt_voltar_cliente;
+    private javax.swing.JButton bt_voltar_cliente_consult;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
