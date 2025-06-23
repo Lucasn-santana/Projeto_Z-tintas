@@ -108,28 +108,32 @@ public class Tela_Consultar_Funcionario extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(7, 25, 82));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
+        jButton1.setBorder(null);
         jPanel1.add(jButton1);
-        jButton1.setBounds(25, 900, 63, 65);
+        jButton1.setBounds(25, 900, 53, 54);
 
         jButton2.setBackground(new java.awt.Color(7, 25, 82));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BotaoEditar.png"))); // NOI18N
+        jButton2.setBorder(null);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(360, 887, 330, 72);
+        jButton2.setBounds(360, 887, 320, 61);
 
         jButton3.setBackground(new java.awt.Color(7, 25, 82));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vetor salvar.png"))); // NOI18N
+        jButton3.setBorder(null);
         jPanel1.add(jButton3);
-        jButton3.setBounds(1340, 900, 63, 65);
+        jButton3.setBounds(1340, 900, 53, 54);
 
         jButton4.setBackground(new java.awt.Color(7, 25, 82));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botaoexluir.png"))); // NOI18N
+        jButton4.setBorder(null);
         jPanel1.add(jButton4);
-        jButton4.setBounds(867, 887, 330, 72);
+        jButton4.setBounds(867, 887, 320, 61);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/MATRICULA.png"))); // NOI18N
         jPanel1.add(jLabel3);
@@ -140,7 +144,7 @@ public class Tela_Consultar_Funcionario extends javax.swing.JFrame {
         jLabel4.setBounds(128, 505, 1184, 125);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 10, 1440, 1024);
+        jPanel1.setBounds(0, 0, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

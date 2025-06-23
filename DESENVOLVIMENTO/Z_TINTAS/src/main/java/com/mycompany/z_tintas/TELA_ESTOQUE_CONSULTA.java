@@ -6,14 +6,14 @@ package com.mycompany.z_tintas;
 
 /**
  *
- * @author f.martins
+ * @author Gabriel
  */
-public class TELA_FUNCIONARIO_TODOSFUNCIONARIOS extends javax.swing.JFrame {
+public class TELA_ESTOQUE_CONSULTA extends javax.swing.JFrame {
 
     /**
-     * Creates new form TELA_FUNCIONARIO_TODOSFUNCIONARIOS
+     * Creates new form TELA_ESTOQUE_CONSULTA
      */
-    public TELA_FUNCIONARIO_TODOSFUNCIONARIOS() {
+    public TELA_ESTOQUE_CONSULTA() {
         initComponents();
     }
 
@@ -27,9 +27,12 @@ public class TELA_FUNCIONARIO_TODOSFUNCIONARIOS extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,39 +47,57 @@ public class TELA_FUNCIONARIO_TODOSFUNCIONARIOS extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setLayout(null);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/consultar.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(25, 25, 296, 77);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LOGO_MENU.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(1265, 35, 150, 150);
+
         jButton1.setBackground(new java.awt.Color(7, 25, 82));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setBorder(null);
+        jPanel1.add(jButton1);
+        jButton1.setBounds(25, 900, 53, 54);
+
+        jButton2.setBackground(new java.awt.Color(7, 25, 82));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vetor salvar.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jPanel1.add(jButton2);
+        jButton2.setBounds(1340, 900, 53, 54);
+
+        jButton3.setBackground(new java.awt.Color(7, 25, 82));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BotaoEditar.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jPanel1.add(jButton3);
+        jButton3.setBounds(360, 887, 320, 61);
+
+        jButton4.setBackground(new java.awt.Color(7, 25, 82));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botaoexluir.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(25, 900, 59, 61);
+        jPanel1.add(jButton4);
+        jButton4.setBounds(867, 887, 320, 61);
 
-        jLabel1.setBackground(new java.awt.Color(7, 25, 82));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LOGO_MENU.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(1265, 25, 150, 150);
-
-        jLabel2.setBackground(new java.awt.Color(7, 25, 82));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LOGO_FUCIONARIO_TABELA.png"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(25, 25, 371, 89);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/TABELA_FUNCIONARIO.png"))); // NOI18N
+        jLabel3.setBackground(new java.awt.Color(7, 25, 82));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/consulta_item.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(72, 213, 1296, 649);
+        jLabel3.setBounds(30, 260, 1377, 606);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, -10, 1440, 1024);
+        jPanel1.setBounds(0, 0, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -95,26 +116,29 @@ public class TELA_FUNCIONARIO_TODOSFUNCIONARIOS extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_TODOSFUNCIONARIOS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TELA_ESTOQUE_CONSULTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_TODOSFUNCIONARIOS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TELA_ESTOQUE_CONSULTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_TODOSFUNCIONARIOS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TELA_ESTOQUE_CONSULTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_TODOSFUNCIONARIOS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TELA_ESTOQUE_CONSULTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TELA_FUNCIONARIO_TODOSFUNCIONARIOS().setVisible(true);
+                new TELA_ESTOQUE_CONSULTA().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
