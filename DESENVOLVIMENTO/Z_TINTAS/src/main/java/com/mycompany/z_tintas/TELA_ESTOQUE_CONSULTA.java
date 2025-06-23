@@ -28,11 +28,19 @@ public class TELA_ESTOQUE_CONSULTA extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        DIGITACAO_TAMANHO = new javax.swing.JTextField();
+        DIGITACAO_HEX = new javax.swing.JTextField();
+        DIGITACAO_NOME = new javax.swing.JTextField();
+        DIGITACAO_MARCA = new javax.swing.JTextField();
+        DIGITACAO_CODIGO = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabela_cadastro_visualizacao = new javax.swing.JTable();
+        BOTAO_PROCURAR = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        VOLTAR = new javax.swing.JButton();
+        SALVAR = new javax.swing.JButton();
+        EDITAR = new javax.swing.JButton();
+        EXCLUIR = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,38 +59,150 @@ public class TELA_ESTOQUE_CONSULTA extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(25, 25, 296, 77);
 
+        DIGITACAO_TAMANHO.setBackground(new java.awt.Color(25, 59, 122));
+        DIGITACAO_TAMANHO.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        DIGITACAO_TAMANHO.setForeground(new java.awt.Color(235, 244, 246));
+        DIGITACAO_TAMANHO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        DIGITACAO_TAMANHO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DIGITACAO_TAMANHOActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DIGITACAO_TAMANHO);
+        DIGITACAO_TAMANHO.setBounds(1090, 315, 300, 40);
+
+        DIGITACAO_HEX.setBackground(new java.awt.Color(25, 59, 122));
+        DIGITACAO_HEX.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        DIGITACAO_HEX.setForeground(new java.awt.Color(235, 244, 246));
+        DIGITACAO_HEX.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        DIGITACAO_HEX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DIGITACAO_HEXActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DIGITACAO_HEX);
+        DIGITACAO_HEX.setBounds(85, 405, 300, 40);
+
+        DIGITACAO_NOME.setBackground(new java.awt.Color(25, 59, 122));
+        DIGITACAO_NOME.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        DIGITACAO_NOME.setForeground(new java.awt.Color(235, 244, 246));
+        DIGITACAO_NOME.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        DIGITACAO_NOME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DIGITACAO_NOMEActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DIGITACAO_NOME);
+        DIGITACAO_NOME.setBounds(415, 315, 300, 40);
+
+        DIGITACAO_MARCA.setBackground(new java.awt.Color(25, 59, 122));
+        DIGITACAO_MARCA.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        DIGITACAO_MARCA.setForeground(new java.awt.Color(235, 244, 246));
+        DIGITACAO_MARCA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        DIGITACAO_MARCA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DIGITACAO_MARCAActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DIGITACAO_MARCA);
+        DIGITACAO_MARCA.setBounds(755, 315, 300, 40);
+
+        DIGITACAO_CODIGO.setBackground(new java.awt.Color(25, 59, 122));
+        DIGITACAO_CODIGO.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        DIGITACAO_CODIGO.setForeground(new java.awt.Color(235, 244, 246));
+        DIGITACAO_CODIGO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        DIGITACAO_CODIGO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DIGITACAO_CODIGOActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DIGITACAO_CODIGO);
+        DIGITACAO_CODIGO.setBounds(85, 315, 300, 40);
+
+        tabela_cadastro_visualizacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tabela_cadastro_visualizacao.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "CODIGO", "NOME_PRODUTO", "TAMANHO", "COD_HEX", "MARCA", "QUANTIDADE", "PRECO"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Double.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tabela_cadastro_visualizacao);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(107, 480, 1220, 370);
+
+        BOTAO_PROCURAR.setBackground(new java.awt.Color(235, 244, 246));
+        BOTAO_PROCURAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botao_buscar_cons_cad.png"))); // NOI18N
+        BOTAO_PROCURAR.setBorder(null);
+        BOTAO_PROCURAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_PROCURARActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BOTAO_PROCURAR);
+        BOTAO_PROCURAR.setBounds(1080, 405, 320, 60);
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LOGO_MENU.png"))); // NOI18N
         jPanel1.add(jLabel2);
         jLabel2.setBounds(1265, 35, 150, 150);
 
-        jButton1.setBackground(new java.awt.Color(7, 25, 82));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jPanel1.add(jButton1);
-        jButton1.setBounds(25, 900, 53, 54);
+        VOLTAR.setBackground(new java.awt.Color(7, 25, 82));
+        VOLTAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
+        VOLTAR.setBorder(null);
+        jPanel1.add(VOLTAR);
+        VOLTAR.setBounds(25, 900, 53, 54);
 
-        jButton2.setBackground(new java.awt.Color(7, 25, 82));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vetor salvar.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jPanel1.add(jButton2);
-        jButton2.setBounds(1340, 900, 53, 54);
+        SALVAR.setBackground(new java.awt.Color(7, 25, 82));
+        SALVAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vetor salvar.png"))); // NOI18N
+        SALVAR.setBorder(null);
+        jPanel1.add(SALVAR);
+        SALVAR.setBounds(1340, 900, 53, 54);
 
-        jButton3.setBackground(new java.awt.Color(7, 25, 82));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BotaoEditar.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jPanel1.add(jButton3);
-        jButton3.setBounds(360, 887, 320, 61);
+        EDITAR.setBackground(new java.awt.Color(7, 25, 82));
+        EDITAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BotaoEditar.png"))); // NOI18N
+        EDITAR.setBorder(null);
+        jPanel1.add(EDITAR);
+        EDITAR.setBounds(360, 887, 320, 61);
 
-        jButton4.setBackground(new java.awt.Color(7, 25, 82));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botaoexluir.png"))); // NOI18N
-        jButton4.setBorder(null);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        EXCLUIR.setBackground(new java.awt.Color(7, 25, 82));
+        EXCLUIR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botaoexluir.png"))); // NOI18N
+        EXCLUIR.setBorder(null);
+        EXCLUIR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                EXCLUIRActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(867, 887, 320, 61);
+        jPanel1.add(EXCLUIR);
+        EXCLUIR.setBounds(867, 887, 320, 61);
 
         jLabel3.setBackground(new java.awt.Color(7, 25, 82));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/consulta_item.png"))); // NOI18N
@@ -95,9 +215,33 @@ public class TELA_ESTOQUE_CONSULTA extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void EXCLUIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EXCLUIRActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_EXCLUIRActionPerformed
+
+    private void DIGITACAO_TAMANHOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DIGITACAO_TAMANHOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DIGITACAO_TAMANHOActionPerformed
+
+    private void DIGITACAO_HEXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DIGITACAO_HEXActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DIGITACAO_HEXActionPerformed
+
+    private void DIGITACAO_NOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DIGITACAO_NOMEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DIGITACAO_NOMEActionPerformed
+
+    private void DIGITACAO_MARCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DIGITACAO_MARCAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DIGITACAO_MARCAActionPerformed
+
+    private void DIGITACAO_CODIGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DIGITACAO_CODIGOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DIGITACAO_CODIGOActionPerformed
+
+    private void BOTAO_PROCURARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTAO_PROCURARActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BOTAO_PROCURARActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,13 +279,21 @@ public class TELA_ESTOQUE_CONSULTA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton BOTAO_PROCURAR;
+    private javax.swing.JTextField DIGITACAO_CODIGO;
+    private javax.swing.JTextField DIGITACAO_HEX;
+    private javax.swing.JTextField DIGITACAO_MARCA;
+    private javax.swing.JTextField DIGITACAO_NOME;
+    private javax.swing.JTextField DIGITACAO_TAMANHO;
+    private javax.swing.JButton EDITAR;
+    private javax.swing.JButton EXCLUIR;
+    private javax.swing.JButton SALVAR;
+    private javax.swing.JButton VOLTAR;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tabela_cadastro_visualizacao;
     // End of variables declaration//GEN-END:variables
 }
