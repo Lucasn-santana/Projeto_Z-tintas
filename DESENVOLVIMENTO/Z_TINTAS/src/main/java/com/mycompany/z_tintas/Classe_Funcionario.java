@@ -7,8 +7,8 @@ package com.mycompany.z_tintas;
 /**
  *
  * @author Matheus
- */
-public class Classe_Funcionario {
+ */ 
+public class Classe_Funcionario{
  
 
     private int idFuncionario;

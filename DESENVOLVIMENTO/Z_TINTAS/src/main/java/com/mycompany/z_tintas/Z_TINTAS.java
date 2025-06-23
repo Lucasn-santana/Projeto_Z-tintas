@@ -8,9 +8,11 @@ package com.mycompany.z_tintas;
  *
  * @author m.targa
  */
+import java.sql.*;
+ 
 public class Z_TINTAS {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
     }
 }

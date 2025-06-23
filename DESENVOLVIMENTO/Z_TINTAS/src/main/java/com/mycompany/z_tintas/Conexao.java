@@ -1,4 +1,4 @@
-package conexao;
+package com.mycompany.z_tintas;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,5 +14,8 @@ public class Conexao {
             System.out.println("Erro: " + e.getMessage());
         }
         return conn;
+        
+        
+       
     }
 }

@@ -123,7 +123,12 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
     private void Botao_Menu_Principal_CatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_Menu_Principal_CatalogoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Botao_Menu_Principal_CatalogoActionPerformed
-
+    private void Botao_Menu_Principal_Sair(java.awt.event.ActionEvent evt){
+        TELA_LOGIN f = new TELA_LOGIN();
+        this.dispose();
+        f.setVisible(true);
+        
+    }
     /**
      * @param args the command line arguments
      */

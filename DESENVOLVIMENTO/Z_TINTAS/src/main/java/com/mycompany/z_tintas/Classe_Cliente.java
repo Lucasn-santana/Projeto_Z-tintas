@@ -8,6 +8,11 @@ package com.mycompany.z_tintas;
  *
  * @author Matheus
  */
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 public class Classe_Cliente {
  
 
@@ -112,7 +117,7 @@ public class Classe_Cliente {
         this.uf = uf;
         this.cidade = cidade;
         this.rua = rua;
-        this.numero = numero;
+        this.numero = numero;       
     }
     
 }
