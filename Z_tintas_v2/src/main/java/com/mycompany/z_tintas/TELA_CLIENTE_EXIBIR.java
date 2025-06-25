@@ -29,8 +29,14 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        Voltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1440, 1024));
+        setMinimumSize(new java.awt.Dimension(1440, 1024));
         setPreferredSize(new java.awt.Dimension(1440, 1024));
         getContentPane().setLayout(null);
 
@@ -49,14 +55,89 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
         jPanel2.add(jLabel10);
         jLabel10.setBounds(20, 20, 290, 30);
 
+        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "NOME", "CPF/CNPJ", "DT/NASC", "UF"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(60, 100, 1160, 402);
+
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(70, 327, 1300, 602);
+        jPanel2.setBounds(70, 287, 1300, 602);
+
+        jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(235, 244, 246));
+        jLabel1.setText("EXIBIR CADASTROS");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(60, 20, 460, 62);
+
+        Voltar.setBackground(new java.awt.Color(7, 25, 82));
+        Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(235, 244, 246));
+        Voltar.setText("VOLTAR");
+        Voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Voltar);
+        Voltar.setBounds(25, 900, 150, 60);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1430, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+        // TODO add your handling code here:
+        TELA_CLIENTE_MENU clit_menu = new TELA_CLIENTE_MENU();
+        clit_menu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,8 +175,12 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Voltar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
