@@ -61,9 +61,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1440, 1024));
         setMinimumSize(new java.awt.Dimension(1440, 1024));
-        setPreferredSize(new java.awt.Dimension(1440, 1024));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(7, 25, 82));
@@ -365,7 +363,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Voltar);
-        Voltar.setBounds(620, 70, 150, 60);
+        Voltar.setBounds(30, 910, 150, 60);
 
         jButton4.setBackground(new java.awt.Color(235, 244, 246));
         jButton4.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N

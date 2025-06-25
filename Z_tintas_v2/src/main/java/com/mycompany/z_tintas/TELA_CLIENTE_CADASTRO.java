@@ -324,7 +324,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Voltar);
-        Voltar.setBounds(400, 100, 150, 60);
+        Voltar.setBounds(25, 900, 150, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

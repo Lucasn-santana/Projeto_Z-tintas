@@ -11,6 +11,7 @@ package com.mycompany.z_tintas;
 public class Z_tintas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        TELA_LOGIN start = new TELA_LOGIN();
+        start.setVisible(true);
     }
 }
