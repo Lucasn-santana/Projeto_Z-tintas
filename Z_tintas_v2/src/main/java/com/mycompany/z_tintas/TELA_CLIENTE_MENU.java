@@ -48,6 +48,11 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
         CONSULTAR_CADASTROS.setForeground(new java.awt.Color(7, 25, 82));
         CONSULTAR_CADASTROS.setText("CONSULTAR CADASTRO");
         CONSULTAR_CADASTROS.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CONSULTAR_CADASTROS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CONSULTAR_CADASTROSActionPerformed(evt);
+            }
+        });
         jPanel1.add(CONSULTAR_CADASTROS);
         CONSULTAR_CADASTROS.setBounds(67, 637, 700, 160);
 
@@ -56,6 +61,11 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
         CADASTRO_CLIENTE.setForeground(new java.awt.Color(7, 25, 82));
         CADASTRO_CLIENTE.setText("CADASTRAR NOVO CLIENTE");
         CADASTRO_CLIENTE.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CADASTRO_CLIENTE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CADASTRO_CLIENTEActionPerformed(evt);
+            }
+        });
         jPanel1.add(CADASTRO_CLIENTE);
         CADASTRO_CLIENTE.setBounds(67, 217, 700, 160);
 
@@ -64,6 +74,11 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
         EXIBIR_CADASTROS.setForeground(new java.awt.Color(7, 25, 82));
         EXIBIR_CADASTROS.setText("EXIBIR CADASTROS");
         EXIBIR_CADASTROS.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        EXIBIR_CADASTROS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EXIBIR_CADASTROSActionPerformed(evt);
+            }
+        });
         jPanel1.add(EXIBIR_CADASTROS);
         EXIBIR_CADASTROS.setBounds(67, 427, 700, 160);
 
@@ -78,7 +93,7 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BT_VOLTAR);
-        BT_VOLTAR.setBounds(25, 900, 150, 60);
+        BT_VOLTAR.setBounds(800, 460, 150, 60);
 
         jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 244, 246));
@@ -106,8 +121,32 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
 
     private void BT_VOLTARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_VOLTARActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        TELA_MENU_PRINCIPAL menu = new TELA_MENU_PRINCIPAL();
+        menu.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BT_VOLTARActionPerformed
+
+    private void CADASTRO_CLIENTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CADASTRO_CLIENTEActionPerformed
+        // TODO add your handling code here:
+        TELA_CLIENTE_CADASTRO cad_cliente = new TELA_CLIENTE_CADASTRO();
+        cad_cliente.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_CADASTRO_CLIENTEActionPerformed
+
+    private void EXIBIR_CADASTROSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EXIBIR_CADASTROSActionPerformed
+        // TODO add your handling code here:
+        TELA_CLIENTE_EXIBIR exib_cliente = new TELA_CLIENTE_EXIBIR();
+        exib_cliente.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_EXIBIR_CADASTROSActionPerformed
+
+    private void CONSULTAR_CADASTROSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CONSULTAR_CADASTROSActionPerformed
+        // TODO add your handling code here:
+        TELA_CLIENTE_CONSULTAR cons_cliente = new TELA_CLIENTE_CONSULTAR();
+        cons_cliente.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_CONSULTAR_CADASTROSActionPerformed
 
     /**
      * @param args the command line arguments

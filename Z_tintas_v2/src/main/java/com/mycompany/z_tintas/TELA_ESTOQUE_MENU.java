@@ -27,39 +27,78 @@ public class TELA_ESTOQUE_MENU extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        Consultar_item = new javax.swing.JButton();
+        Cadastrar_item = new javax.swing.JButton();
+        Voltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
         setMinimumSize(new java.awt.Dimension(1440, 1024));
+        getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1440, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1024, Short.MAX_VALUE)
-        );
+        jPanel1.setBackground(new java.awt.Color(7, 25, 82));
+        jPanel1.setMaximumSize(new java.awt.Dimension(1440, 1024));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1440, 1024));
+        jPanel1.setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(235, 244, 246));
+        jLabel1.setText("ESTOQUE");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(25, 25, 300, 62);
+
+        Consultar_item.setBackground(new java.awt.Color(235, 244, 246));
+        Consultar_item.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
+        Consultar_item.setForeground(new java.awt.Color(7, 25, 82));
+        Consultar_item.setText("CONSULTAR ITEM");
+        Consultar_item.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Consultar_item.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Consultar_itemActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Consultar_item);
+        Consultar_item.setBounds(115, 329, 700, 160);
+
+        Cadastrar_item.setBackground(new java.awt.Color(235, 244, 246));
+        Cadastrar_item.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
+        Cadastrar_item.setForeground(new java.awt.Color(7, 25, 82));
+        Cadastrar_item.setText("CADASTRAR NOVO ITEM");
+        Cadastrar_item.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(Cadastrar_item);
+        Cadastrar_item.setBounds(115, 539, 700, 160);
+
+        Voltar.setBackground(new java.awt.Color(7, 25, 82));
+        Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(235, 244, 246));
+        Voltar.setText("VOLTAR");
+        Voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Voltar);
+        Voltar.setBounds(850, 590, 150, 60);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Consultar_itemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Consultar_itemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Consultar_itemActionPerformed
+
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+        // TODO add your handling code here:
+        TELA_MENU_PRINCIPAL menu = new TELA_MENU_PRINCIPAL();
+        menu.setVisible(true);
+        dispose();
+
+    }//GEN-LAST:event_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,6 +136,10 @@ public class TELA_ESTOQUE_MENU extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cadastrar_item;
+    private javax.swing.JButton Consultar_item;
+    private javax.swing.JButton Voltar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

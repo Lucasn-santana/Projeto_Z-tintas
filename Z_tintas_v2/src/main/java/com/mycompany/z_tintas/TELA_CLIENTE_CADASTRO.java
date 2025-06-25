@@ -27,7 +27,6 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         matricula = new javax.swing.JTextField();
@@ -53,6 +52,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         ENTRAR = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        Voltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,19 +62,6 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setPreferredSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setLayout(null);
-
-        jButton2.setBackground(new java.awt.Color(7, 25, 82));
-        jButton2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(235, 244, 246));
-        jButton2.setText("VOLTAR");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(25, 900, 150, 60);
 
         jPanel2.setBackground(new java.awt.Color(235, 244, 246));
         jPanel2.setMaximumSize(new java.awt.Dimension(1290, 676));
@@ -326,6 +313,19 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(25, 25, 650, 62);
 
+        Voltar.setBackground(new java.awt.Color(7, 25, 82));
+        Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(235, 244, 246));
+        Voltar.setText("VOLTAR");
+        Voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Voltar);
+        Voltar.setBounds(400, 100, 150, 60);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -390,10 +390,13 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
 
     }//GEN-LAST:event_ENTRARActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        TELA_CLIENTE_MENU clit_menu = new TELA_CLIENTE_MENU();
+        clit_menu.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -432,7 +435,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ENTRAR;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton Voltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

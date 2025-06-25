@@ -45,6 +45,11 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
         bt_cliente.setForeground(new java.awt.Color(7, 25, 82));
         bt_cliente.setText("CLIENTE");
         bt_cliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bt_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_clienteActionPerformed(evt);
+            }
+        });
         jPanel2.add(bt_cliente);
         bt_cliente.setBounds(70, 271, 400, 210);
 
@@ -67,6 +72,11 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
         bt_estoque.setText("ESTOQUE");
         bt_estoque.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bt_estoque.setPreferredSize(new java.awt.Dimension(400, 210));
+        bt_estoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_estoqueActionPerformed(evt);
+            }
+        });
         jPanel2.add(bt_estoque);
         bt_estoque.setBounds(970, 271, 400, 210);
 
@@ -112,7 +122,22 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
     private void bt_funcionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_funcionarioActionPerformed
         TELA_FUNCIONARIO_MENU func_menu = new TELA_FUNCIONARIO_MENU();
         func_menu.setVisible(true);
+        dispose();
     }//GEN-LAST:event_bt_funcionarioActionPerformed
+
+    private void bt_estoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_estoqueActionPerformed
+        // TODO add your handling code here:
+        TELA_ESTOQUE_MENU esto_menu = new TELA_ESTOQUE_MENU();
+        esto_menu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_bt_estoqueActionPerformed
+
+    private void bt_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_clienteActionPerformed
+        // TODO add your handling code here:
+        TELA_CLIENTE_MENU clit_menu = new TELA_CLIENTE_MENU();
+        clit_menu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_bt_clienteActionPerformed
 
     /**
      * @param args the command line arguments

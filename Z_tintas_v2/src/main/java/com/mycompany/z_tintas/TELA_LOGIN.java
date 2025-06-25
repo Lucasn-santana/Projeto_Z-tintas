@@ -170,6 +170,7 @@ public class TELA_LOGIN extends javax.swing.JFrame {
     private void ENTRARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ENTRARActionPerformed
         TELA_MENU_PRINCIPAL menu = new TELA_MENU_PRINCIPAL();
         menu.setVisible(true);
+        dispose();
         
         
     }//GEN-LAST:event_ENTRARActionPerformed

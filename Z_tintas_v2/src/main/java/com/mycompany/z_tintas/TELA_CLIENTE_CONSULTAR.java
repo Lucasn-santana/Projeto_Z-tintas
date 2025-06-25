@@ -55,7 +55,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         ENTRAR = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        Voltar = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -354,18 +354,18 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel1.add(jButton2);
         jButton2.setBounds(670, 900, 150, 60);
 
-        jButton3.setBackground(new java.awt.Color(7, 25, 82));
-        jButton3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(235, 244, 246));
-        jButton3.setText("VOLTAR");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Voltar.setBackground(new java.awt.Color(7, 25, 82));
+        Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(235, 244, 246));
+        Voltar.setText("VOLTAR");
+        Voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                VoltarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(25, 900, 150, 60);
+        jPanel1.add(Voltar);
+        Voltar.setBounds(620, 70, 150, 60);
 
         jButton4.setBackground(new java.awt.Color(235, 244, 246));
         jButton4.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
@@ -459,9 +459,12 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         menu.setVisible(true);
     }//GEN-LAST:event_ENTRARActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        TELA_CLIENTE_MENU clit_menu = new TELA_CLIENTE_MENU();
+        clit_menu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_VoltarActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -508,8 +511,8 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ENTRAR;
+    private javax.swing.JButton Voltar;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
