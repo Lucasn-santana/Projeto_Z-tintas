@@ -6,14 +6,14 @@ package com.mycompany.z_tintas;
 
 /**
  *
- * @author f.martins
+ * @author Gabriel
  */
-public class TELA_FUNCIONARIO_TODOSFUNCIONARIOS extends javax.swing.JFrame {
+public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
 
     /**
-     * Creates new form TELA_FUNCIONARIO_TODOSFUNCIONARIOS
+     * Creates new form TELA_FUNCIONARIO_EXIBIR
      */
-    public TELA_FUNCIONARIO_TODOSFUNCIONARIOS() {
+    public TELA_FUNCIONARIO_EXIBIR() {
         initComponents();
     }
 
@@ -27,36 +27,50 @@ public class TELA_FUNCIONARIO_TODOSFUNCIONARIOS extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        VOLTAR = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tabela_cadastro_visualizacao = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        voltar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabela_funcionario = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1440, 1024));
         setMinimumSize(new java.awt.Dimension(1440, 1024));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(7, 25, 82));
         jPanel1.setMaximumSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setMinimumSize(new java.awt.Dimension(1440, 1024));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setLayout(null);
 
-        VOLTAR.setBackground(new java.awt.Color(7, 25, 82));
-        VOLTAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/voltarr.png"))); // NOI18N
-        VOLTAR.setBorder(null);
-        VOLTAR.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(235, 244, 246));
+        jLabel1.setText("Exibir Funcionários");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(25, 25, 440, 62);
+
+        voltar.setBackground(new java.awt.Color(7, 25, 82));
+        voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        voltar.setForeground(new java.awt.Color(235, 244, 246));
+        voltar.setText("VOLTAR");
+        voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VOLTARActionPerformed(evt);
+                voltarActionPerformed(evt);
             }
         });
-        jPanel1.add(VOLTAR);
-        VOLTAR.setBounds(25, 900, 53, 54);
+        jPanel1.add(voltar);
+        voltar.setBounds(1120, 50, 150, 60);
 
-        tabela_cadastro_visualizacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tabela_cadastro_visualizacao.setModel(new javax.swing.table.DefaultTableModel(
+        jPanel2.setBackground(new java.awt.Color(235, 244, 246));
+        jPanel2.setMaximumSize(new java.awt.Dimension(1296, 649));
+        jPanel2.setMinimumSize(new java.awt.Dimension(1296, 649));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1296, 649));
+        jPanel2.setLayout(null);
+
+        tabela_funcionario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tabela_funcionario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -80,7 +94,7 @@ public class TELA_FUNCIONARIO_TODOSFUNCIONARIOS extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "ID", "NOME", "CARGO"
+                "MATRÍCULA", "NOME", "CARGO"
             }
         ) {
             Class[] types = new Class [] {
@@ -98,34 +112,33 @@ public class TELA_FUNCIONARIO_TODOSFUNCIONARIOS extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tabela_cadastro_visualizacao);
+        jScrollPane1.setViewportView(tabela_funcionario);
 
-        jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(110, 360, 1210, 402);
-
-        jLabel1.setBackground(new java.awt.Color(7, 25, 82));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LOGO_MENU.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(1265, 25, 150, 150);
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(40, 180, 1210, 402);
 
         jLabel2.setBackground(new java.awt.Color(7, 25, 82));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/LOGO_FUCIONARIO_TABELA.png"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(25, 25, 371, 89);
+        jLabel2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel2.setText("Tabela de Funcionários:");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(20, 20, 550, 62);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/TABELA_FUNCIONARIO.png"))); // NOI18N
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(72, 213, 1296, 649);
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(72, 213, 1296, 649);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, -10, 1440, 1024);
+        jPanel1.setBounds(0, 0, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void VOLTARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VOLTARActionPerformed
+    private void voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_VOLTARActionPerformed
+        TELA_FUNCIONARIO_MENU func_menu = new TELA_FUNCIONARIO_MENU();
+        func_menu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_voltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,31 +157,31 @@ public class TELA_FUNCIONARIO_TODOSFUNCIONARIOS extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_TODOSFUNCIONARIOS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_EXIBIR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_TODOSFUNCIONARIOS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_EXIBIR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_TODOSFUNCIONARIOS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_EXIBIR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_TODOSFUNCIONARIOS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TELA_FUNCIONARIO_EXIBIR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TELA_FUNCIONARIO_TODOSFUNCIONARIOS().setVisible(true);
+                new TELA_FUNCIONARIO_EXIBIR().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton VOLTAR;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tabela_cadastro_visualizacao;
+    private javax.swing.JTable tabela_funcionario;
+    private javax.swing.JButton voltar;
     // End of variables declaration//GEN-END:variables
 }

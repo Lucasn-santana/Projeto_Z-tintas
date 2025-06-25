@@ -66,6 +66,11 @@ public class TELA_FUNCIONARIO_MENU extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(7, 25, 82));
         jButton3.setText("CADASTRO DE FUNCIONÁRIO");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3);
         jButton3.setBounds(97, 222, 700, 160);
 
@@ -74,6 +79,11 @@ public class TELA_FUNCIONARIO_MENU extends javax.swing.JFrame {
         jButton4.setForeground(new java.awt.Color(7, 25, 82));
         jButton4.setText("CONSULTA DE FUNCIONÁRIO");
         jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton4);
         jButton4.setBounds(97, 432, 700, 160);
 
@@ -82,6 +92,11 @@ public class TELA_FUNCIONARIO_MENU extends javax.swing.JFrame {
         jButton5.setForeground(new java.awt.Color(7, 25, 82));
         jButton5.setText("TODOS FUNCIONÁRIO");
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton5);
         jButton5.setBounds(97, 642, 700, 160);
 
@@ -106,6 +121,28 @@ public class TELA_FUNCIONARIO_MENU extends javax.swing.JFrame {
         dispose();
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        TELA_FUNCIONARIO_CADASTRO func_cadastro = new TELA_FUNCIONARIO_CADASTRO();
+        func_cadastro.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        TELA_FUNCIONARIO_CONSULTA func_consulta = new TELA_FUNCIONARIO_CONSULTA();
+        func_consulta.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        TELA_FUNCIONARIO_EXIBIR func_exibir = new TELA_FUNCIONARIO_EXIBIR();
+        func_exibir.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

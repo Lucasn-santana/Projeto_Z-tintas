@@ -144,7 +144,7 @@ public class Tela_Consultar_Funcionario extends javax.swing.JFrame {
         jLabel4.setBounds(128, 505, 1184, 125);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1440, 1024);
+        jPanel1.setBounds(0, 10, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
