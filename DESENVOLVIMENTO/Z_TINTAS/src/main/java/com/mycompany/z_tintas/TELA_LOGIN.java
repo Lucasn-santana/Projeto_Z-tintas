@@ -4,6 +4,8 @@
  */
 package com.mycompany.z_tintas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author f.martins
@@ -29,17 +31,16 @@ public class TELA_LOGIN extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        senha = new javax.swing.JTextField();
+        matricula = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1440, 1024));
@@ -50,33 +51,33 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setLayout(null);
 
-        jTextField1.setBackground(new java.awt.Color(7, 25, 82));
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(235, 244, 246));
-        jTextField1.setMaximumSize(new java.awt.Dimension(400, 60));
-        jTextField1.setMinimumSize(new java.awt.Dimension(400, 60));
-        jTextField1.setPreferredSize(new java.awt.Dimension(400, 60));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        senha.setBackground(new java.awt.Color(7, 25, 82));
+        senha.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        senha.setForeground(new java.awt.Color(235, 244, 246));
+        senha.setMaximumSize(new java.awt.Dimension(400, 60));
+        senha.setMinimumSize(new java.awt.Dimension(400, 60));
+        senha.setPreferredSize(new java.awt.Dimension(400, 60));
+        senha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                senhaActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(839, 524, 400, 60);
+        jPanel1.add(senha);
+        senha.setBounds(839, 524, 400, 60);
 
-        jTextField2.setBackground(new java.awt.Color(7, 25, 82));
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(235, 244, 246));
-        jTextField2.setMaximumSize(new java.awt.Dimension(400, 60));
-        jTextField2.setMinimumSize(new java.awt.Dimension(400, 60));
-        jTextField2.setPreferredSize(new java.awt.Dimension(400, 60));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        matricula.setBackground(new java.awt.Color(7, 25, 82));
+        matricula.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        matricula.setForeground(new java.awt.Color(235, 244, 246));
+        matricula.setMaximumSize(new java.awt.Dimension(400, 60));
+        matricula.setMinimumSize(new java.awt.Dimension(400, 60));
+        matricula.setPreferredSize(new java.awt.Dimension(400, 60));
+        matricula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                matriculaActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(839, 412, 400, 60);
+        jPanel1.add(matricula);
+        matricula.setBounds(839, 412, 400, 60);
 
         jLabel6.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(7, 25, 82));
@@ -92,11 +93,17 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         jPanel1.add(jLabel7);
         jLabel7.setBounds(1073, 584, 170, 20);
 
-        jButton2.setBackground(new java.awt.Color(235, 244, 246));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BotãoEntrar (3).png"))); // NOI18N
+        jButton2.setBackground(new java.awt.Color(7, 25, 82));
+        jButton2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        jButton2.setText("ENTRAR");
         jButton2.setBorder(null);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2);
-        jButton2.setBounds(830, 640, 420, 68);
+        jButton2.setBounds(830, 640, 420, 60);
 
         jLabel8.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(7, 25, 82));
@@ -121,19 +128,7 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         jLabel1.setRequestFocusEnabled(false);
         jLabel1.setVerifyInputWhenFocusTarget(false);
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(101, 160, 1417, 216);
-
-        jLabel5.setBackground(new java.awt.Color(7, 25, 82));
-        jLabel5.setForeground(new java.awt.Color(7, 25, 82));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Img esfera login.png"))); // NOI18N
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(978, 107, 137, 130);
-
-        jLabel4.setBackground(new java.awt.Color(7, 25, 82));
-        jLabel4.setForeground(new java.awt.Color(7, 25, 82));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/retangulo_tela_login.png"))); // NOI18N
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(757, 107, 571, 850);
+        jLabel1.setBounds(40, 160, 560, 216);
 
         jLabel3.setBackground(new java.awt.Color(7, 25, 82));
         jLabel3.setForeground(new java.awt.Color(7, 25, 82));
@@ -143,19 +138,35 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(106, 412, 506, 506);
 
+        jPanel2.setBackground(new java.awt.Color(235, 244, 246));
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(757, 158, 571, 740);
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void senhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_senhaActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matriculaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_matriculaActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if(senha.getText().equals("fer")&& (matricula.getText().equals("fer"))){
+            MENU_PRINCIPAL tela = new MENU_PRINCIPAL();
+            tela.setVisible(true);
+            dispose();            
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "TA ERRADO");
+                    
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,13 +198,12 @@ public class TELA_LOGIN extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField matricula;
+    private javax.swing.JTextField senha;
     // End of variables declaration//GEN-END:variables
 }

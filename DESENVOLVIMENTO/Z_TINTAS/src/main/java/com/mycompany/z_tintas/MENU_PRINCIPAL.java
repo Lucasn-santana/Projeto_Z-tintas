@@ -66,16 +66,18 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
         jPanel2.add(jLabel2);
         jLabel2.setBounds(1265, 25, 150, 150);
 
-        Botao_Menu_Principal_Cliente.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Cliente.setBackground(new java.awt.Color(235, 244, 246));
+        Botao_Menu_Principal_Cliente.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         Botao_Menu_Principal_Cliente.setForeground(new java.awt.Color(7, 25, 82));
-        Botao_Menu_Principal_Cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoCliente.png"))); // NOI18N
+        Botao_Menu_Principal_Cliente.setText("CLIENTE");
         Botao_Menu_Principal_Cliente.setBorder(null);
         jPanel2.add(Botao_Menu_Principal_Cliente);
         Botao_Menu_Principal_Cliente.setBounds(70, 271, 400, 210);
 
-        Botao_Menu_Principal_Catalogo.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Catalogo.setBackground(new java.awt.Color(235, 244, 246));
+        Botao_Menu_Principal_Catalogo.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         Botao_Menu_Principal_Catalogo.setForeground(new java.awt.Color(7, 25, 82));
-        Botao_Menu_Principal_Catalogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoCatálogo.png"))); // NOI18N
+        Botao_Menu_Principal_Catalogo.setText("CÁTAGOLO");
         Botao_Menu_Principal_Catalogo.setBorder(null);
         Botao_Menu_Principal_Catalogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,30 +87,34 @@ public class MENU_PRINCIPAL extends javax.swing.JFrame {
         jPanel2.add(Botao_Menu_Principal_Catalogo);
         Botao_Menu_Principal_Catalogo.setBounds(520, 271, 400, 210);
 
-        Botao_Menu_Principal_Funcionario.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Funcionario.setBackground(new java.awt.Color(235, 244, 246));
+        Botao_Menu_Principal_Funcionario.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         Botao_Menu_Principal_Funcionario.setForeground(new java.awt.Color(7, 25, 82));
-        Botao_Menu_Principal_Funcionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoFuncionário.png"))); // NOI18N
+        Botao_Menu_Principal_Funcionario.setText("FUNCIONÁRIO");
         Botao_Menu_Principal_Funcionario.setBorder(null);
         jPanel2.add(Botao_Menu_Principal_Funcionario);
         Botao_Menu_Principal_Funcionario.setBounds(295, 531, 400, 210);
 
-        Botao_Menu_Principal_Vendas.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Vendas.setBackground(new java.awt.Color(235, 244, 246));
+        Botao_Menu_Principal_Vendas.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         Botao_Menu_Principal_Vendas.setForeground(new java.awt.Color(7, 25, 82));
-        Botao_Menu_Principal_Vendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoVendas.png"))); // NOI18N
+        Botao_Menu_Principal_Vendas.setText("VENDAS");
         Botao_Menu_Principal_Vendas.setBorder(null);
         jPanel2.add(Botao_Menu_Principal_Vendas);
         Botao_Menu_Principal_Vendas.setBounds(745, 531, 410, 210);
 
         Botao_Menu_Principal_Sair.setBackground(new java.awt.Color(7, 25, 82));
-        Botao_Menu_Principal_Sair.setForeground(new java.awt.Color(7, 25, 82));
-        Botao_Menu_Principal_Sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoSair.png"))); // NOI18N
+        Botao_Menu_Principal_Sair.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
+        Botao_Menu_Principal_Sair.setForeground(new java.awt.Color(235, 244, 246));
+        Botao_Menu_Principal_Sair.setText("VOLTAR");
         Botao_Menu_Principal_Sair.setBorder(null);
         jPanel2.add(Botao_Menu_Principal_Sair);
         Botao_Menu_Principal_Sair.setBounds(25, 900, 75, 75);
 
-        Botao_Menu_Principal_Estoque.setBackground(new java.awt.Color(7, 25, 82));
+        Botao_Menu_Principal_Estoque.setBackground(new java.awt.Color(235, 244, 246));
+        Botao_Menu_Principal_Estoque.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         Botao_Menu_Principal_Estoque.setForeground(new java.awt.Color(7, 25, 82));
-        Botao_Menu_Principal_Estoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botãoEstoque.png"))); // NOI18N
+        Botao_Menu_Principal_Estoque.setText("ESTOQUE");
         Botao_Menu_Principal_Estoque.setBorder(null);
         Botao_Menu_Principal_Estoque.setPreferredSize(new java.awt.Dimension(400, 210));
         jPanel2.add(Botao_Menu_Principal_Estoque);

@@ -6,14 +6,11 @@ package com.mycompany.z_tintas;
 
 /**
  *
- * @author m.targa
+ * @author Gabriel
  */
-import java.sql.*;
- 
-public class Z_TINTAS {
+public class Z_tintas {
 
     public static void main(String[] args) {
-        TELA_LOGIN f = new TELA_LOGIN();
-        f.setVisible(true);
+        System.out.println("Hello World!");
     }
 }
