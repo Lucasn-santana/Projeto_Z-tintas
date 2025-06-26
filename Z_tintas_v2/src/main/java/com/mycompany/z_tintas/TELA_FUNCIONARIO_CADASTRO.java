@@ -28,6 +28,19 @@ public class TELA_FUNCIONARIO_CADASTRO extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        voltar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        matricula10 = new javax.swing.JTextField();
+        matricula9 = new javax.swing.JTextField();
+        matricula8 = new javax.swing.JTextField();
+        matricula6 = new javax.swing.JTextField();
+        matricula11 = new javax.swing.JTextField();
+        ENTRAR = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -46,11 +59,182 @@ public class TELA_FUNCIONARIO_CADASTRO extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(25, 25, 510, 62);
 
+        voltar.setBackground(new java.awt.Color(7, 25, 82));
+        voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        voltar.setForeground(new java.awt.Color(235, 244, 246));
+        voltar.setText("VOLTAR");
+        voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(voltar);
+        voltar.setBounds(1120, 50, 150, 60);
+
+        jPanel2.setBackground(new java.awt.Color(235, 244, 246));
+        jPanel2.setMaximumSize(new java.awt.Dimension(1138, 593));
+        jPanel2.setMinimumSize(new java.awt.Dimension(1138, 593));
+        jPanel2.setLayout(null);
+
+        jLabel16.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel16.setText("NOME:");
+        jLabel16.setToolTipText("");
+        jPanel2.add(jLabel16);
+        jLabel16.setBounds(30, 20, 100, 30);
+
+        jLabel15.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel15.setText("CARGO:");
+        jLabel15.setToolTipText("");
+        jPanel2.add(jLabel15);
+        jLabel15.setBounds(440, 20, 100, 30);
+
+        jLabel12.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel12.setText("MATRÍCULA:");
+        jLabel12.setToolTipText("");
+        jPanel2.add(jLabel12);
+        jLabel12.setBounds(840, 20, 160, 30);
+
+        jLabel14.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel14.setText("SENHA:");
+        jLabel14.setToolTipText("");
+        jPanel2.add(jLabel14);
+        jLabel14.setBounds(280, 200, 140, 30);
+
+        jLabel13.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel13.setText("CONFIRMAR SENHA:");
+        jLabel13.setToolTipText("");
+        jPanel2.add(jLabel13);
+        jLabel13.setBounds(690, 200, 250, 30);
+
+        matricula10.setBackground(new java.awt.Color(7, 25, 82));
+        matricula10.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        matricula10.setForeground(new java.awt.Color(235, 244, 246));
+        matricula10.setMaximumSize(new java.awt.Dimension(400, 60));
+        matricula10.setMinimumSize(new java.awt.Dimension(400, 60));
+        matricula10.setPreferredSize(new java.awt.Dimension(250, 60));
+        matricula10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matricula10ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(matricula10);
+        matricula10.setBounds(30, 60, 250, 60);
+
+        matricula9.setBackground(new java.awt.Color(7, 25, 82));
+        matricula9.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        matricula9.setForeground(new java.awt.Color(235, 244, 246));
+        matricula9.setMaximumSize(new java.awt.Dimension(400, 60));
+        matricula9.setMinimumSize(new java.awt.Dimension(400, 60));
+        matricula9.setPreferredSize(new java.awt.Dimension(250, 60));
+        matricula9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matricula9ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(matricula9);
+        matricula9.setBounds(440, 60, 250, 60);
+
+        matricula8.setBackground(new java.awt.Color(7, 25, 82));
+        matricula8.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        matricula8.setForeground(new java.awt.Color(235, 244, 246));
+        matricula8.setMaximumSize(new java.awt.Dimension(400, 60));
+        matricula8.setMinimumSize(new java.awt.Dimension(400, 60));
+        matricula8.setPreferredSize(new java.awt.Dimension(400, 60));
+        matricula8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matricula8ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(matricula8);
+        matricula8.setBounds(840, 60, 250, 60);
+
+        matricula6.setBackground(new java.awt.Color(7, 25, 82));
+        matricula6.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        matricula6.setForeground(new java.awt.Color(235, 244, 246));
+        matricula6.setMaximumSize(new java.awt.Dimension(400, 60));
+        matricula6.setMinimumSize(new java.awt.Dimension(400, 60));
+        matricula6.setPreferredSize(new java.awt.Dimension(400, 60));
+        matricula6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matricula6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(matricula6);
+        matricula6.setBounds(280, 240, 250, 60);
+
+        matricula11.setBackground(new java.awt.Color(7, 25, 82));
+        matricula11.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        matricula11.setForeground(new java.awt.Color(235, 244, 246));
+        matricula11.setMaximumSize(new java.awt.Dimension(400, 60));
+        matricula11.setMinimumSize(new java.awt.Dimension(400, 60));
+        matricula11.setPreferredSize(new java.awt.Dimension(400, 60));
+        matricula11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matricula11ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(matricula11);
+        matricula11.setBounds(690, 240, 250, 60);
+
+        ENTRAR.setBackground(new java.awt.Color(7, 25, 82));
+        ENTRAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        ENTRAR.setForeground(new java.awt.Color(235, 244, 246));
+        ENTRAR.setText("CADASTRAR FUNCIONARIO");
+        ENTRAR.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ENTRAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ENTRARActionPerformed(evt);
+            }
+        });
+        jPanel2.add(ENTRAR);
+        ENTRAR.setBounds(400, 490, 340, 50);
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(151, 151, 1138, 593);
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarActionPerformed
+        // TODO add your handling code here:
+        TELA_FUNCIONARIO_MENU func_menu = new TELA_FUNCIONARIO_MENU();
+        func_menu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_voltarActionPerformed
+
+    private void matricula10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_matricula10ActionPerformed
+
+    private void matricula9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_matricula9ActionPerformed
+
+    private void matricula8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_matricula8ActionPerformed
+
+    private void matricula6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_matricula6ActionPerformed
+
+    private void matricula11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_matricula11ActionPerformed
+
+    private void ENTRARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ENTRARActionPerformed
+        TELA_MENU_PRINCIPAL menu = new TELA_MENU_PRINCIPAL();
+        menu.setVisible(true);
+    }//GEN-LAST:event_ENTRARActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,7 +272,20 @@ public class TELA_FUNCIONARIO_CADASTRO extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ENTRAR;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField matricula10;
+    private javax.swing.JTextField matricula11;
+    private javax.swing.JTextField matricula6;
+    private javax.swing.JTextField matricula8;
+    private javax.swing.JTextField matricula9;
+    private javax.swing.JButton voltar;
     // End of variables declaration//GEN-END:variables
 }
