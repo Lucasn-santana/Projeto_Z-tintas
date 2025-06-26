@@ -4,6 +4,10 @@
  */
 package com.mycompany.z_tintas;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 /**
  *
  * @author Matheus
@@ -13,13 +17,34 @@ public class Classe_cliente {
     private String nome;
     private String dt_nascimento;
     private String cpf;
-    private String cnpj;
+   /* private String cnpj;*/
     private String cep;
     private String uf;
     private String cidade;
     private String rua;
     private String numero;
+    private String bairro;
 
+    public Classe_cliente(String nome, String dt_nascimento, String cpf, String cep, String uf, String cidade, String rua, String numero, String bairro) {
+        this.nome = nome;
+        this.dt_nascimento = dt_nascimento;
+        this.cpf = cpf;
+        /*this.cnpj = cnpj;*/
+        this.cep = cep;
+        this.uf = uf;
+        this.cidade = cidade;
+        this.rua = rua;
+        this.numero = numero;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+    
     public int getId_cliente() {
         return id_cliente;
     }
@@ -52,13 +77,13 @@ public class Classe_cliente {
         this.cpf = cpf;
     }
 
-    public String getCnpj() {
+    /*public String getCnpj() {
         return cnpj;
     }
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
-    }
+    }*/
 
     public String getCep() {
         return cep;
@@ -100,4 +125,29 @@ public class Classe_cliente {
         this.numero = numero;
     }
     
+    
+    public static void inserirCliente(Classe_cliente cliente){
+        String sql = "INSERT INTO cliente (nome, dt_nascimento,cpf ,cep ,uf ,cidade ,rua ,numero, bairro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        
+        try{
+            Connection conn = Conexao.conectar();
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, cliente.getNome());
+            stmt.setString(2, cliente.getDt_nascimento());
+            stmt.setString(3, cliente.getCpf());
+            stmt.setString(4, cliente.getCep());
+            stmt.setString(5, cliente.getUf());
+            stmt.setString(6, cliente.getCidade());
+            stmt.setString(7, cliente.getRua());
+            stmt.setString(8, cliente.getNumero());
+            stmt.setString(9, cliente.getBairro());
+                               
+            stmt.executeUpdate(); 
+            System.out.println("Cadastro realizado!!");
+        }catch(SQLException e){
+             e.printStackTrace();
+        }
+            
+        
+    }
 }

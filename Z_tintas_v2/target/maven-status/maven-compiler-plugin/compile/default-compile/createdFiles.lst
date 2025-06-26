@@ -4,6 +4,7 @@ com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$12.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_CONSULTA$4.class
 com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO$8.class
 com\mycompany\z_tintas\TELA_CLIENTE_MENU$2.class
+com\mycompany\z_tintas\TELA_FUNCIONARIO_CADASTRO$6.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_CONSULTA$1.class
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$8.class
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$3.class
@@ -27,6 +28,11 @@ com\mycompany\z_tintas\Z_tintas.class
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$2.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_MENU$1.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CADASTRO$7.class
+<<<<<<< HEAD
+=======
+com\mycompany\z_tintas\TELA_FUNCIONARIO_CADASTRO$7.class
+com\mycompany\z_tintas\TELA_FUNCIONARIO_CONSULTA$9.class
+>>>>>>> d7677998da4604ddb533330b02bbbcaaf4a292a3
 com\mycompany\z_tintas\TELA_FUNCIONARIO_MENU.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$7.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_CADASTRO$1.class
@@ -53,6 +59,10 @@ com\mycompany\z_tintas\TELA_FUNCIONARIO_MENU$3.class
 com\mycompany\z_tintas\Classe_produto.class
 com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO$4.class
 com\mycompany\z_tintas\Classe_cliente.class
+<<<<<<< HEAD
+=======
+com\mycompany\z_tintas\TELA_FUNCIONARIO_CADASTRO$2.class
+>>>>>>> d7677998da4604ddb533330b02bbbcaaf4a292a3
 com\mycompany\z_tintas\TELA_LOGIN$3.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_CONSULTA$8.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$2.class
@@ -68,12 +78,22 @@ com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO$12.class
 com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO$7.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$8.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$10.class
+<<<<<<< HEAD
 com\mycompany\z_tintas\TELA_CLIENTE_MENU$3.class
+=======
+com\mycompany\z_tintas\TELA_FUNCIONARIO_CADASTRO$8.class
+com\mycompany\z_tintas\TELA_CLIENTE_MENU$3.class
+com\mycompany\z_tintas\TELA_FUNCIONARIO_CADASTRO$5.class
+>>>>>>> d7677998da4604ddb533330b02bbbcaaf4a292a3
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$9.class
 com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO$13.class
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$10.class
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$17.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_CONSULTA$6.class
+<<<<<<< HEAD
+=======
+com\mycompany\z_tintas\Conexao.class
+>>>>>>> d7677998da4604ddb533330b02bbbcaaf4a292a3
 com\mycompany\z_tintas\Classe_funcionario.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CADASTRO.class
 com\mycompany\z_tintas\TELA_CLIENTE_MENU$1.class
@@ -87,8 +107,15 @@ com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$5.class
 com\mycompany\z_tintas\TELA_MENU_PRINCIPAL$3.class
 com\mycompany\z_tintas\TELA_ESTOQUE_MENU$3.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_EXIBIR$3.class
+<<<<<<< HEAD
 com\mycompany\z_tintas\TELA_ESTOQUE_MENU.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_CONSULTA$5.class
+=======
+com\mycompany\z_tintas\TELA_FUNCIONARIO_CADASTRO$4.class
+com\mycompany\z_tintas\TELA_ESTOQUE_MENU.class
+com\mycompany\z_tintas\TELA_FUNCIONARIO_CONSULTA$5.class
+com\mycompany\z_tintas\TELA_FUNCIONARIO_CADASTRO$3.class
+>>>>>>> d7677998da4604ddb533330b02bbbcaaf4a292a3
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$11.class
 com\mycompany\z_tintas\TELA_ESTOQUE_MENU$4.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$3.class

@@ -12,7 +12,7 @@ create table tb_produto(
 );
 
 CREATE TABLE tb_funcionario(
-	id_fucnionario INT,
+	id_funcionario  int primary key ,
 	nome VARCHAR(45),
 	cargo VARCHAR(45)
 );
@@ -38,14 +38,16 @@ create table cliente(
     nome varchar(45) not null,
     dt_nascimento date not null,
     cpf varchar(11) not null unique,
-    cnpj varchar(14) not null unique,
+    /*cnpj varchar(14) not null unique,*/
     cep varchar(8) not null,
     uf char(2) not null,
     cidade varchar(45) not null,
     rua varchar(45) not null,
-    numero varchar(45) not null
+    numero varchar(45) not null,
+    bairro varchar(45) not null
 );
     
+select * from cliente;
 
 
 

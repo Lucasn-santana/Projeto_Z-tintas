@@ -1,4 +1,4 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -35,11 +35,12 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         matricula10 = new javax.swing.JTextField();
+        PROCURAR = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        voltar = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        voltar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -125,6 +126,19 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
         jPanel2.add(matricula10);
         matricula10.setBounds(30, 60, 400, 50);
 
+        PROCURAR.setBackground(new java.awt.Color(7, 25, 82));
+        PROCURAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        PROCURAR.setForeground(new java.awt.Color(235, 244, 246));
+        PROCURAR.setText("PROCURAR");
+        PROCURAR.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        PROCURAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PROCURARActionPerformed(evt);
+            }
+        });
+        jPanel2.add(PROCURAR);
+        PROCURAR.setBounds(920, 30, 160, 60);
+
         jPanel1.add(jPanel2);
         jPanel2.setBounds(128, 330, 1184, 125);
 
@@ -133,19 +147,6 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
         jLabel2.setText("Consultar Funcionário");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(25, 25, 500, 62);
-
-        voltar.setBackground(new java.awt.Color(7, 25, 82));
-        voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        voltar.setForeground(new java.awt.Color(235, 244, 246));
-        voltar.setText("VOLTAR");
-        voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        voltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                voltarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(voltar);
-        voltar.setBounds(1120, 50, 150, 60);
 
         jButton5.setBackground(new java.awt.Color(235, 244, 246));
         jButton5.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
@@ -186,18 +187,30 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
         jPanel1.add(jButton4);
         jButton4.setBounds(840, 700, 150, 60);
 
+        voltar1.setBackground(new java.awt.Color(7, 25, 82));
+        voltar1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        voltar1.setForeground(new java.awt.Color(235, 244, 246));
+        voltar1.setText("VOLTAR");
+        voltar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        voltar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltar1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(voltar1);
+        voltar1.setBounds(1120, 50, 150, 60);
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarActionPerformed
+    private void PROCURARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PROCURARActionPerformed
         // TODO add your handling code here:
-        TELA_FUNCIONARIO_MENU func_menu = new TELA_FUNCIONARIO_MENU();
-        func_menu.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_voltarActionPerformed
+        
+        
+    }//GEN-LAST:event_PROCURARActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -223,6 +236,13 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
     private void matricula12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula12ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_matricula12ActionPerformed
+
+    private void voltar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltar1ActionPerformed
+        // TODO add your handling code here:
+        TELA_FUNCIONARIO_MENU func_menu = new TELA_FUNCIONARIO_MENU();
+        func_menu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_voltar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,6 +280,7 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton PROCURAR;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -273,6 +294,6 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
     private javax.swing.JTextField matricula10;
     private javax.swing.JTextField matricula11;
     private javax.swing.JTextField matricula12;
-    private javax.swing.JButton voltar;
+    private javax.swing.JButton voltar1;
     // End of variables declaration//GEN-END:variables
 }
