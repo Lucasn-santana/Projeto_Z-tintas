@@ -30,8 +30,6 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        telefone = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         data_nasc = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
@@ -70,27 +68,6 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         jPanel2.setMinimumSize(new java.awt.Dimension(1290, 676));
         jPanel2.setPreferredSize(new java.awt.Dimension(1290, 676));
         jPanel2.setLayout(null);
-
-        jLabel8.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(7, 25, 82));
-        jLabel8.setText("TELEFONE");
-        jLabel8.setToolTipText("");
-        jPanel2.add(jLabel8);
-        jLabel8.setBounds(40, 220, 120, 30);
-
-        telefone.setBackground(new java.awt.Color(7, 25, 82));
-        telefone.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        telefone.setForeground(new java.awt.Color(235, 244, 246));
-        telefone.setMaximumSize(new java.awt.Dimension(400, 60));
-        telefone.setMinimumSize(new java.awt.Dimension(400, 60));
-        telefone.setPreferredSize(new java.awt.Dimension(400, 60));
-        telefone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                telefoneActionPerformed(evt);
-            }
-        });
-        jPanel2.add(telefone);
-        telefone.setBounds(40, 250, 400, 60);
 
         jLabel9.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(7, 25, 82));
@@ -346,10 +323,6 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void telefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_telefoneActionPerformed
-
     private void data_nascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_data_nascActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_data_nascActionPerformed
@@ -396,6 +369,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         String bairro1 = bairro.getText();
         String uf1 = uf.getText();
         String numero1 = numero.getText();
+        
         Classe_cliente cliente_01 = new Classe_cliente(nome1,data_nasc1,cpf1,cep1,uf1,cidade1,rua1,numero1,bairro1);
         inserirCliente(cliente_01);
         
@@ -462,7 +436,6 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -471,7 +444,6 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
     private javax.swing.JTextField numero;
     private javax.swing.JButton realizar_cadastro_cliente;
     private javax.swing.JTextField rua;
-    private javax.swing.JTextField telefone;
     private javax.swing.JTextField uf;
     // End of variables declaration//GEN-END:variables
 }

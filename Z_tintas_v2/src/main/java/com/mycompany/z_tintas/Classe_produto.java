@@ -17,6 +17,16 @@ public class Classe_produto {
   private int quantidade;
   private double preco;
 
+    public Classe_produto(int idProduto, String nomeProduto, String tamanho, String codHex, String marca, int quantidade, double preco) {
+        this.idProduto = idProduto;
+        this.nomeProduto = nomeProduto;
+        this.tamanho = tamanho;
+        this.codHex = codHex;
+        this.marca = marca;
+        this.quantidade = quantidade;
+        this.preco = preco;
+    }
+        
     public int getIdProduto() {
         return idProduto;
     }

@@ -14,6 +14,13 @@ public class Classe_funcionario {
     private String cargoFuncionario;
     private String senha;
 
+    public Classe_funcionario(int idFuncionario, String nomeFuncionario, String cargoFuncionario, String senha) {
+        this.idFuncionario = idFuncionario;
+        this.nomeFuncionario = nomeFuncionario;
+        this.cargoFuncionario = cargoFuncionario;
+        this.senha = senha;
+    }
+        
     public int getIdFuncionario() {
         return idFuncionario;
     }

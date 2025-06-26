@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 C:\Users\m.targa\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR.java
+C:\Users\m.targa\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\Conexao.java
 C:\Users\m.targa\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_FUNCIONARIO_CONSULTA.java
 C:\Users\m.targa\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO.java
 C:\Users\m.targa\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\Classe_funcionario.java
@@ -16,23 +16,3 @@ C:\Users\m.targa\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompan
 C:\Users\m.targa\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_CLIENTE_EXIBIR.java
 C:\Users\m.targa\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\Classe_produto.java
 C:\Users\m.targa\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\Z_tintas.java
-=======
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\Classe_cliente.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\Classe_funcionario.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\Classe_produto.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\Conexao.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_CLIENTE_EXIBIR.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_CLIENTE_MENU.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_ESTOQUE_CADASTRO.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_ESTOQUE_MENU.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_FUNCIONARIO_CADASTRO.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_FUNCIONARIO_CONSULTA.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_FUNCIONARIO_EXIBIR.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_FUNCIONARIO_MENU.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_LOGIN.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\TELA_MENU_PRINCIPAL.java
-C:\Users\Matheus\Desktop\Projeto_Z-tintas\Z_tintas_v2\src\main\java\com\mycompany\z_tintas\Z_tintas.java
->>>>>>> d7677998da4604ddb533330b02bbbcaaf4a292a3
