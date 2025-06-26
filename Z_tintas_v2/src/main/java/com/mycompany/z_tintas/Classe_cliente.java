@@ -127,11 +127,17 @@ public class Classe_cliente {
     
     
     public static void inserirCliente(Classe_cliente cliente){
+        Connection conn = Conexao.getConexao();
+    if (conn == null) {
+        System.out.println("Falha ao conectar ao banco.");
+        return;
+    }
         String sql = "INSERT INTO cliente (nome, dt_nascimento,cpf ,cep ,uf ,cidade ,rua ,numero, bairro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         try{
-            Connection conn = Conexao.conectar();
+            
             PreparedStatement stmt = conn.prepareStatement(sql);
+            
             stmt.setString(1, cliente.getNome());
             stmt.setString(2, cliente.getDt_nascimento());
             stmt.setString(3, cliente.getCpf());
