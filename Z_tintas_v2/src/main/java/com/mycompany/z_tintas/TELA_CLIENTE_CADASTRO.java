@@ -5,7 +5,7 @@
 package com.mycompany.z_tintas;
 
 import static com.mycompany.z_tintas.Classe_cliente.inserirCliente;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Matheus
@@ -360,7 +360,14 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
     }//GEN-LAST:event_numeroActionPerformed
 
     private void realizar_cadastro_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_realizar_cadastro_clienteActionPerformed
-        String nome1 = nome.getText();
+        boolean x = false;
+        
+        if(cpf.getText().length() < 11){
+             x = true;
+        }else{
+            JOptionPane.showMessageDialog(null,"O CPF precisa ter ONZE números!!!");
+        }
+       /* String nome1 = nome.getText();
         String cpf1 = cpf.getText();
         String data_nasc1 = data_nasc.getText();
         String cep1 = cep.getText();
@@ -368,10 +375,12 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         String rua1 = rua.getText();
         String bairro1 = bairro.getText();
         String uf1 = uf.getText();
-        String numero1 = numero.getText();
-        
-        Classe_cliente cliente_01 = new Classe_cliente(nome1,data_nasc1,cpf1,cep1,uf1,cidade1,rua1,numero1,bairro1);
-        inserirCliente(cliente_01);
+        String numero1 = numero.getText();*/
+        Classe_cliente cliente_01 = new Classe_cliente(nome.getText(),data_nasc.getText(),cpf.getText(),cep.getText(),uf.getText(),cidade.getText(),rua.getText(),numero.getText(),bairro.getText());
+        /*Classe_cliente cliente_01 = new Classe_cliente(nome1,data_nasc1,cpf1,cep1,uf1,cidade1,rua1,numero1,bairro1);*/
+        if(x){
+            inserirCliente(cliente_01);
+        }
         
         
     }//GEN-LAST:event_realizar_cadastro_clienteActionPerformed
