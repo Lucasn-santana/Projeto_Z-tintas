@@ -363,20 +363,33 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         boolean x = false;
         String cpf1 = cpf.getText().trim(); // Retira espaços em branco
 
-        if (cpf1.isEmpty()) {
+        try{
+            if (cpf1.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "O CPF É OBRIGATÓRIO");
+            }else if(cpf1.length() == 11 && cpf1.matches("\\d{11}")) {
+               JOptionPane.showMessageDialog(null, "O CPF VÁLIDO"); 
+            }else{
+                JOptionPane.showMessageDialog(null, "O CPF INVALIDO");
+            }           
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR CPF :"+e.getMessage());
+        }
+        
+        
+        
+ /*       if (cpf1.isEmpty()) {
             JOptionPane.showMessageDialog(null, "O CPF É OBRIGATÓRIO");
         } else {
-            if (cpf1.length() != 11) {
+            if (cpf1.length() != 11 && cpf1.matches("\\d{11}")) {
                 JOptionPane.showMessageDialog(null, "O CPF precisa ter ONZE números!!!");
             } else {
-                try {
-                    Long.parseLong(cpf1); // Use Long para evitar overflow com 11 dígitos
+                try {                   
                     x = true; // CPF válido
                 } catch (NumberFormatException e) {
                     JOptionPane.showMessageDialog(null, "O CPF SÓ PODE CONTER NÚMEROS!!!");
                 }
             }
-        }
+        }*/
         
 
         
