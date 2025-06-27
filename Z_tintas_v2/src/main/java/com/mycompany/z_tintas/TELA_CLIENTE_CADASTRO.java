@@ -361,14 +361,26 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
 
     private void realizar_cadastro_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_realizar_cadastro_clienteActionPerformed
         boolean x = false;
-        
-        if(cpf.getText().length() < 11){
-             x = true;
-        }else{
-            JOptionPane.showMessageDialog(null,"O CPF precisa ter ONZE números!!!");
-        }
-       /* String nome1 = nome.getText();
         String cpf1 = cpf.getText();
+        try{
+            Integer.parseInt(cpf1);       
+            if(this.cpf.getText().trim().isEmpty()){
+               JOptionPane.showMessageDialog(null,"O CPF É OBRIGATORIO");            
+            }else{
+                if(cpf1.length() == 11){
+                     x = true;
+                }else{
+                    JOptionPane.showMessageDialog(null,"O CPF precisa ter ONZE números!!!");
+                }            
+            }        
+        }catch(NumberFormatException e){
+                    JOptionPane.showMessageDialog(null,"O CPF SO PODE CONTER NÚMEROS!!!");            
+        }
+        
+
+        
+       /* String nome1 = nome.getText();
+        
         String data_nasc1 = data_nasc.getText();
         String cep1 = cep.getText();
         String cidade1 = cidade.getText();
