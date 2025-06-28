@@ -4,6 +4,11 @@
  */
 package com.mycompany.z_tintas;
 
+import static com.mycompany.z_tintas.Classe_funcionario.buscarFuncionario;
+import static com.mycompany.z_tintas.Classe_funcionario.excluirFuncionario;
+import static com.mycompany.z_tintas.Classe_funcionario.salvarAlteracoes;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gabriel
@@ -15,6 +20,11 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
      */
     public TELA_FUNCIONARIO_CONSULTA() {
         initComponents();
+        CargoFuncionario.setEditable(false);
+        NomeFuncionario.setEditable(false);
+        Excluir.setEnabled(false);
+        Salvar.setEnabled(false);
+        
     }
 
     /**
@@ -30,16 +40,16 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        matricula11 = new javax.swing.JTextField();
-        matricula12 = new javax.swing.JTextField();
+        CargoFuncionario = new javax.swing.JTextField();
+        NomeFuncionario = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        matricula10 = new javax.swing.JTextField();
+        matricula = new javax.swing.JTextField();
         PROCURAR = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Editar = new javax.swing.JButton();
+        Excluir = new javax.swing.JButton();
+        Salvar = new javax.swing.JButton();
         voltar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,33 +79,33 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
         jPanel3.add(jLabel4);
         jLabel4.setBounds(30, 0, 290, 62);
 
-        matricula11.setBackground(new java.awt.Color(7, 25, 82));
-        matricula11.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula11.setForeground(new java.awt.Color(235, 244, 246));
-        matricula11.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula11.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula11.setPreferredSize(new java.awt.Dimension(400, 50));
-        matricula11.addActionListener(new java.awt.event.ActionListener() {
+        CargoFuncionario.setBackground(new java.awt.Color(7, 25, 82));
+        CargoFuncionario.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        CargoFuncionario.setForeground(new java.awt.Color(235, 244, 246));
+        CargoFuncionario.setMaximumSize(new java.awt.Dimension(400, 60));
+        CargoFuncionario.setMinimumSize(new java.awt.Dimension(400, 60));
+        CargoFuncionario.setPreferredSize(new java.awt.Dimension(400, 50));
+        CargoFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula11ActionPerformed(evt);
+                CargoFuncionarioActionPerformed(evt);
             }
         });
-        jPanel3.add(matricula11);
-        matricula11.setBounds(720, 60, 400, 50);
+        jPanel3.add(CargoFuncionario);
+        CargoFuncionario.setBounds(720, 60, 400, 50);
 
-        matricula12.setBackground(new java.awt.Color(7, 25, 82));
-        matricula12.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula12.setForeground(new java.awt.Color(235, 244, 246));
-        matricula12.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula12.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula12.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula12.addActionListener(new java.awt.event.ActionListener() {
+        NomeFuncionario.setBackground(new java.awt.Color(7, 25, 82));
+        NomeFuncionario.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        NomeFuncionario.setForeground(new java.awt.Color(235, 244, 246));
+        NomeFuncionario.setMaximumSize(new java.awt.Dimension(400, 60));
+        NomeFuncionario.setMinimumSize(new java.awt.Dimension(400, 60));
+        NomeFuncionario.setPreferredSize(new java.awt.Dimension(400, 60));
+        NomeFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula12ActionPerformed(evt);
+                NomeFuncionarioActionPerformed(evt);
             }
         });
-        jPanel3.add(matricula12);
-        matricula12.setBounds(30, 60, 400, 50);
+        jPanel3.add(NomeFuncionario);
+        NomeFuncionario.setBounds(30, 60, 400, 50);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(128, 505, 1184, 125);
@@ -112,19 +122,19 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
         jPanel2.add(jLabel1);
         jLabel1.setBounds(30, 0, 170, 62);
 
-        matricula10.setBackground(new java.awt.Color(7, 25, 82));
-        matricula10.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula10.setForeground(new java.awt.Color(235, 244, 246));
-        matricula10.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula10.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula10.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula10.addActionListener(new java.awt.event.ActionListener() {
+        matricula.setBackground(new java.awt.Color(7, 25, 82));
+        matricula.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        matricula.setForeground(new java.awt.Color(235, 244, 246));
+        matricula.setMaximumSize(new java.awt.Dimension(400, 60));
+        matricula.setMinimumSize(new java.awt.Dimension(400, 60));
+        matricula.setPreferredSize(new java.awt.Dimension(400, 60));
+        matricula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula10ActionPerformed(evt);
+                matriculaActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula10);
-        matricula10.setBounds(30, 60, 400, 50);
+        jPanel2.add(matricula);
+        matricula.setBounds(30, 60, 400, 50);
 
         PROCURAR.setBackground(new java.awt.Color(7, 25, 82));
         PROCURAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
@@ -148,44 +158,44 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(25, 25, 500, 62);
 
-        jButton5.setBackground(new java.awt.Color(235, 244, 246));
-        jButton5.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(7, 25, 82));
-        jButton5.setText("EDITAR");
-        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        Editar.setBackground(new java.awt.Color(235, 244, 246));
+        Editar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Editar.setForeground(new java.awt.Color(7, 25, 82));
+        Editar.setText("EDITAR");
+        Editar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Editar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                EditarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5);
-        jButton5.setBounds(500, 700, 150, 60);
+        jPanel1.add(Editar);
+        Editar.setBounds(500, 700, 150, 60);
 
-        jButton2.setBackground(new java.awt.Color(235, 244, 246));
-        jButton2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(7, 25, 82));
-        jButton2.setText("EXCLUIR");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Excluir.setBackground(new java.awt.Color(235, 244, 246));
+        Excluir.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Excluir.setForeground(new java.awt.Color(7, 25, 82));
+        Excluir.setText("EXCLUIR");
+        Excluir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Excluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ExcluirActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(670, 700, 150, 60);
+        jPanel1.add(Excluir);
+        Excluir.setBounds(670, 700, 150, 60);
 
-        jButton4.setBackground(new java.awt.Color(235, 244, 246));
-        jButton4.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(7, 25, 82));
-        jButton4.setText("SALVAR");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Salvar.setBackground(new java.awt.Color(235, 244, 246));
+        Salvar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Salvar.setForeground(new java.awt.Color(7, 25, 82));
+        Salvar.setText("SALVAR");
+        Salvar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Salvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                SalvarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(840, 700, 150, 60);
+        jPanel1.add(Salvar);
+        Salvar.setBounds(840, 700, 150, 60);
 
         voltar1.setBackground(new java.awt.Color(7, 25, 82));
         voltar1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
@@ -208,34 +218,57 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
 
     private void PROCURARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PROCURARActionPerformed
         // TODO add your handling code here:
-        
-        
+        if(this.matricula.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "O CAMPO DE MATRICULA É OBRIGATORIO");
+        }else{
+            int matricula= Integer.parseInt(this.matricula.getText());
+            buscarFuncionario(matricula,NomeFuncionario,CargoFuncionario);
+        }
+
     }//GEN-LAST:event_PROCURARActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+        CargoFuncionario.setEditable(true);
+        NomeFuncionario.setEditable(true);
+        Excluir.setEnabled(true);
+        Salvar.setEnabled(true);        
+    }//GEN-LAST:event_EditarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcluirActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        if(this.matricula.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "O CAMPO DE MATRICULA É OBRIGATORIO");
+        }else{
+            int matricula= Integer.parseInt(this.matricula.getText());
+            excluirFuncionario(matricula);
+        }
+        Excluir.setEnabled(false);
+        Salvar.setEnabled(false);
+    }//GEN-LAST:event_ExcluirActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarActionPerformed
+        if(this.matricula.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "O CAMPO DE MATRICULA É OBRIGATORIO");
+        }else{
+            int matricula= Integer.parseInt(this.matricula.getText());
+            salvarAlteracoes(matricula,NomeFuncionario,CargoFuncionario);
+        }
+        Excluir.setEnabled(false);
+        Salvar.setEnabled(false);
+    }//GEN-LAST:event_SalvarActionPerformed
 
-    private void matricula10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula10ActionPerformed
+    private void matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matriculaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula10ActionPerformed
+    }//GEN-LAST:event_matriculaActionPerformed
 
-    private void matricula11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_matricula11ActionPerformed
+    private void CargoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargoFuncionarioActionPerformed
+                
+    }//GEN-LAST:event_CargoFuncionarioActionPerformed
 
-    private void matricula12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_matricula12ActionPerformed
+    private void NomeFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeFuncionarioActionPerformed
+                        
+    }//GEN-LAST:event_NomeFuncionarioActionPerformed
 
     private void voltar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltar1ActionPerformed
         // TODO add your handling code here:
@@ -280,10 +313,12 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CargoFuncionario;
+    private javax.swing.JButton Editar;
+    private javax.swing.JButton Excluir;
+    private javax.swing.JTextField NomeFuncionario;
     private javax.swing.JButton PROCURAR;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton Salvar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -291,9 +326,7 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField matricula10;
-    private javax.swing.JTextField matricula11;
-    private javax.swing.JTextField matricula12;
+    private javax.swing.JTextField matricula;
     private javax.swing.JButton voltar1;
     // End of variables declaration//GEN-END:variables
 }

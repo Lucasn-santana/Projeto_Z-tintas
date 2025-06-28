@@ -4,6 +4,13 @@
  */
 package com.mycompany.z_tintas;
 
+import static com.mycompany.z_tintas.Classe_funcionario.listarFuncionarios;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.JTableHeader;
+
 /**
  *
  * @author Gabriel
@@ -15,6 +22,29 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
      */
     public TELA_FUNCIONARIO_EXIBIR() {
         initComponents();
+        tabela_funcionario_java.setFont(new Font("Segoe UI", Font.PLAIN, 16));
+
+    // Altura das linhas
+    tabela_funcionario_java.setRowHeight(30);
+
+    // Largura das colunas
+    tabela_funcionario_java.getColumnModel().getColumn(0).setPreferredWidth(100); // Matrícula
+    tabela_funcionario_java.getColumnModel().getColumn(1).setPreferredWidth(300); // Nome
+    tabela_funcionario_java.getColumnModel().getColumn(2).setPreferredWidth(200); // Cargo
+    tabela_funcionario_java.getColumnModel().getColumn(3).setPreferredWidth(150); // Senha
+
+    // Cabeçalho da tabela
+    JTableHeader cabecalho = tabela_funcionario_java.getTableHeader();
+    cabecalho.setFont(new Font("Segoe UI", Font.BOLD, 18));
+    cabecalho.setBackground(new Color(7, 25, 82)); // Azul escuro
+    cabecalho.setForeground(Color.WHITE);
+
+    // Centralizar dados da coluna "Matrícula" e "Cargo"
+    DefaultTableCellRenderer centro = new DefaultTableCellRenderer();
+    centro.setHorizontalAlignment(SwingConstants.CENTER);
+
+    tabela_funcionario_java.getColumnModel().getColumn(0).setCellRenderer(centro); // Matrícula
+    tabela_funcionario_java.getColumnModel().getColumn(2).setCellRenderer(centro); // Cargo
     }
 
     /**
@@ -31,8 +61,9 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
         voltar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabela_funcionario = new javax.swing.JTable();
+        tabela_funcionario_java = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
+        LISTAR = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -69,39 +100,39 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(1296, 649));
         jPanel2.setLayout(null);
 
-        tabela_funcionario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tabela_funcionario.setModel(new javax.swing.table.DefaultTableModel(
+        tabela_funcionario_java.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tabela_funcionario_java.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "MATRÍCULA", "NOME", "CARGO"
+                "MATRÍCULA", "NOME", "CARGO", "SENHA"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -112,10 +143,17 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tabela_funcionario);
+        jScrollPane1.setViewportView(tabela_funcionario_java);
+        if (tabela_funcionario_java.getColumnModel().getColumnCount() > 0) {
+            tabela_funcionario_java.getColumnModel().getColumn(0).setResizable(false);
+            tabela_funcionario_java.getColumnModel().getColumn(0).setPreferredWidth(2);
+            tabela_funcionario_java.getColumnModel().getColumn(1).setResizable(false);
+            tabela_funcionario_java.getColumnModel().getColumn(2).setResizable(false);
+            tabela_funcionario_java.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(40, 180, 1210, 402);
+        jScrollPane1.setBounds(50, 120, 1210, 402);
 
         jLabel2.setBackground(new java.awt.Color(7, 25, 82));
         jLabel2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
@@ -123,6 +161,19 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
         jLabel2.setText("Tabela de Funcionários:");
         jPanel2.add(jLabel2);
         jLabel2.setBounds(20, 20, 550, 62);
+
+        LISTAR.setBackground(new java.awt.Color(7, 25, 82));
+        LISTAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        LISTAR.setForeground(new java.awt.Color(235, 244, 246));
+        LISTAR.setText("LISTAR");
+        LISTAR.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        LISTAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LISTARActionPerformed(evt);
+            }
+        });
+        jPanel2.add(LISTAR);
+        LISTAR.setBounds(550, 560, 160, 60);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(72, 213, 1296, 649);
@@ -140,6 +191,12 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_voltarActionPerformed
 
+    private void LISTARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LISTARActionPerformed
+        // TODO add your handling code here:
+        listarFuncionarios(tabela_funcionario_java);
+    }//GEN-LAST:event_LISTARActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -176,12 +233,13 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton LISTAR;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tabela_funcionario;
+    private javax.swing.JTable tabela_funcionario_java;
     private javax.swing.JButton voltar;
     // End of variables declaration//GEN-END:variables
 }
