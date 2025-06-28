@@ -367,7 +367,8 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
             if (cpf1.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "O CPF É OBRIGATÓRIO");
             }else if(cpf1.length() == 11 && cpf1.matches("\\d{11}")) {
-               JOptionPane.showMessageDialog(null, "O CPF VÁLIDO"); 
+               /*JOptionPane.showMessageDialog(null, "O CPF VÁLIDO");*/
+               x = true;
             }else{
                 JOptionPane.showMessageDialog(null, "O CPF INVALIDO");
             }           
