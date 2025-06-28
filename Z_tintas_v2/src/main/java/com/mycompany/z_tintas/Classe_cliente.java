@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+
 /**
  *
  * @author Matheus
@@ -35,6 +36,7 @@ public class Classe_cliente {
         this.cidade = cidade;
         this.rua = rua;
         this.numero = numero;
+        this.bairro = bairro;
     }
 
     public String getBairro() {

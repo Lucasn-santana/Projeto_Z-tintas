@@ -44,7 +44,7 @@ create table cliente(
     cidade varchar(45) not null,
     rua varchar(45) not null,
     numero varchar(45) not null,
-    bairro varchar(45) not null
+    bairro varchar(45) 
 );
     
 select * from cliente;
