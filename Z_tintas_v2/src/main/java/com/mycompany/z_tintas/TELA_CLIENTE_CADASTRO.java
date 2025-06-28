@@ -360,21 +360,81 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
     }//GEN-LAST:event_numeroActionPerformed
 
     private void realizar_cadastro_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_realizar_cadastro_clienteActionPerformed
-        boolean x = false;
+        boolean cpf_verificacao = false;
+        boolean nome_verificacao = false;
+        boolean data_verificacao = false;
+        boolean cep_verificacao = false;
+        
         String cpf1 = cpf.getText().trim(); // Retira espaços em branco
 
         try{
             if (cpf1.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "O CPF É OBRIGATÓRIO");
+                JOptionPane.showMessageDialog(null, "O CAMPO DE CPF ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");
             }else if(cpf1.length() == 11 && cpf1.matches("\\d{11}")) {
+
                /*JOptionPane.showMessageDialog(null, "O CPF VÁLIDO");*/
-               x = true;
+                cpf_verificacao = true;
             }else{
                 JOptionPane.showMessageDialog(null, "O CPF INVALIDO");
-            }           
+            }
+            
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR CPF :"+e.getMessage());
         }
+        
+        
+        
+        String nome1 = nome.getText().trim();
+        
+        try{
+            if (nome1.isEmpty()){
+                JOptionPane.showMessageDialog(null, "O CAMPO DE NOME ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");
+            }else if (nome1.matches("[a-zA-Z]+")){
+                /*verificação se tem apenas letras, o else abaixo mostrará caso estiver números*/
+                nome_verificacao = true;
+                
+            }else{
+                JOptionPane.showMessageDialog(null, "O CAMPO DE NOME SÓ PODE CONTER LETRAS!");
+            }      
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR O NOME :"+e.getMessage());
+        }
+        
+        
+        
+        String data1 = data_nasc.getText().trim();
+        
+        try{
+            if (data1.isEmpty()){
+                JOptionPane.showMessageDialog(null, "O CAMPO DE DATA ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");
+            }else if (data1.length() == 8 && data1.matches("\\d{8}")){
+                data_verificacao = true;           
+            }else{
+                JOptionPane.showMessageDialog(null, "DATA INVÁLIDA");
+            } 
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR A DATA :"+e.getMessage());
+        }
+        
+        
+        
+        String cep1 = cep.getText().trim();
+        
+        try{
+            if (cep1.isEmpty()){
+                JOptionPane.showMessageDialog(null, "O CAMPO DE CEP ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");
+            }else if (cep1.length() == 8 && cep1.matches("\\d{8}")){
+                cep_verificacao = true;           
+            }else{
+                JOptionPane.showMessageDialog(null, "CEP INVÁLIDO!");
+            } 
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR CPF :"+e.getMessage());
+        }
+        
+        
+        
+        
         
         
         
@@ -405,7 +465,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         String numero1 = numero.getText();*/
         Classe_cliente cliente_01 = new Classe_cliente(nome.getText(),data_nasc.getText(),cpf.getText(),cep.getText(),uf.getText(),cidade.getText(),rua.getText(),numero.getText(),bairro.getText());
         /*Classe_cliente cliente_01 = new Classe_cliente(nome1,data_nasc1,cpf1,cep1,uf1,cidade1,rua1,numero1,bairro1);*/
-        if(x){
+        if(cpf_verificacao && nome_verificacao && data_verificacao){
             inserirCliente(cliente_01);
         }
         
