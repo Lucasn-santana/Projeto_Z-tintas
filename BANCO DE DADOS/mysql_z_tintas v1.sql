@@ -12,9 +12,10 @@ create table tb_produto(
 );
 
 CREATE TABLE tb_funcionario(
-	id_funcionario  int primary key ,
+	id_funcionario  int primary key auto_increment ,
 	nome VARCHAR(45),
-	cargo VARCHAR(45)
+	cargo VARCHAR(45),
+    senha VARCHAR(45)
 );
 
 CREATE TABLE tb_produto_venda(
@@ -44,7 +45,7 @@ create table cliente(
     cidade varchar(45) not null,
     rua varchar(45) not null,
     numero varchar(45) not null,
-    bairro varchar(45) not null
+    bairro varchar(45) 
 );
     
 select * from cliente;
