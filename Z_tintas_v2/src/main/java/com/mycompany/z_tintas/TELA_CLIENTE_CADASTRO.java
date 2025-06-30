@@ -364,6 +364,11 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         boolean nome_verificacao = false;
         boolean data_verificacao = false;
         boolean cep_verificacao = false;
+        boolean rua_verificacao = false;
+        boolean uf_verificacao = false;
+        boolean cdd_verificacao = false;
+        boolean bairro_verificacao = false;
+        boolean numero_verificacao = false;
         
         String cpf1 = cpf.getText().trim(); // Retira espaços em branco
 
@@ -389,7 +394,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         try{
             if (nome1.isEmpty()){
                 JOptionPane.showMessageDialog(null, "O CAMPO DE NOME ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");
-            }else if (nome1.matches("[a-zA-Z]+")){
+            }else if (nome1.matches("[a-zA-Z ]+")){
                 /*verificação se tem apenas letras, o else abaixo mostrará caso estiver números*/
                 nome_verificacao = true;
                 
@@ -433,6 +438,88 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         }
         
         
+        String rua1 = rua.getText().trim();
+        
+        try{
+            if(rua1.isEmpty()){
+                JOptionPane.showMessageDialog(null, "O CAMPO DE RUA ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");
+            }else if(rua1.matches("^[\\p{L}0-9\\s.,'-]+$")){
+                rua_verificacao = true;
+            }else{
+                JOptionPane.showMessageDialog(null, "NÃO É PERMITIDO O USO DE CARACTERES ESPECIAIS!");
+            
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR RUA :"+e.getMessage());
+        }
+        
+        
+        
+        String uf1 = uf.getText().trim();
+        
+        try{
+            if (uf1.isEmpty()){
+                JOptionPane.showMessageDialog(null, "O CAMPO DE UF ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");
+            }else if (uf1.length() == 2 && uf1.matches("^[A-Za-z]{2}$")){
+                uf_verificacao = true;           
+            }else{
+                JOptionPane.showMessageDialog(null, "UF INVÁLIDO!");
+            } 
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR UF :"+e.getMessage());
+        }
+        
+        
+        
+        String cdd1 = cidade.getText().trim();
+        
+        try{
+            if(cdd1.isEmpty()){
+                JOptionPane.showMessageDialog(null, "O CAMPO DE CIDADE ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");
+            }else if(cdd1.matches("^[\\p{L}0-9\\s.,'-]+$")){
+                cdd_verificacao = true;            
+            }else{
+                JOptionPane.showMessageDialog(null, "CIDADE INVÁLIDO!");
+            }        
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR CIDADE :"+e.getMessage());
+        }
+        
+        
+        
+        String bairro1 = bairro.getText().trim();
+        
+        try{
+            if(bairro1.isEmpty()){
+                JOptionPane.showMessageDialog(null, "O CAMPO DE BAIRRO ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");               
+            }else if(bairro1.matches("^[\\p{L}0-9\\s.,'-]+$")){
+                bairro_verificacao = true;
+            }else{
+                JOptionPane.showMessageDialog(null, "BAIRRO INVÁLIDO!");
+            }      
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR BAIRRO :"+e.getMessage());
+        }
+        
+        
+        
+        String num1 = numero.getText().trim();
+        
+        try{
+            if(num1.isEmpty()){
+                JOptionPane.showMessageDialog(null, "O CAMPO DE NUMERO ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");    
+            }else if(num1.matches("\\d+")){
+                numero_verificacao = true;
+            }else{
+                JOptionPane.showMessageDialog(null, "NUMERO INVÁLIDO!");
+            }      
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR NUMERO :"+e.getMessage());
+        }
+        
+        
+        
+        
         
         
         
@@ -465,7 +552,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         String numero1 = numero.getText();*/
         Classe_cliente cliente_01 = new Classe_cliente(nome.getText(),data_nasc.getText(),cpf.getText(),cep.getText(),uf.getText(),cidade.getText(),rua.getText(),numero.getText(),bairro.getText());
         /*Classe_cliente cliente_01 = new Classe_cliente(nome1,data_nasc1,cpf1,cep1,uf1,cidade1,rua1,numero1,bairro1);*/
-        if(cpf_verificacao && nome_verificacao && data_verificacao){
+        if(cpf_verificacao && nome_verificacao && data_verificacao && cep_verificacao && rua_verificacao && uf_verificacao && cdd_verificacao && bairro_verificacao && numero_verificacao){
             inserirCliente(cliente_01);
         }
         
