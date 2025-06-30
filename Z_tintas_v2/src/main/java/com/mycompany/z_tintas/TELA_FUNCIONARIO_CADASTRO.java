@@ -249,7 +249,9 @@ public class TELA_FUNCIONARIO_CADASTRO extends javax.swing.JFrame {
         Classe_funcionario funcionario_01 = new Classe_funcionario(NomeFuncionario.getText(),CargoFuncionario.getText(),SenhaFuncionario.getText());
         
         if(x && y && z){
+            
             inserirFuncionario(funcionario_01);
+            
         }
         
         
