@@ -32,6 +32,7 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
         bt_estoque = new javax.swing.JButton();
         bt_funcionario = new javax.swing.JButton();
         bt_vendas = new javax.swing.JButton();
+        Excluir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -101,6 +102,19 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
         jPanel2.add(bt_vendas);
         bt_vendas.setBounds(745, 531, 410, 210);
 
+        Excluir.setBackground(new java.awt.Color(235, 244, 246));
+        Excluir.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Excluir.setForeground(new java.awt.Color(7, 25, 82));
+        Excluir.setText("SAIR");
+        Excluir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Excluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExcluirActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Excluir);
+        Excluir.setBounds(360, 180, 150, 60);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -139,6 +153,12 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_bt_clienteActionPerformed
 
+    private void ExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcluirActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+
+    }//GEN-LAST:event_ExcluirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -175,6 +195,7 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Excluir;
     private javax.swing.JButton bt_catalogo;
     private javax.swing.JButton bt_cliente;
     private javax.swing.JButton bt_estoque;

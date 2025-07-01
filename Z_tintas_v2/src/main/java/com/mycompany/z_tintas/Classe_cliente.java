@@ -8,7 +8,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -203,6 +205,53 @@ public class Classe_cliente {
         }                            
     }
 
+        public static void buscarCliente(String cpf,JTextField nomeCompleto,JTextField dt_nasc,JTextField cpf_texto,JTextField telefone,JTextField cep,JTextField rua,JTextField uf,JTextField cidade,JTextField bairro,JTextField numero_Casa){
+        Connection conn = Conexao.getConexao();
+        
+        if(conn == null){
+            System.out.println("Falha ao conectar ao banco.");
+            return;
+        }
+        
+        String sql = "SELECT nome,dt_nascimento,cep,uf,cidade,rua,numero,bairro FROM cliente WHERE cpf = ?";
+        
+        try{
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, cpf);
+            
+            ResultSet busca = stmt.executeQuery();
+            
+            if(busca.next()){
+                nomeCompleto.setText(busca.getString("nome"));
+                dt_nasc.setText(busca.getString("dt_nascimento"));
+                cpf_texto.setText(busca.getString("cpf"));
+                telefone.setText(busca.getString("telefone"));
+                cep.setText(busca.getString("cep"));
+                rua.setText(busca.getString("uf"));
+                uf.setText(busca.getString("cidade"));
+                cidade.setText(busca.getString("rua"));
+                bairro.setText(busca.getString("numero"));
+                numero_Casa.setText(busca.getString("bairro"));
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "FUNCIONARIO NÃO ENCONTRADO");
+            }
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "ERRO AO BUSCAR O FUNCIONARIO");
+        }catch(NumberFormatException r){
+            r.printStackTrace();
+            JOptionPane.showMessageDialog(null, "O CAMPO DE MATRICULA É OBRIGATORIO");
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
     }
         
         

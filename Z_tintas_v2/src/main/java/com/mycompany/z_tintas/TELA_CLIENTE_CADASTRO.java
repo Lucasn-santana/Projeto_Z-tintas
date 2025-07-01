@@ -281,7 +281,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
             }
         });
         jPanel2.add(realizar_cadastro_cliente);
-        realizar_cadastro_cliente.setBounds(430, 600, 400, 60);
+        realizar_cadastro_cliente.setBounds(410, 240, 400, 60);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(75, 174, 1290, 676);

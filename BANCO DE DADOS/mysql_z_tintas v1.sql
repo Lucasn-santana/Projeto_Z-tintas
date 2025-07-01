@@ -39,6 +39,7 @@ create table cliente(
     nome varchar(45) not null,
     dt_nascimento date not null,
     cpf varchar(11) not null unique,
+    telefone varchar(45) not null,
     /*cnpj varchar(14) not null unique,*/
     cep varchar(8) not null,
     uf char(2) not null,
@@ -50,6 +51,7 @@ create table cliente(
     
 select * from cliente;
 
+insert into tb_funcionario(nome,cargo,senha) values ("fer","adm","123");
 
 
 

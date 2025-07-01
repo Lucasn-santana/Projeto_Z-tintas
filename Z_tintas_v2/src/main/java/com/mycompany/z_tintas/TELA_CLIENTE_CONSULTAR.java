@@ -4,6 +4,10 @@
  */
 package com.mycompany.z_tintas;
 
+import static com.mycompany.z_tintas.Classe_cliente.buscarCliente;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Matheus
@@ -15,6 +19,20 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
      */
     public TELA_CLIENTE_CONSULTAR() {
         initComponents();
+        nomeCompleto.setEditable(false);
+        dt_nasc.setEditable(false);
+        cpf_texto.setEditable(false);
+        telefone.setEditable(false);
+        cep.setEditable(false);
+        rua.setEditable(false);
+        uf.setEditable(false);
+        cidade.setEditable(false);
+        bairro.setEditable(false);
+        numero_Casa.setEditable(false);
+        Excluir.setEnabled(false);
+        Salvar.setEnabled(false);
+        
+        
     }
 
     /**
@@ -28,36 +46,36 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        matricula1 = new javax.swing.JTextField();
+        dt_nasc = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        matricula2 = new javax.swing.JTextField();
+        cpf_texto = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        matricula = new javax.swing.JTextField();
+        telefone = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        matricula4 = new javax.swing.JTextField();
+        cep = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        matricula5 = new javax.swing.JTextField();
-        matricula8 = new javax.swing.JTextField();
+        cidade = new javax.swing.JTextField();
+        bairro = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        matricula6 = new javax.swing.JTextField();
-        matricula7 = new javax.swing.JTextField();
+        rua = new javax.swing.JTextField();
+        uf = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        matricula9 = new javax.swing.JTextField();
+        numero_Casa = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        matricula10 = new javax.swing.JTextField();
+        nomeCompleto = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
+        Editar = new javax.swing.JButton();
+        Excluir = new javax.swing.JButton();
+        Salvar = new javax.swing.JButton();
+        Voltar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        matricula3 = new javax.swing.JTextField();
+        Cpf_busca = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         Procurar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        Voltar = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -74,19 +92,19 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(235, 244, 246));
         jPanel2.setLayout(null);
 
-        matricula1.setBackground(new java.awt.Color(7, 25, 82));
-        matricula1.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula1.setForeground(new java.awt.Color(235, 244, 246));
-        matricula1.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula1.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula1.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula1.addActionListener(new java.awt.event.ActionListener() {
+        dt_nasc.setBackground(new java.awt.Color(7, 25, 82));
+        dt_nasc.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        dt_nasc.setForeground(new java.awt.Color(235, 244, 246));
+        dt_nasc.setMaximumSize(new java.awt.Dimension(400, 60));
+        dt_nasc.setMinimumSize(new java.awt.Dimension(400, 60));
+        dt_nasc.setPreferredSize(new java.awt.Dimension(400, 60));
+        dt_nasc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula1ActionPerformed(evt);
+                dt_nascActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula1);
-        matricula1.setBounds(520, 50, 400, 60);
+        jPanel2.add(dt_nasc);
+        dt_nasc.setBounds(520, 50, 400, 60);
 
         jLabel9.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(7, 25, 82));
@@ -95,19 +113,19 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.add(jLabel9);
         jLabel9.setBounds(520, 20, 290, 30);
 
-        matricula2.setBackground(new java.awt.Color(7, 25, 82));
-        matricula2.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula2.setForeground(new java.awt.Color(235, 244, 246));
-        matricula2.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula2.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula2.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula2.addActionListener(new java.awt.event.ActionListener() {
+        cpf_texto.setBackground(new java.awt.Color(7, 25, 82));
+        cpf_texto.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        cpf_texto.setForeground(new java.awt.Color(235, 244, 246));
+        cpf_texto.setMaximumSize(new java.awt.Dimension(400, 60));
+        cpf_texto.setMinimumSize(new java.awt.Dimension(400, 60));
+        cpf_texto.setPreferredSize(new java.awt.Dimension(400, 60));
+        cpf_texto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula2ActionPerformed(evt);
+                cpf_textoActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula2);
-        matricula2.setBounds(40, 150, 400, 60);
+        jPanel2.add(cpf_texto);
+        cpf_texto.setBounds(40, 150, 400, 60);
 
         jLabel10.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(7, 25, 82));
@@ -123,19 +141,19 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.add(jLabel8);
         jLabel8.setBounds(40, 220, 120, 30);
 
-        matricula.setBackground(new java.awt.Color(7, 25, 82));
-        matricula.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula.setForeground(new java.awt.Color(235, 244, 246));
-        matricula.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula.addActionListener(new java.awt.event.ActionListener() {
+        telefone.setBackground(new java.awt.Color(7, 25, 82));
+        telefone.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        telefone.setForeground(new java.awt.Color(235, 244, 246));
+        telefone.setMaximumSize(new java.awt.Dimension(400, 60));
+        telefone.setMinimumSize(new java.awt.Dimension(400, 60));
+        telefone.setPreferredSize(new java.awt.Dimension(400, 60));
+        telefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matriculaActionPerformed(evt);
+                telefoneActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula);
-        matricula.setBounds(40, 250, 400, 60);
+        jPanel2.add(telefone);
+        telefone.setBounds(40, 250, 400, 60);
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
@@ -156,19 +174,19 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.add(jLabel13);
         jLabel13.setBounds(40, 370, 120, 30);
 
-        matricula4.setBackground(new java.awt.Color(7, 25, 82));
-        matricula4.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula4.setForeground(new java.awt.Color(235, 244, 246));
-        matricula4.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula4.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula4.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula4.addActionListener(new java.awt.event.ActionListener() {
+        cep.setBackground(new java.awt.Color(7, 25, 82));
+        cep.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        cep.setForeground(new java.awt.Color(235, 244, 246));
+        cep.setMaximumSize(new java.awt.Dimension(400, 60));
+        cep.setMinimumSize(new java.awt.Dimension(400, 60));
+        cep.setPreferredSize(new java.awt.Dimension(400, 60));
+        cep.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula4ActionPerformed(evt);
+                cepActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula4);
-        matricula4.setBounds(40, 400, 400, 60);
+        jPanel2.add(cep);
+        cep.setBounds(40, 400, 400, 60);
 
         jLabel14.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(7, 25, 82));
@@ -177,33 +195,33 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.add(jLabel14);
         jLabel14.setBounds(40, 470, 120, 30);
 
-        matricula5.setBackground(new java.awt.Color(7, 25, 82));
-        matricula5.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula5.setForeground(new java.awt.Color(235, 244, 246));
-        matricula5.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula5.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula5.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula5.addActionListener(new java.awt.event.ActionListener() {
+        cidade.setBackground(new java.awt.Color(7, 25, 82));
+        cidade.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        cidade.setForeground(new java.awt.Color(235, 244, 246));
+        cidade.setMaximumSize(new java.awt.Dimension(400, 60));
+        cidade.setMinimumSize(new java.awt.Dimension(400, 60));
+        cidade.setPreferredSize(new java.awt.Dimension(400, 60));
+        cidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula5ActionPerformed(evt);
+                cidadeActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula5);
-        matricula5.setBounds(40, 500, 400, 60);
+        jPanel2.add(cidade);
+        cidade.setBounds(40, 500, 400, 60);
 
-        matricula8.setBackground(new java.awt.Color(7, 25, 82));
-        matricula8.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula8.setForeground(new java.awt.Color(235, 244, 246));
-        matricula8.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula8.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula8.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula8.addActionListener(new java.awt.event.ActionListener() {
+        bairro.setBackground(new java.awt.Color(7, 25, 82));
+        bairro.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        bairro.setForeground(new java.awt.Color(235, 244, 246));
+        bairro.setMaximumSize(new java.awt.Dimension(400, 60));
+        bairro.setMinimumSize(new java.awt.Dimension(400, 60));
+        bairro.setPreferredSize(new java.awt.Dimension(400, 60));
+        bairro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula8ActionPerformed(evt);
+                bairroActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula8);
-        matricula8.setBounds(470, 500, 400, 60);
+        jPanel2.add(bairro);
+        bairro.setBounds(470, 500, 400, 60);
 
         jLabel17.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(7, 25, 82));
@@ -219,33 +237,33 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.add(jLabel15);
         jLabel15.setBounds(470, 370, 120, 30);
 
-        matricula6.setBackground(new java.awt.Color(7, 25, 82));
-        matricula6.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula6.setForeground(new java.awt.Color(235, 244, 246));
-        matricula6.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula6.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula6.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula6.addActionListener(new java.awt.event.ActionListener() {
+        rua.setBackground(new java.awt.Color(7, 25, 82));
+        rua.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        rua.setForeground(new java.awt.Color(235, 244, 246));
+        rua.setMaximumSize(new java.awt.Dimension(400, 60));
+        rua.setMinimumSize(new java.awt.Dimension(400, 60));
+        rua.setPreferredSize(new java.awt.Dimension(400, 60));
+        rua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula6ActionPerformed(evt);
+                ruaActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula6);
-        matricula6.setBounds(470, 400, 400, 60);
+        jPanel2.add(rua);
+        rua.setBounds(470, 400, 400, 60);
 
-        matricula7.setBackground(new java.awt.Color(7, 25, 82));
-        matricula7.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula7.setForeground(new java.awt.Color(235, 244, 246));
-        matricula7.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula7.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula7.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula7.addActionListener(new java.awt.event.ActionListener() {
+        uf.setBackground(new java.awt.Color(7, 25, 82));
+        uf.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        uf.setForeground(new java.awt.Color(235, 244, 246));
+        uf.setMaximumSize(new java.awt.Dimension(400, 60));
+        uf.setMinimumSize(new java.awt.Dimension(400, 60));
+        uf.setPreferredSize(new java.awt.Dimension(400, 60));
+        uf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula7ActionPerformed(evt);
+                ufActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula7);
-        matricula7.setBounds(900, 400, 150, 60);
+        jPanel2.add(uf);
+        uf.setBounds(900, 400, 150, 60);
 
         jLabel16.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(7, 25, 82));
@@ -254,19 +272,19 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.add(jLabel16);
         jLabel16.setBounds(900, 370, 120, 30);
 
-        matricula9.setBackground(new java.awt.Color(7, 25, 82));
-        matricula9.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula9.setForeground(new java.awt.Color(235, 244, 246));
-        matricula9.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula9.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula9.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula9.addActionListener(new java.awt.event.ActionListener() {
+        numero_Casa.setBackground(new java.awt.Color(7, 25, 82));
+        numero_Casa.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        numero_Casa.setForeground(new java.awt.Color(235, 244, 246));
+        numero_Casa.setMaximumSize(new java.awt.Dimension(400, 60));
+        numero_Casa.setMinimumSize(new java.awt.Dimension(400, 60));
+        numero_Casa.setPreferredSize(new java.awt.Dimension(400, 60));
+        numero_Casa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula9ActionPerformed(evt);
+                numero_CasaActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula9);
-        matricula9.setBounds(900, 500, 150, 60);
+        jPanel2.add(numero_Casa);
+        numero_Casa.setBounds(900, 500, 150, 60);
 
         jLabel18.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(7, 25, 82));
@@ -275,19 +293,19 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.add(jLabel18);
         jLabel18.setBounds(900, 470, 120, 30);
 
-        matricula10.setBackground(new java.awt.Color(7, 25, 82));
-        matricula10.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula10.setForeground(new java.awt.Color(235, 244, 246));
-        matricula10.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula10.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula10.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula10.addActionListener(new java.awt.event.ActionListener() {
+        nomeCompleto.setBackground(new java.awt.Color(7, 25, 82));
+        nomeCompleto.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        nomeCompleto.setForeground(new java.awt.Color(235, 244, 246));
+        nomeCompleto.setMaximumSize(new java.awt.Dimension(400, 60));
+        nomeCompleto.setMinimumSize(new java.awt.Dimension(400, 60));
+        nomeCompleto.setPreferredSize(new java.awt.Dimension(400, 60));
+        nomeCompleto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula10ActionPerformed(evt);
+                nomeCompletoActionPerformed(evt);
             }
         });
-        jPanel2.add(matricula10);
-        matricula10.setBounds(40, 50, 400, 60);
+        jPanel2.add(nomeCompleto);
+        nomeCompleto.setBounds(40, 50, 400, 60);
 
         jLabel19.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(7, 25, 82));
@@ -296,25 +314,77 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.add(jLabel19);
         jLabel19.setBounds(40, 20, 230, 30);
 
+        Editar.setBackground(new java.awt.Color(235, 244, 246));
+        Editar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Editar.setForeground(new java.awt.Color(7, 25, 82));
+        Editar.setText("EDITAR");
+        Editar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Editar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Editar);
+        Editar.setBounds(540, 250, 150, 60);
+
+        Excluir.setBackground(new java.awt.Color(235, 244, 246));
+        Excluir.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Excluir.setForeground(new java.awt.Color(7, 25, 82));
+        Excluir.setText("EXCLUIR");
+        Excluir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Excluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExcluirActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Excluir);
+        Excluir.setBounds(710, 250, 150, 60);
+
+        Salvar.setBackground(new java.awt.Color(235, 244, 246));
+        Salvar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Salvar.setForeground(new java.awt.Color(7, 25, 82));
+        Salvar.setText("SALVAR");
+        Salvar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Salvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalvarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Salvar);
+        Salvar.setBounds(880, 250, 150, 60);
+
+        Voltar.setBackground(new java.awt.Color(7, 25, 82));
+        Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(235, 244, 246));
+        Voltar.setText("VOLTAR");
+        Voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Voltar);
+        Voltar.setBounds(550, 170, 150, 60);
+
         jPanel1.add(jPanel2);
         jPanel2.setBounds(110, 280, 1184, 600);
 
         jPanel3.setBackground(new java.awt.Color(235, 244, 246));
         jPanel3.setLayout(null);
 
-        matricula3.setBackground(new java.awt.Color(7, 25, 82));
-        matricula3.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        matricula3.setForeground(new java.awt.Color(235, 244, 246));
-        matricula3.setMaximumSize(new java.awt.Dimension(400, 60));
-        matricula3.setMinimumSize(new java.awt.Dimension(400, 60));
-        matricula3.setPreferredSize(new java.awt.Dimension(400, 60));
-        matricula3.addActionListener(new java.awt.event.ActionListener() {
+        Cpf_busca.setBackground(new java.awt.Color(7, 25, 82));
+        Cpf_busca.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        Cpf_busca.setForeground(new java.awt.Color(235, 244, 246));
+        Cpf_busca.setMaximumSize(new java.awt.Dimension(400, 60));
+        Cpf_busca.setMinimumSize(new java.awt.Dimension(400, 60));
+        Cpf_busca.setPreferredSize(new java.awt.Dimension(400, 60));
+        Cpf_busca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matricula3ActionPerformed(evt);
+                Cpf_buscaActionPerformed(evt);
             }
         });
-        jPanel3.add(matricula3);
-        matricula3.setBounds(30, 30, 400, 60);
+        jPanel3.add(Cpf_busca);
+        Cpf_busca.setBounds(30, 30, 400, 60);
 
         jLabel12.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(7, 25, 82));
@@ -339,58 +409,6 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel1.add(jPanel3);
         jPanel3.setBounds(110, 150, 1184, 104);
 
-        jButton2.setBackground(new java.awt.Color(235, 244, 246));
-        jButton2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(7, 25, 82));
-        jButton2.setText("EXCLUIR");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(670, 900, 150, 60);
-
-        Voltar.setBackground(new java.awt.Color(7, 25, 82));
-        Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        Voltar.setForeground(new java.awt.Color(235, 244, 246));
-        Voltar.setText("VOLTAR");
-        Voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Voltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VoltarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Voltar);
-        Voltar.setBounds(30, 910, 150, 60);
-
-        jButton4.setBackground(new java.awt.Color(235, 244, 246));
-        jButton4.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(7, 25, 82));
-        jButton4.setText("SALVAR");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(840, 900, 150, 60);
-
-        jButton5.setBackground(new java.awt.Color(235, 244, 246));
-        jButton5.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(7, 25, 82));
-        jButton5.setText("EDITAR");
-        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton5);
-        jButton5.setBounds(500, 900, 150, 60);
-
         jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 244, 246));
         jLabel1.setText("CONSULTAR CADASTRO");
@@ -403,58 +421,62 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void matricula3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula3ActionPerformed
+    private void Cpf_buscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cpf_buscaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula3ActionPerformed
+    }//GEN-LAST:event_Cpf_buscaActionPerformed
 
-    private void matricula1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula1ActionPerformed
+    private void dt_nascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dt_nascActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula1ActionPerformed
+    }//GEN-LAST:event_dt_nascActionPerformed
 
-    private void matricula2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula2ActionPerformed
+    private void cpf_textoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpf_textoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula2ActionPerformed
+    }//GEN-LAST:event_cpf_textoActionPerformed
 
-    private void matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matriculaActionPerformed
+    private void telefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matriculaActionPerformed
+    }//GEN-LAST:event_telefoneActionPerformed
 
-    private void matricula4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula4ActionPerformed
+    private void cepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula4ActionPerformed
+    }//GEN-LAST:event_cepActionPerformed
 
-    private void matricula5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula5ActionPerformed
+    private void cidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula5ActionPerformed
+    }//GEN-LAST:event_cidadeActionPerformed
 
-    private void matricula8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula8ActionPerformed
+    private void bairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bairroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula8ActionPerformed
+    }//GEN-LAST:event_bairroActionPerformed
 
-    private void matricula6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula6ActionPerformed
+    private void ruaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula6ActionPerformed
+    }//GEN-LAST:event_ruaActionPerformed
 
-    private void matricula7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula7ActionPerformed
+    private void ufActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ufActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula7ActionPerformed
+    }//GEN-LAST:event_ufActionPerformed
 
-    private void matricula9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula9ActionPerformed
+    private void numero_CasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_CasaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula9ActionPerformed
+    }//GEN-LAST:event_numero_CasaActionPerformed
 
-    private void matricula10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matricula10ActionPerformed
+    private void nomeCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeCompletoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_matricula10ActionPerformed
+    }//GEN-LAST:event_nomeCompletoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcluirActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        
+    }//GEN-LAST:event_ExcluirActionPerformed
 
     private void ProcurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProcurarActionPerformed
-
-        
+        if(this.Cpf_busca.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "O CAMPO DE MATRICULA É OBRIGATORIO");
+        }else{
+            String cpf = Cpf_busca.getText();
+            buscarCliente(cpf,nomeCompleto,dt_nasc,cpf_texto,telefone,cep,rua,uf,cidade,bairro,numero_Casa);
+        }        
     }//GEN-LAST:event_ProcurarActionPerformed
 
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
@@ -464,13 +486,25 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_VoltarActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_SalvarActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarActionPerformed
+        nomeCompleto.setEditable(true);
+        dt_nasc.setEditable(true);
+        cpf_texto.setEditable(true);
+        telefone.setEditable(true);
+        cep.setEditable(true);
+        rua.setEditable(true);
+        uf.setEditable(true);
+        cidade.setEditable(true);
+        bairro.setEditable(true);
+        numero_Casa.setEditable(true);
+        Excluir.setEnabled(true);
+        Salvar.setEnabled(true);
+        
+    }//GEN-LAST:event_EditarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -508,11 +542,17 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Cpf_busca;
+    private javax.swing.JButton Editar;
+    private javax.swing.JButton Excluir;
     private javax.swing.JButton Procurar;
+    private javax.swing.JButton Salvar;
     private javax.swing.JButton Voltar;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JTextField bairro;
+    private javax.swing.JTextField cep;
+    private javax.swing.JTextField cidade;
+    private javax.swing.JTextField cpf_texto;
+    private javax.swing.JTextField dt_nasc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -530,16 +570,12 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField matricula;
-    private javax.swing.JTextField matricula1;
-    private javax.swing.JTextField matricula10;
-    private javax.swing.JTextField matricula2;
-    private javax.swing.JTextField matricula3;
-    private javax.swing.JTextField matricula4;
-    private javax.swing.JTextField matricula5;
-    private javax.swing.JTextField matricula6;
-    private javax.swing.JTextField matricula7;
-    private javax.swing.JTextField matricula8;
-    private javax.swing.JTextField matricula9;
+    private javax.swing.JTextField nomeCompleto;
+    private javax.swing.JTextField numero_Casa;
+    private javax.swing.JTextField rua;
+    private javax.swing.JTextField telefone;
+    private javax.swing.JTextField uf;
     // End of variables declaration//GEN-END:variables
+
+    
 }
