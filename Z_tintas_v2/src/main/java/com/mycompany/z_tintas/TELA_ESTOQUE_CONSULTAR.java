@@ -173,7 +173,6 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
         ENTRAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         ENTRAR.setForeground(new java.awt.Color(235, 244, 246));
         ENTRAR.setText("BUSCAR");
-        ENTRAR.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ENTRAR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ENTRARActionPerformed(evt);
@@ -237,7 +236,7 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
         BT_VOLTAR_ESTOQUE_CONSULTA.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         BT_VOLTAR_ESTOQUE_CONSULTA.setForeground(new java.awt.Color(235, 244, 246));
         BT_VOLTAR_ESTOQUE_CONSULTA.setText("VOLTAR");
-        BT_VOLTAR_ESTOQUE_CONSULTA.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BT_VOLTAR_ESTOQUE_CONSULTA.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         BT_VOLTAR_ESTOQUE_CONSULTA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BT_VOLTAR_ESTOQUE_CONSULTAActionPerformed(evt);
@@ -250,7 +249,7 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         jButton5.setForeground(new java.awt.Color(7, 25, 82));
         jButton5.setText("EDITAR");
-        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -263,7 +262,7 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(7, 25, 82));
         jButton2.setText("EXCLUIR");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -276,7 +275,7 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(7, 25, 82));
         jButton4.setText("SALVAR");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);

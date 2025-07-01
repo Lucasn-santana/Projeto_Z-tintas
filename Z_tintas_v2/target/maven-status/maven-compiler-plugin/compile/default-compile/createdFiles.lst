@@ -52,6 +52,7 @@ com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$6.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_MENU$2.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CADASTRO$5.class
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$15.class
+com\mycompany\z_tintas\TELA_ESTOQUE_CADASTRO$10.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_MENU$3.class
 com\mycompany\z_tintas\Classe_produto.class
 com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO$4.class
@@ -109,5 +110,6 @@ com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$4.class
 com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO.class
 com\mycompany\z_tintas\TELA_LOGIN$1.class
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR.class
+com\mycompany\z_tintas\TELA_ESTOQUE_CADASTRO$9.class
 com\mycompany\z_tintas\TELA_LOGIN.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR.class

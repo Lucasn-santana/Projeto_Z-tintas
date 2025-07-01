@@ -109,7 +109,7 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         ENTRAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         ENTRAR.setForeground(new java.awt.Color(255, 255, 255));
         ENTRAR.setText("ENTRAR");
-        ENTRAR.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ENTRAR.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         ENTRAR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ENTRARActionPerformed(evt);
