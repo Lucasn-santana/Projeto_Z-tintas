@@ -6,7 +6,10 @@ package com.mycompany.z_tintas;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 
 /**
@@ -155,7 +158,53 @@ public class Classe_cliente {
         }catch(SQLException e){
              e.printStackTrace();
         }
-            
+    }    
+    public static void listarClientes(JTable tabela_cliente){
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet resultado = null;
         
+        try{
+            conn = Conexao.getConexao();
+            
+            String sql = "SELECT * FROM cliente;";
+            stmt = conn.prepareStatement(sql);
+            resultado = stmt.executeQuery();
+            
+            DefaultTableModel modelo = (DefaultTableModel)tabela_cliente.getModel();
+            modelo.setRowCount(0);
+            
+            while(resultado.next()){
+                int id_cli = resultado.getInt("id_cliente");
+                String nome_cli = resultado.getString("nome");
+                String dt_nasc = resultado.getString("dt_nascimento");
+                String cpf_cli = resultado.getString("cpf");
+                String cep_cli = resultado.getString("cep");
+                String uf_cli = resultado.getString("uf");
+                String cidade_cli = resultado.getString("cidade");
+                String rua_cli = resultado.getString("rua");
+                String numero_cli = resultado.getString("numero");
+                String bairro_cli = resultado.getString("bairro");
+                modelo.addRow(new Object[]{id_cli,nome_cli,dt_nasc,cpf_cli,cep_cli,uf_cli,cidade_cli,rua_cli,numero_cli,bairro_cli} );
+            }                        
+        }catch(SQLException e){
+            e.printStackTrace();
+        }catch(Exception ee){
+            ee.printStackTrace();
+        }
+        finally{
+            try{
+                if(resultado != null)resultado.close();
+                if(stmt != null)stmt.close();
+                if(conn != null)conn.close();
+            }catch(SQLException ex){
+                ex.printStackTrace();
+            }
+        }                            
     }
-}
+
+    }
+        
+        
+    
+

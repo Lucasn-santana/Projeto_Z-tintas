@@ -53,7 +53,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         matricula3 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        ENTRAR = new javax.swing.JButton();
+        Procurar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         Voltar = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -318,23 +318,23 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(7, 25, 82));
-        jLabel12.setText("NOME/CPF/CNPJ");
+        jLabel12.setText("CPF");
         jLabel12.setToolTipText("");
         jPanel3.add(jLabel12);
         jLabel12.setBounds(30, 0, 230, 30);
 
-        ENTRAR.setBackground(new java.awt.Color(7, 25, 82));
-        ENTRAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        ENTRAR.setForeground(new java.awt.Color(235, 244, 246));
-        ENTRAR.setText("PROCURAR");
-        ENTRAR.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ENTRAR.addActionListener(new java.awt.event.ActionListener() {
+        Procurar.setBackground(new java.awt.Color(7, 25, 82));
+        Procurar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Procurar.setForeground(new java.awt.Color(235, 244, 246));
+        Procurar.setText("PROCURAR");
+        Procurar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Procurar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ENTRARActionPerformed(evt);
+                ProcurarActionPerformed(evt);
             }
         });
-        jPanel3.add(ENTRAR);
-        ENTRAR.setBounds(730, 30, 400, 60);
+        jPanel3.add(Procurar);
+        Procurar.setBounds(730, 30, 400, 60);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(110, 150, 1184, 104);
@@ -452,10 +452,10 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void ENTRARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ENTRARActionPerformed
-        TELA_MENU_PRINCIPAL menu = new TELA_MENU_PRINCIPAL();
-        menu.setVisible(true);
-    }//GEN-LAST:event_ENTRARActionPerformed
+    private void ProcurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProcurarActionPerformed
+
+        
+    }//GEN-LAST:event_ProcurarActionPerformed
 
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         // TODO add your handling code here:
@@ -508,7 +508,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ENTRAR;
+    private javax.swing.JButton Procurar;
     private javax.swing.JButton Voltar;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;

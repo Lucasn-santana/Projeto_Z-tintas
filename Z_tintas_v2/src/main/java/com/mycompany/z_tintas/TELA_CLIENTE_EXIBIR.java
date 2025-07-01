@@ -4,6 +4,12 @@
  */
 package com.mycompany.z_tintas;
 
+import static com.mycompany.z_tintas.Classe_cliente.listarClientes;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.JTableHeader;
 /**
  *
  * @author Matheus
@@ -15,6 +21,39 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
      */
     public TELA_CLIENTE_EXIBIR() {
         initComponents();
+        
+        tabela_cliente.setFont(new Font("Segoe UI", Font.PLAIN, 16));
+
+    // Altura das linhas
+    tabela_cliente.setRowHeight(30);
+
+    // Largura das colunas
+    tabela_cliente.getColumnModel().getColumn(0).setPreferredWidth(100); // Matrícula
+    tabela_cliente.getColumnModel().getColumn(1).setPreferredWidth(300); // Nome
+    tabela_cliente.getColumnModel().getColumn(2).setPreferredWidth(200); // Cargo
+    tabela_cliente.getColumnModel().getColumn(3).setPreferredWidth(200);
+    tabela_cliente.getColumnModel().getColumn(4).setPreferredWidth(200);
+    tabela_cliente.getColumnModel().getColumn(5).setPreferredWidth(200);
+    tabela_cliente.getColumnModel().getColumn(6).setPreferredWidth(200);
+    tabela_cliente.getColumnModel().getColumn(7).setPreferredWidth(200);
+    tabela_cliente.getColumnModel().getColumn(8).setPreferredWidth(200);
+    tabela_cliente.getColumnModel().getColumn(9).setPreferredWidth(200);
+    
+
+    // Cabeçalho da tabela
+    JTableHeader cabecalho = tabela_cliente.getTableHeader();
+    cabecalho.setFont(new Font("Segoe UI", Font.BOLD, 18));
+    cabecalho.setBackground(new Color(7, 25, 82)); // Azul escuro
+    cabecalho.setForeground(Color.WHITE);
+
+    // Centralizar dados da coluna "Matrícula" e "Cargo"
+    DefaultTableCellRenderer centro = new DefaultTableCellRenderer();
+    centro.setHorizontalAlignment(SwingConstants.CENTER);
+
+    tabela_cliente.getColumnModel().getColumn(0).setCellRenderer(centro); // Matrícula
+    tabela_cliente.getColumnModel().getColumn(2).setCellRenderer(centro); // Cargo
+    
+
     }
 
     /**
@@ -30,7 +69,8 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabela_cliente = new javax.swing.JTable();
+        LISTAR_cliente = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Voltar = new javax.swing.JButton();
 
@@ -55,40 +95,40 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
         jPanel2.add(jLabel10);
         jLabel10.setBounds(20, 20, 290, 30);
 
-        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabela_cliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tabela_cliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "NOME", "CPF/CNPJ", "DT/NASC", "UF"
+                "ID", "NOME", "DT/NASC", "CPF", "CEP", "UF", "CIDADE", "RUA", "NUMERO", "BAIRRO"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                true, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -99,10 +139,23 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabela_cliente);
 
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(60, 100, 1160, 402);
+
+        LISTAR_cliente.setBackground(new java.awt.Color(7, 25, 82));
+        LISTAR_cliente.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        LISTAR_cliente.setForeground(new java.awt.Color(235, 244, 246));
+        LISTAR_cliente.setText("LISTAR");
+        LISTAR_cliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        LISTAR_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LISTAR_clienteActionPerformed(evt);
+            }
+        });
+        jPanel2.add(LISTAR_cliente);
+        LISTAR_cliente.setBounds(550, 520, 160, 60);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(70, 287, 1300, 602);
@@ -138,6 +191,11 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
         clit_menu.setVisible(true);
         dispose();
     }//GEN-LAST:event_VoltarActionPerformed
+
+    private void LISTAR_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LISTAR_clienteActionPerformed
+        // TODO add your handling code here:
+        listarClientes(tabela_cliente);
+    }//GEN-LAST:event_LISTAR_clienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,12 +233,13 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton LISTAR_cliente;
     private javax.swing.JButton Voltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tabela_cliente;
     // End of variables declaration//GEN-END:variables
 }
