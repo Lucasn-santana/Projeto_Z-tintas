@@ -373,6 +373,12 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
 
     private void BuscarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarProdutoActionPerformed
         if(this.idProduto.getText().isEmpty()){
+            nomeProduto.setEditable(false);
+            marcaProduto.setEditable(false);
+            codHex.setEditable(false);
+            PrecoProduto.setEditable(false);
+            ExcluirProduto.setEnabled(false);
+            SalvarProduto.setEnabled(false);
             JOptionPane.showMessageDialog(null, "O CAMPO DE CÓDIGO É OBRIGATORIO");
         }else{
             buscarProduto( idProduto,nomeProduto,marcaProduto,codHex,PrecoProduto);
@@ -408,7 +414,12 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
     }//GEN-LAST:event_ExcluirProdutoActionPerformed
 
     private void SalvarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarProdutoActionPerformed
-        // TODO add your handling code here:
+        nomeProduto.setEditable(false);
+        marcaProduto.setEditable(false);
+        codHex.setEditable(false);
+        PrecoProduto.setEditable(false);
+        ExcluirProduto.setEnabled(false);
+        SalvarProduto.setEnabled(false);
         salvarAlteracoesProdutos (idProduto, nomeProduto, marcaProduto,  codHex,  PrecoProduto);
     }//GEN-LAST:event_SalvarProdutoActionPerformed
 

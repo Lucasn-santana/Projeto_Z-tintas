@@ -29,8 +29,6 @@ public class TELA_LOGIN extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         matricula_login = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -40,6 +38,8 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         senha_login = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -50,18 +50,6 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setPreferredSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setLayout(null);
-
-        jLabel3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 60)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel3.setText("Bem-vindo ao");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(50, 160, 400, 80);
-
-        jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 60)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel1.setText("Z-Tintas");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(210, 230, 240, 80);
 
         matricula_login.setBackground(new java.awt.Color(7, 25, 82));
         matricula_login.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
@@ -142,6 +130,14 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(106, 412, 0, 0);
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG tela login.png"))); // NOI18N
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(130, 390, 514, 514);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BemVindo (login) logo.png"))); // NOI18N
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(113, 167, 554, 216);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -211,13 +207,13 @@ public class TELA_LOGIN extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ENTRAR;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField matricula_login;
