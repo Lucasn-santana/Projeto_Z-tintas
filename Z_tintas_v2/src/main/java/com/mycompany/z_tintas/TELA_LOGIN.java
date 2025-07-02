@@ -34,9 +34,9 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        ENTRAR = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         senha_login = new javax.swing.JPasswordField();
+        ENTRAR = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -93,19 +93,6 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         jPanel1.add(jLabel6);
         jLabel6.setBounds(839, 490, 71, 30);
 
-        ENTRAR.setBackground(new java.awt.Color(7, 25, 82));
-        ENTRAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        ENTRAR.setForeground(new java.awt.Color(255, 255, 255));
-        ENTRAR.setText("ENTRAR");
-        ENTRAR.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
-        ENTRAR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ENTRARActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ENTRAR);
-        ENTRAR.setBounds(840, 625, 400, 60);
-
         jPanel2.setBackground(new java.awt.Color(235, 244, 246));
         jPanel2.setLayout(null);
 
@@ -119,6 +106,19 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         });
         jPanel2.add(senha_login);
         senha_login.setBounds(80, 360, 400, 60);
+
+        ENTRAR.setBackground(new java.awt.Color(235, 244, 246));
+        ENTRAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        ENTRAR.setForeground(new java.awt.Color(255, 255, 255));
+        ENTRAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BotãoEntrar.png"))); // NOI18N
+        ENTRAR.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        ENTRAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ENTRARActionPerformed(evt);
+            }
+        });
+        jPanel2.add(ENTRAR);
+        ENTRAR.setBounds(70, 470, 420, 70);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(757, 158, 571, 700);
