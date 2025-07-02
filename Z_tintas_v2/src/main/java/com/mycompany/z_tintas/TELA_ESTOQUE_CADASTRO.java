@@ -41,11 +41,9 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         Preco = new javax.swing.JTextField();
         NomeProduto = new javax.swing.JTextField();
         MarcaProduto = new javax.swing.JTextField();
-        QuantidadeProduto = new javax.swing.JTextField();
         Cadastrar_produto = new javax.swing.JButton();
         Escolher_cor = new javax.swing.JColorChooser();
         jLabel18 = new javax.swing.JLabel();
@@ -92,13 +90,6 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
         jPanel2.add(jLabel12);
         jLabel12.setBounds(320, 30, 100, 30);
 
-        jLabel13.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(7, 25, 82));
-        jLabel13.setText("QTD:");
-        jLabel13.setToolTipText("");
-        jPanel2.add(jLabel13);
-        jLabel13.setBounds(240, 320, 160, 30);
-
         Preco.setBackground(new java.awt.Color(7, 25, 82));
         Preco.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
         Preco.setForeground(new java.awt.Color(235, 244, 246));
@@ -141,24 +132,11 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
         jPanel2.add(MarcaProduto);
         MarcaProduto.setBounds(320, 70, 200, 60);
 
-        QuantidadeProduto.setBackground(new java.awt.Color(7, 25, 82));
-        QuantidadeProduto.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
-        QuantidadeProduto.setForeground(new java.awt.Color(235, 244, 246));
-        QuantidadeProduto.setMaximumSize(new java.awt.Dimension(400, 60));
-        QuantidadeProduto.setMinimumSize(new java.awt.Dimension(400, 60));
-        QuantidadeProduto.setPreferredSize(new java.awt.Dimension(400, 60));
-        QuantidadeProduto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                QuantidadeProdutoActionPerformed(evt);
-            }
-        });
-        jPanel2.add(QuantidadeProduto);
-        QuantidadeProduto.setBounds(240, 360, 160, 60);
-
         Cadastrar_produto.setBackground(new java.awt.Color(7, 25, 82));
         Cadastrar_produto.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         Cadastrar_produto.setForeground(new java.awt.Color(235, 244, 246));
         Cadastrar_produto.setText("CADASTRAR PRODUTO");
+        Cadastrar_produto.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Cadastrar_produto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cadastrar_produtoActionPerformed(evt);
@@ -174,7 +152,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
         jLabel18.setText("CÓDIGO HEX");
         jLabel18.setToolTipText("");
         jPanel2.add(jLabel18);
-        jLabel18.setBounds(240, 200, 160, 30);
+        jLabel18.setBounds(40, 190, 160, 30);
 
         CodHex.setBackground(new java.awt.Color(7, 25, 82));
         CodHex.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
@@ -188,7 +166,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
             }
         });
         jPanel2.add(CodHex);
-        CodHex.setBounds(240, 240, 160, 60);
+        CodHex.setBounds(40, 230, 160, 60);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(151, 151, 1138, 593);
@@ -230,17 +208,13 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_MarcaProdutoActionPerformed
 
-    private void QuantidadeProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuantidadeProdutoActionPerformed
-       
-    }//GEN-LAST:event_QuantidadeProdutoActionPerformed
-
     private void Cadastrar_produtoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cadastrar_produtoActionPerformed
         Classe_produto produto;
         produto = new Classe_produto(NomeProduto.getText(),CodHex.getText(),
-                MarcaProduto.getText(),Integer.parseInt(QuantidadeProduto.getText()),Double.parseDouble(Preco.getText()));
+        MarcaProduto.getText()/*,Integer.parseInt(QuantidadeProduto.getText())*/,Double.parseDouble(Preco.getText()));
         boolean x1 = false;
-        boolean x2 = false;
-        boolean x3 = false;
+        /*boolean x2 = false;*/
+        /*boolean x3 = false;*/
         boolean x4 = false;
         boolean x5 = false;
         boolean x6 = false;
@@ -266,7 +240,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Falha na Inserção do TAMANHO!!!");
             e.printStackTrace();
         }*/
-        try{
+       /* try{
             if(QuantidadeProduto.getText().isEmpty()){
                 JOptionPane.showMessageDialog(null, "O CAMPO QTD É OBRIGATÓRIO!!!");
             }else{
@@ -275,7 +249,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Falha na Inserção da QTD!!!");
             e.printStackTrace();
-        }
+        }*/
         try{
             if(MarcaProduto.getText().isEmpty()){
                 JOptionPane.showMessageDialog(null, "O CAMPO MARCA É OBRIGATÓRIO!!!");
@@ -306,7 +280,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Falha na Inserção do PRECO!!!");
             e.printStackTrace();
         }        
-        if(x1 && x2 && x3 && x4 && x5 && x6){
+        if(x1 /*&& x2 && x3*/ && x4 && x5 && x6){
             inserirProduto(produto);
         }
         
@@ -365,11 +339,9 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
     private javax.swing.JTextField MarcaProduto;
     private javax.swing.JTextField NomeProduto;
     private javax.swing.JTextField Preco;
-    private javax.swing.JTextField QuantidadeProduto;
     private javax.swing.JButton Voltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
