@@ -7,7 +7,7 @@ create table tb_produto(
 	nome_produto varchar(45) not null,
 	cod_hex varchar(6) unique,
 	marca varchar(45) not null,
-	quantidade int not null,
+	/*quantidade int not null,*/
 	preco double(7,2) not null
 );
 
@@ -50,7 +50,7 @@ create table cliente(
 );
     
 select * from cliente;
-
+INSERT INTO tb_funcionario (nome,cargo,senha) VALUES ("MATHEUS TARGA","DESENVOLVEDOR","123");
 
 insert into tb_funcionario(nome,cargo,senha) values ("fer","adm","123");
 
