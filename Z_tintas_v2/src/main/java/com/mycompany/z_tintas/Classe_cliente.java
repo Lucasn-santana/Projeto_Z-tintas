@@ -23,7 +23,7 @@ public class Classe_cliente {
     private String nome;
     private String dt_nascimento;
     private String cpf;
-   /* private String cnpj;*/
+    private String telefone;
     private String cep;
     private String uf;
     private String cidade;
@@ -31,11 +31,11 @@ public class Classe_cliente {
     private String numero;
     private String bairro;
 
-    public Classe_cliente(String nome, String dt_nascimento, String cpf, String cep, String uf, String cidade, String rua, String numero, String bairro) {
+    public Classe_cliente(String nome, String dt_nascimento, String cpf,String telefone, String cep, String uf, String cidade, String rua, String numero, String bairro) {
         this.nome = nome;
         this.dt_nascimento = dt_nascimento;
         this.cpf = cpf;
-        /*this.cnpj = cnpj;*/
+        this.telefone = telefone;
         this.cep = cep;
         this.uf = uf;
         this.cidade = cidade;
@@ -84,13 +84,13 @@ public class Classe_cliente {
         this.cpf = cpf;
     }
 
-    /*public String getCnpj() {
-        return cnpj;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
-    }*/
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
 
     public String getCep() {
         return cep;
@@ -139,7 +139,7 @@ public class Classe_cliente {
         System.out.println("Falha ao conectar ao banco.");
         return;
     }
-        String sql = "INSERT INTO cliente (nome, dt_nascimento,cpf ,cep ,uf ,cidade ,rua ,numero, bairro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO cliente (nome, dt_nascimento,cpf ,telefone,cep ,uf ,cidade ,rua ,numero, bairro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         try{
             
@@ -148,12 +148,13 @@ public class Classe_cliente {
             stmt.setString(1, cliente.getNome());
             stmt.setString(2, cliente.getDt_nascimento());
             stmt.setString(3, cliente.getCpf());
-            stmt.setString(4, cliente.getCep());
-            stmt.setString(5, cliente.getUf());
-            stmt.setString(6, cliente.getCidade());
-            stmt.setString(7, cliente.getRua());
-            stmt.setString(8, cliente.getNumero());
-            stmt.setString(9, cliente.getBairro());
+            stmt.setString(4, cliente.getTelefone());
+            stmt.setString(5, cliente.getCep());
+            stmt.setString(6, cliente.getUf());
+            stmt.setString(7, cliente.getCidade());
+            stmt.setString(8, cliente.getRua());
+            stmt.setString(9, cliente.getNumero());
+            stmt.setString(10, cliente.getBairro());
                                
             stmt.executeUpdate(); 
             System.out.println("Cadastro realizado!!");
@@ -205,7 +206,7 @@ public class Classe_cliente {
         }                            
     }
 
-        public static void buscarCliente(String cpf,JTextField nomeCompleto,JTextField dt_nasc,JTextField cpf_texto,JTextField telefone,JTextField cep,JTextField rua,JTextField uf,JTextField cidade,JTextField bairro,JTextField numero_Casa){
+        public static void buscarCliente(String cpf,JTextField nomeCompleto,JTextField dt_nasc,JTextField cpf_texto,JTextField cep,JTextField rua,JTextField uf,JTextField cidade,JTextField bairro,JTextField numero_Casa){
         Connection conn = Conexao.getConexao();
         
         if(conn == null){
@@ -213,7 +214,7 @@ public class Classe_cliente {
             return;
         }
         
-        String sql = "SELECT nome,dt_nascimento,cep,uf,cidade,rua,numero,bairro FROM cliente WHERE cpf = ?";
+        String sql = "SELECT nome,dt_nascimento,cpf,cep,uf,cidade,rua,numero,bairro FROM cliente WHERE cpf = ?";
         
         try{
             PreparedStatement stmt = conn.prepareStatement(sql);
@@ -225,7 +226,6 @@ public class Classe_cliente {
                 nomeCompleto.setText(busca.getString("nome"));
                 dt_nasc.setText(busca.getString("dt_nascimento"));
                 cpf_texto.setText(busca.getString("cpf"));
-                telefone.setText(busca.getString("telefone"));
                 cep.setText(busca.getString("cep"));
                 rua.setText(busca.getString("uf"));
                 uf.setText(busca.getString("cidade"));

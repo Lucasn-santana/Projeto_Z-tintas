@@ -51,6 +51,9 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         numero = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         realizar_cadastro_cliente = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        telefone = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         Voltar = new javax.swing.JButton();
 
@@ -71,10 +74,10 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(7, 25, 82));
-        jLabel9.setText("DATA DE NASCIMENTO");
+        jLabel9.setText("TELEFONE");
         jLabel9.setToolTipText("");
         jPanel2.add(jLabel9);
-        jLabel9.setBounds(520, 20, 290, 30);
+        jLabel9.setBounds(520, 120, 290, 30);
 
         data_nasc.setBackground(new java.awt.Color(7, 25, 82));
         data_nasc.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
@@ -283,6 +286,30 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         jPanel2.add(realizar_cadastro_cliente);
         realizar_cadastro_cliente.setBounds(410, 240, 400, 60);
 
+        jLabel19.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel19.setText("DATA DE NASCIMENTO");
+        jLabel19.setToolTipText("");
+        jPanel2.add(jLabel19);
+        jLabel19.setBounds(520, 20, 290, 30);
+
+        jLabel20.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel20.setText("DATA DE NASCIMENTO");
+        jLabel20.setToolTipText("");
+        jPanel2.add(jLabel20);
+        jLabel20.setBounds(520, 20, 290, 30);
+
+        telefone.setBackground(new java.awt.Color(7, 25, 82));
+        telefone.setForeground(new java.awt.Color(235, 244, 246));
+        telefone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telefoneActionPerformed(evt);
+            }
+        });
+        jPanel2.add(telefone);
+        telefone.setBounds(520, 150, 400, 60);
+
         jPanel1.add(jPanel2);
         jPanel2.setBounds(75, 174, 1290, 676);
 
@@ -322,10 +349,6 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void data_nascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_data_nascActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_data_nascActionPerformed
 
     private void cpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfActionPerformed
         // TODO add your handling code here:
@@ -369,6 +392,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         boolean cdd_verificacao = false;
         boolean bairro_verificacao = false;
         boolean numero_verificacao = false;
+        boolean telefone_verificacao = false;
         
         String cpf1 = cpf.getText().trim(); // Retira espaços em branco
 
@@ -517,6 +541,20 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR NUMERO :"+e.getMessage());
         }
         
+        String tele1 = telefone.getText().trim();
+        
+        try{
+            if(tele1.isEmpty()){
+                JOptionPane.showMessageDialog(null, "O CAMPO DE TELEFONE ESTÁ VAZIO,PREENCHA PARA CONTINUAR!");    
+            }else if(tele1.matches("\\d+")){
+                telefone_verificacao = true;
+            }else{
+                JOptionPane.showMessageDialog(null, "TELEFONE INVÁLIDO!");
+            }      
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERRO AO PROCESSAR O TELEFONE :"+e.getMessage());
+        }
+        
         
         
         
@@ -550,9 +588,9 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         String bairro1 = bairro.getText();
         String uf1 = uf.getText();
         String numero1 = numero.getText();*/
-        Classe_cliente cliente_01 = new Classe_cliente(nome.getText(),data_nasc.getText(),cpf.getText(),cep.getText(),uf.getText(),cidade.getText(),rua.getText(),numero.getText(),bairro.getText());
+        Classe_cliente cliente_01 = new Classe_cliente(nome.getText(),data_nasc.getText(),cpf.getText(),telefone.getText(),cep.getText(),uf.getText(),cidade.getText(),rua.getText(),numero.getText(),bairro.getText());
         /*Classe_cliente cliente_01 = new Classe_cliente(nome1,data_nasc1,cpf1,cep1,uf1,cidade1,rua1,numero1,bairro1);*/
-        if(cpf_verificacao && nome_verificacao && data_verificacao && cep_verificacao && rua_verificacao && uf_verificacao && cdd_verificacao && bairro_verificacao && numero_verificacao){
+        if(cpf_verificacao && nome_verificacao && data_verificacao && cep_verificacao && rua_verificacao && uf_verificacao && cdd_verificacao && bairro_verificacao && numero_verificacao && telefone_verificacao){
             inserirCliente(cliente_01);
         }
         
@@ -566,6 +604,14 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_VoltarActionPerformed
+
+    private void data_nascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_data_nascActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_data_nascActionPerformed
+
+    private void telefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_telefoneActionPerformed
 
     /**
      * @param args the command line arguments
@@ -619,6 +665,8 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -627,6 +675,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
     private javax.swing.JTextField numero;
     private javax.swing.JButton realizar_cadastro_cliente;
     private javax.swing.JTextField rua;
+    private javax.swing.JTextField telefone;
     private javax.swing.JTextField uf;
     // End of variables declaration//GEN-END:variables
 }
