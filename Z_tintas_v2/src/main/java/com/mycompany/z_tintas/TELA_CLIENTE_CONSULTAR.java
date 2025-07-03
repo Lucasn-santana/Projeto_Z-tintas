@@ -6,6 +6,7 @@ package com.mycompany.z_tintas;
 
 import static com.mycompany.z_tintas.Classe_cliente.excluirCliente;
 import static com.mycompany.z_tintas.Classe_cliente.buscarCliente;
+import static com.mycompany.z_tintas.Classe_cliente.salvarAlteracoescli;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -489,7 +490,14 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
     }//GEN-LAST:event_VoltarActionPerformed
 
     private void SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarActionPerformed
-        // TODO add your handling code here:
+        if(this.Cpf_busca.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "O CAMPO DE MATRICULA É OBRIGATORIO");
+        }else{
+            String cpf = Cpf_busca.getText();
+            salvarAlteracoescli(cpf,nomeCompleto,dt_nasc,cpf_texto,telefone,cep,uf,cidade,rua,numero_Casa,bairro);
+        }
+        Excluir.setEnabled(false);
+        Salvar.setEnabled(false);
     }//GEN-LAST:event_SalvarActionPerformed
 
     private void EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarActionPerformed

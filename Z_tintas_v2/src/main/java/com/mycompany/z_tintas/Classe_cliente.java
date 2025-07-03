@@ -206,8 +206,8 @@ public class Classe_cliente {
             }
         }                            
     }
-
-        public static void buscarCliente(String cpf,JTextField nomeCompleto,JTextField dt_nasc,JTextField telefone,JTextField cpf_texto,JTextField cep,JTextField rua,JTextField uf,JTextField cidade,JTextField bairro,JTextField numero_Casa){
+                                            
+        public static void buscarCliente(String cpf,JTextField nomeCompleto,JTextField dt_nasc,JTextField cpf_texto,JTextField telefone,JTextField cep,JTextField uf,JTextField cidade,JTextField rua,JTextField numero_Casa,JTextField bairro){
         Connection conn = Conexao.getConexao();
         
         if(conn == null){
@@ -278,7 +278,47 @@ public class Classe_cliente {
             JOptionPane.showMessageDialog(null,"FALHA AO EXCLUIR O CLIENTE!!!");
         }                
     }
-    
+    public static void salvarAlteracoescli (String cpf,JTextField nomeCompleto,JTextField dt_nasc,JTextField telefone,JTextField cpf_texto,JTextField cep,JTextField rua,JTextField uf,JTextField cidade,JTextField bairro,JTextField numero_Casa){
+        Connection conn = Conexao.getConexao();
+        
+        if(conn == null){
+            System.out.println("Falha ao conectar ao banco!!!");
+            return;
+        }
+        
+        String sql = "UPDATE cliente SET nome = ? , dt_nascimento = ? , cpf = ? , telefone = ? , cep = ? , uf = ? , cidade = ? , rua = ? , numero = ? , bairro = ? WHERE cpf = ?";
+        
+        try{
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            
+            stmt.setString(1, nomeCompleto.getText());
+            stmt.setString(2, dt_nasc.getText());
+            stmt.setString(3, cpf_texto.getText());
+            stmt.setString(4, telefone.getText());
+            stmt.setString(5, cep.getText());
+            stmt.setString(6, uf.getText());
+            stmt.setString(7, cidade.getText());
+            stmt.setString(8, rua.getText());
+            stmt.setString(9, numero_Casa.getText());
+            stmt.setString(10,bairro.getText());
+            stmt.setString(11, cpf);
+            
+           int linhasApagadas = stmt.executeUpdate();
+           
+           if(linhasApagadas > 0){
+                JOptionPane.showMessageDialog(null,"ALTERAÇÕES FEITAS COM SUCESSO!!!");
+           }else{
+                JOptionPane.showMessageDialog(null,"FUNCIONARIO NÃO ENCONTRADO BY:alteraçoes");
+           }
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"FALHA AO ALTERAR DADOS DO FUNCIONARIO!!!");
+
+        }
+        
+    }
+   
     
     
     
