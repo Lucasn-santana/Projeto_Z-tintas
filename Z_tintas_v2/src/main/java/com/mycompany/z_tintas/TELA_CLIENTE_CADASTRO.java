@@ -301,6 +301,7 @@ public class TELA_CLIENTE_CADASTRO extends javax.swing.JFrame {
         jLabel20.setBounds(520, 20, 290, 30);
 
         telefone.setBackground(new java.awt.Color(7, 25, 82));
+        telefone.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
         telefone.setForeground(new java.awt.Color(235, 244, 246));
         telefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

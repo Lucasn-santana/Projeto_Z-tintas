@@ -70,8 +70,8 @@ com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO$1.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$5.class
 com\mycompany\z_tintas\TELA_MENU_PRINCIPAL$6.class
 com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO$12.class
-com\mycompany\z_tintas\dt_nasc.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$13.class
+com\mycompany\z_tintas\dt_nasc.class
 com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO$7.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$8.class
 com\mycompany\z_tintas\TELA_ESTOQUE_CONSULTAR$10.class
@@ -80,6 +80,7 @@ com\mycompany\z_tintas\TELA_FUNCIONARIO_CADASTRO$5.class
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$9.class
 com\mycompany\z_tintas\TELA_CLIENTE_CADASTRO$13.class
 com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$10.class
+com\mycompany\z_tintas\TELA_CLIENTE_CONSULTAR$17.class
 com\mycompany\z_tintas\TELA_FUNCIONARIO_CONSULTA$6.class
 com\mycompany\z_tintas\Conexao.class
 com\mycompany\z_tintas\Classe_funcionario.class

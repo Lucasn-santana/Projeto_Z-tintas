@@ -4,6 +4,7 @@
  */
 package com.mycompany.z_tintas;
 
+import static com.mycompany.z_tintas.Classe_cliente.excluirCliente;
 import static com.mycompany.z_tintas.Classe_cliente.buscarCliente;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -22,7 +23,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         nomeCompleto.setEditable(false);
         dt_nasc.setEditable(false);
         cpf_texto.setEditable(false);
-        
+        telefone.setEditable(false);       
         cep.setEditable(false);
         rua.setEditable(false);
         uf.setEditable(false);
@@ -70,6 +71,8 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         Excluir = new javax.swing.JButton();
         Salvar = new javax.swing.JButton();
         Voltar = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        telefone = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         Cpf_busca = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
@@ -343,6 +346,24 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.add(Voltar);
         Voltar.setBounds(370, 250, 150, 60);
 
+        jLabel20.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel20.setText("TELEFONE");
+        jLabel20.setToolTipText("");
+        jPanel2.add(jLabel20);
+        jLabel20.setBounds(520, 120, 290, 30);
+
+        telefone.setBackground(new java.awt.Color(7, 25, 82));
+        telefone.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        telefone.setForeground(new java.awt.Color(235, 244, 246));
+        telefone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telefoneActionPerformed(evt);
+            }
+        });
+        jPanel2.add(telefone);
+        telefone.setBounds(520, 150, 400, 60);
+
         jPanel1.add(jPanel2);
         jPanel2.setBounds(110, 280, 1184, 600);
 
@@ -439,7 +460,15 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
     }//GEN-LAST:event_nomeCompletoActionPerformed
 
     private void ExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcluirActionPerformed
-        // TODO add your handling code here:
+        if(this.Cpf_busca.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "O CAMPO DE CPF É OBRIGATORIO");
+        }else{
+            String cpf = Cpf_busca.getText();
+            excluirCliente(cpf);
+        }
+        Excluir.setEnabled(false);
+        Salvar.setEnabled(false);
+
         
     }//GEN-LAST:event_ExcluirActionPerformed
 
@@ -448,7 +477,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "O CAMPO DE MATRICULA É OBRIGATORIO");
         }else{
             String cpf = Cpf_busca.getText();
-            buscarCliente(cpf,nomeCompleto,dt_nasc,cpf_texto,cep,rua,uf,cidade,bairro,numero_Casa);
+            buscarCliente(cpf,nomeCompleto,dt_nasc,cpf_texto,telefone,cep,rua,uf,cidade,bairro,numero_Casa);
         }        
     }//GEN-LAST:event_ProcurarActionPerformed
 
@@ -467,6 +496,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         nomeCompleto.setEditable(true);
         dt_nasc.setEditable(true);
         cpf_texto.setEditable(true);
+        telefone.setEditable(true);
         cep.setEditable(true);
         rua.setEditable(true);
         uf.setEditable(true);
@@ -477,6 +507,10 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         Salvar.setEnabled(true);
         
     }//GEN-LAST:event_EditarActionPerformed
+
+    private void telefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_telefoneActionPerformed
 
     /**
      * @param args the command line arguments
@@ -536,6 +570,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -544,8 +579,11 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
     private javax.swing.JTextField nomeCompleto;
     private javax.swing.JTextField numero_Casa;
     private javax.swing.JTextField rua;
+    private javax.swing.JTextField telefone;
     private javax.swing.JTextField uf;
     // End of variables declaration//GEN-END:variables
+
+   
 
     
 }

@@ -188,7 +188,8 @@ public class Classe_cliente {
                 String rua_cli = resultado.getString("rua");
                 String numero_cli = resultado.getString("numero");
                 String bairro_cli = resultado.getString("bairro");
-                modelo.addRow(new Object[]{id_cli,nome_cli,dt_nasc,cpf_cli,cep_cli,uf_cli,cidade_cli,rua_cli,numero_cli,bairro_cli} );
+                String tele_cli = resultado.getString("telefone");
+                modelo.addRow(new Object[]{id_cli,nome_cli,dt_nasc,cpf_cli,cep_cli,uf_cli,cidade_cli,rua_cli,numero_cli,bairro_cli,tele_cli} );
             }                        
         }catch(SQLException e){
             e.printStackTrace();
@@ -206,7 +207,7 @@ public class Classe_cliente {
         }                            
     }
 
-        public static void buscarCliente(String cpf,JTextField nomeCompleto,JTextField dt_nasc,JTextField cpf_texto,JTextField cep,JTextField rua,JTextField uf,JTextField cidade,JTextField bairro,JTextField numero_Casa){
+        public static void buscarCliente(String cpf,JTextField nomeCompleto,JTextField dt_nasc,JTextField telefone,JTextField cpf_texto,JTextField cep,JTextField rua,JTextField uf,JTextField cidade,JTextField bairro,JTextField numero_Casa){
         Connection conn = Conexao.getConexao();
         
         if(conn == null){
@@ -214,7 +215,7 @@ public class Classe_cliente {
             return;
         }
         
-        String sql = "SELECT nome,dt_nascimento,cpf,cep,uf,cidade,rua,numero,bairro FROM cliente WHERE cpf = ?";
+        String sql = "SELECT nome,dt_nascimento,cpf,telefone,cep,uf,cidade,rua,numero,bairro FROM cliente WHERE cpf = ?";
         
         try{
             PreparedStatement stmt = conn.prepareStatement(sql);
@@ -226,6 +227,7 @@ public class Classe_cliente {
                 nomeCompleto.setText(busca.getString("nome"));
                 dt_nasc.setText(busca.getString("dt_nascimento"));
                 cpf_texto.setText(busca.getString("cpf"));
+                telefone.setText(busca.getString("telefone"));
                 cep.setText(busca.getString("cep"));
                 rua.setText(busca.getString("uf"));
                 uf.setText(busca.getString("cidade"));
@@ -246,7 +248,36 @@ public class Classe_cliente {
         }
         
     }
-    
+    public static void excluirCliente(String cpf){
+        Connection conn = Conexao.getConexao();
+        
+        if(conn == null){
+            System.out.println("Falha ao conectar ao banco");
+            return;
+        }
+        
+        String sql = "DELETE FROM cliente WHERE cpf = ?";
+        
+        try{
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1,cpf);
+            
+            int linhasAfetadas =stmt.executeUpdate();
+            
+            if(linhasAfetadas > 0){
+                //sucesso
+                JOptionPane.showMessageDialog(null,"CLIENTE O APAGADO COM SUCESSO!!!");
+            }else{
+                //erro
+                JOptionPane.showMessageDialog(null,"CLIENTE NÃO ENCONTRADO!!!");
+                }
+            
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"FALHA AO EXCLUIR O CLIENTE!!!");
+        }                
+    }
     
     
     
