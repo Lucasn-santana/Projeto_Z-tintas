@@ -34,7 +34,7 @@ public class Classe_produto {
         /*this.tamanho = tamanho;*/
         this.codHex = codHex;
         this.marca = marca;
-        this.quantidade = quantidade;
+       /* this.quantidade = quantidade;*/
         this.preco = preco;
     }
         
@@ -101,7 +101,7 @@ public static void inserirProduto(Classe_produto produto){
             System.out.println("Falha ao conectar ao banco.");
             return;
         }
-        String sql = "INSERT INTO tb_produto (nome_produto , cod_hex , marca, quantidade , preco) VALUES (? , ? , ? ,? , ?)";
+        String sql = "INSERT INTO tb_produto (nome_produto , cod_hex , marca, preco) VALUES (? , ? , ? ,?  )";
         
         try{
             PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS); 
@@ -109,8 +109,8 @@ public static void inserirProduto(Classe_produto produto){
             stmt.setString(1, produto.getNomeProduto());
             stmt.setString(2, produto.getCodHex());
             stmt.setString(3, produto.getMarca());
-            stmt.setInt(4, produto.getQuantidade());
-            stmt.setDouble(5, produto.getPreco());
+            /*stmt.setInt(4, produto.getQuantidade());*/
+            stmt.setDouble(4, produto.getPreco());
             
             int linhaId = stmt.executeUpdate();
             //O metodo GeneratedKeys busca valores auto_increment do banco de dados e usamos ele para retornar o valor da propria consula
