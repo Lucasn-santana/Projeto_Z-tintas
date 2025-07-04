@@ -57,13 +57,14 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         voltar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabela_funcionario_java = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         LISTAR = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -75,24 +76,18 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel1.setText("Exibir Funcionários");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(25, 25, 440, 62);
-
         voltar.setBackground(new java.awt.Color(7, 25, 82));
         voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         voltar.setForeground(new java.awt.Color(235, 244, 246));
-        voltar.setText("VOLTAR");
-        voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltarr.png"))); // NOI18N
+        voltar.setBorder(null);
         voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 voltarActionPerformed(evt);
             }
         });
         jPanel1.add(voltar);
-        voltar.setBounds(1120, 50, 150, 60);
+        voltar.setBounds(25, 900, 75, 75);
 
         jPanel2.setBackground(new java.awt.Color(235, 244, 246));
         jPanel2.setMaximumSize(new java.awt.Dimension(1296, 649));
@@ -178,6 +173,16 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(72, 213, 1296, 649);
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(1265, 25, 150, 150);
+
+        jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(235, 244, 246));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/funcionarios titulo m.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(25, 25, 402, 95);
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
 
@@ -236,6 +241,7 @@ public class TELA_FUNCIONARIO_EXIBIR extends javax.swing.JFrame {
     private javax.swing.JButton LISTAR;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

@@ -31,6 +31,8 @@ public class TELA_ESTOQUE_MENU extends javax.swing.JFrame {
         BT_CONSULTAR_ESTOQUE = new javax.swing.JButton();
         BT_CADASTRAR_ITEM = new javax.swing.JButton();
         Voltar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1440, 1024));
@@ -43,28 +45,28 @@ public class TELA_ESTOQUE_MENU extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel1.setText("ESTOQUE");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estoque titulo m.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(25, 25, 300, 62);
+        jLabel1.setBounds(25, 25, 286, 88);
 
-        BT_CONSULTAR_ESTOQUE.setBackground(new java.awt.Color(235, 244, 246));
+        BT_CONSULTAR_ESTOQUE.setBackground(new java.awt.Color(7, 25, 82));
         BT_CONSULTAR_ESTOQUE.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         BT_CONSULTAR_ESTOQUE.setForeground(new java.awt.Color(7, 25, 82));
-        BT_CONSULTAR_ESTOQUE.setText("CONSULTAR ITEM");
-        BT_CONSULTAR_ESTOQUE.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BT_CONSULTAR_ESTOQUE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt_consultar_item m.png"))); // NOI18N
+        BT_CONSULTAR_ESTOQUE.setBorder(null);
         BT_CONSULTAR_ESTOQUE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BT_CONSULTAR_ESTOQUEActionPerformed(evt);
             }
         });
         jPanel1.add(BT_CONSULTAR_ESTOQUE);
-        BT_CONSULTAR_ESTOQUE.setBounds(115, 329, 700, 160);
+        BT_CONSULTAR_ESTOQUE.setBounds(115, 330, 700, 160);
 
-        BT_CADASTRAR_ITEM.setBackground(new java.awt.Color(235, 244, 246));
+        BT_CADASTRAR_ITEM.setBackground(new java.awt.Color(7, 25, 82));
         BT_CADASTRAR_ITEM.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         BT_CADASTRAR_ITEM.setForeground(new java.awt.Color(7, 25, 82));
-        BT_CADASTRAR_ITEM.setText("CADASTRAR NOVO ITEM");
-        BT_CADASTRAR_ITEM.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BT_CADASTRAR_ITEM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cadastrar novo item m.png"))); // NOI18N
+        BT_CADASTRAR_ITEM.setBorder(null);
         BT_CADASTRAR_ITEM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BT_CADASTRAR_ITEMActionPerformed(evt);
@@ -76,15 +78,23 @@ public class TELA_ESTOQUE_MENU extends javax.swing.JFrame {
         Voltar.setBackground(new java.awt.Color(7, 25, 82));
         Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         Voltar.setForeground(new java.awt.Color(235, 244, 246));
-        Voltar.setText("VOLTAR");
-        Voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltarr.png"))); // NOI18N
+        Voltar.setBorder(null);
         Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VoltarActionPerformed(evt);
             }
         });
         jPanel1.add(Voltar);
-        Voltar.setBounds(850, 590, 150, 60);
+        Voltar.setBounds(31, 900, 75, 75);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(1265, 25, 150, 150);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG mulherLata estoque m.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(830, 262, 500, 500);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
@@ -154,6 +164,8 @@ public class TELA_ESTOQUE_MENU extends javax.swing.JFrame {
     private javax.swing.JButton BT_CONSULTAR_ESTOQUE;
     private javax.swing.JButton Voltar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

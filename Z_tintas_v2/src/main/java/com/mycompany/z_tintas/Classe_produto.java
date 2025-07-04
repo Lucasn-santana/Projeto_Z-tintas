@@ -25,7 +25,7 @@ public class Classe_produto {
   private String tamanho;
   private String codHex;
   private String marca;
-  private int quantidade;
+  /*private int quantidade;*/
   private double preco;
 
     public Classe_produto( String nomeProduto, /*String tamanho,*/ String codHex, String marca/*, int quantidade*/, double preco) {
@@ -78,13 +78,13 @@ public class Classe_produto {
         this.marca = marca;
     }
 
-    public int getQuantidade() {
+   /* public int getQuantidade() {
         return quantidade;
     }
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
-    }
+    }*/
 
     public double getPreco() {
         return preco;
@@ -118,13 +118,15 @@ public static void inserirProduto(Classe_produto produto){
                 ResultSet generatedKeys = stmt.getGeneratedKeys();
                     if(generatedKeys.next()){
                         int id = generatedKeys.getInt(1);// isso aqui vai garantir que o codigo retorne a primeira coluna
-                        JOptionPane.showMessageDialog(null, " CADASTRO DE FUNCIONÁRIO REALIZADO!\nO ID CORRESPONDENTE AO PRODUTO: " + id);
+                        JOptionPane.showMessageDialog(null, " CADASTRO DO PRODUTO REALIZADO!\nO ID CORRESPONDENTE AO PRODUTO: " + id);
                     }
             }else{
                 JOptionPane.showMessageDialog(null, "FALHA AO REALIZAR O CADASTRO ");
             }                                                         
         }catch(SQLException e){
             e.printStackTrace();
+        }catch(NumberFormatException z){
+            JOptionPane.showMessageDialog(null, "O PREÇO DEVE USAR [.]");
         }
         
     }
@@ -189,12 +191,12 @@ public static void inserirProduto(Classe_produto produto){
            if(linhasApagadas > 0){
                 JOptionPane.showMessageDialog(null,"ALTERAÇÕES FEITAS COM SUCESSO!!!");
            }else{
-                JOptionPane.showMessageDialog(null,"PRODUTO NÃO ENCONTRADO BY:alteraçoes");
+                JOptionPane.showMessageDialog(null,"PRODUTO NÃO ENCONTRADO BY:alteraçoes PRODUTO");
            }
             
         }catch(SQLException e){
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null,"FALHA AO ALTERAR DADOS DO FUNCIONARIO!!!");
+            JOptionPane.showMessageDialog(null,"FALHA AO ALTERAR DADOS DO PRODUTO!!!");
 
         }
         

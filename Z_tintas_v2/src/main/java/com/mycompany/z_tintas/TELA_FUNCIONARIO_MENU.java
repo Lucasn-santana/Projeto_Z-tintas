@@ -32,6 +32,8 @@ public class TELA_FUNCIONARIO_MENU extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -44,28 +46,28 @@ public class TELA_FUNCIONARIO_MENU extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel1.setText("Funcionários");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/funcionarios titulo m.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(25, 25, 300, 62);
+        jLabel1.setBounds(25, 25, 402, 95);
 
         jButton2.setBackground(new java.awt.Color(7, 25, 82));
         jButton2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(235, 244, 246));
-        jButton2.setText("VOLTAR");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltarr.png"))); // NOI18N
+        jButton2.setBorder(null);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(850, 590, 150, 60);
+        jButton2.setBounds(25, 900, 75, 75);
 
-        jButton3.setBackground(new java.awt.Color(235, 244, 246));
+        jButton3.setBackground(new java.awt.Color(7, 25, 82));
         jButton3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         jButton3.setForeground(new java.awt.Color(7, 25, 82));
-        jButton3.setText("CADASTRO DE FUNCIONÁRIO");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt cadastro de funcionario m.png"))); // NOI18N
+        jButton3.setBorder(null);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -74,11 +76,11 @@ public class TELA_FUNCIONARIO_MENU extends javax.swing.JFrame {
         jPanel1.add(jButton3);
         jButton3.setBounds(97, 222, 700, 160);
 
-        jButton4.setBackground(new java.awt.Color(235, 244, 246));
+        jButton4.setBackground(new java.awt.Color(7, 25, 82));
         jButton4.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         jButton4.setForeground(new java.awt.Color(7, 25, 82));
-        jButton4.setText("CONSULTA DE FUNCIONÁRIO");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt consulta de funcionario m.png"))); // NOI18N
+        jButton4.setBorder(null);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -87,11 +89,11 @@ public class TELA_FUNCIONARIO_MENU extends javax.swing.JFrame {
         jPanel1.add(jButton4);
         jButton4.setBounds(97, 432, 700, 160);
 
-        jButton5.setBackground(new java.awt.Color(235, 244, 246));
+        jButton5.setBackground(new java.awt.Color(7, 25, 82));
         jButton5.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         jButton5.setForeground(new java.awt.Color(7, 25, 82));
-        jButton5.setText("TODOS FUNCIONÁRIO");
-        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt tds funcionarios m.png"))); // NOI18N
+        jButton5.setBorder(null);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -99,6 +101,14 @@ public class TELA_FUNCIONARIO_MENU extends javax.swing.JFrame {
         });
         jPanel1.add(jButton5);
         jButton5.setBounds(97, 642, 700, 160);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(1265, 25, 150, 150);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mulher pintando funcionarios.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(847, 254, 496, 496);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,6 +195,8 @@ public class TELA_FUNCIONARIO_MENU extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

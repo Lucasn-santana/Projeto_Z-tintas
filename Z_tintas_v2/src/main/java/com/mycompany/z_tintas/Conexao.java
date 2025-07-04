@@ -16,7 +16,7 @@ public class Conexao {
     public static Connection getConexao() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost:3307/Z_tintas", "root", "");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/Z_tintas", "root", "");
         } catch (Exception e) {
             e.printStackTrace();
             return null;
