@@ -49,7 +49,11 @@ create table cliente(
 );
     
 select * from cliente;
-INSERT INTO tb_funcionario (nome,cargo,senha) VALUES ("MATHEUS TARGA","DESENVOLVEDOR","123");
+select * FROM tb_funcionario;
+select * from tb_produto;
+
+INSERT INTO tb_funcionario(nome,cargo,senha)VALUES("MATHEUS","ADM","123");
+
 
 
 

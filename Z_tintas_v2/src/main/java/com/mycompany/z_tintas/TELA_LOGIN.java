@@ -111,7 +111,7 @@ public class TELA_LOGIN extends javax.swing.JFrame {
         ENTRAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         ENTRAR.setForeground(new java.awt.Color(255, 255, 255));
         ENTRAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BotãoEntrar.png"))); // NOI18N
-        ENTRAR.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        ENTRAR.setBorder(null);
         ENTRAR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ENTRARActionPerformed(evt);
