@@ -485,7 +485,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "O CAMPO DE MATRICULA É OBRIGATORIO");
         }else{
             String cpf = Cpf_busca.getText();
-            buscarCliente(cpf,nomeCompleto,dt_nasc,cpf_texto,telefone,cep,rua,uf,cidade,bairro,numero_Casa);
+            buscarCliente(cpf,nomeCompleto,dt_nasc,cpf_texto,telefone,cep,uf,cidade,rua,numero_Casa,bairro);
         }        
     }//GEN-LAST:event_ProcurarActionPerformed
 

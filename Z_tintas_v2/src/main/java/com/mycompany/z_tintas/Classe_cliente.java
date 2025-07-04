@@ -31,7 +31,7 @@ public class Classe_cliente {
     private String numero;
     private String bairro;
 
-    public Classe_cliente(String nome, String dt_nascimento, String cpf,String telefone, String cep, String uf, String cidade, String rua, String numero, String bairro) {
+    public Classe_cliente(String nome, String dt_nascimento, String cpf,String telefone,String cep, String uf, String cidade, String rua, String numero, String bairro) {
         this.nome = nome;
         this.dt_nascimento = dt_nascimento;
         this.cpf = cpf;
@@ -183,12 +183,14 @@ public class Classe_cliente {
                 String dt_nasc = resultado.getString("dt_nascimento");
                 String cpf_cli = resultado.getString("cpf");
                 String cep_cli = resultado.getString("cep");
+                String tele_cli = resultado.getString("telefone");
                 String uf_cli = resultado.getString("uf");
                 String cidade_cli = resultado.getString("cidade");
                 String rua_cli = resultado.getString("rua");
                 String numero_cli = resultado.getString("numero");
                 String bairro_cli = resultado.getString("bairro");
-                String tele_cli = resultado.getString("telefone");
+                
+                
                 modelo.addRow(new Object[]{id_cli,nome_cli,dt_nasc,cpf_cli,cep_cli,uf_cli,cidade_cli,rua_cli,numero_cli,bairro_cli,tele_cli} );
             }                        
         }catch(SQLException e){
@@ -229,11 +231,12 @@ public class Classe_cliente {
                 cpf_texto.setText(busca.getString("cpf"));
                 telefone.setText(busca.getString("telefone"));
                 cep.setText(busca.getString("cep"));
-                rua.setText(busca.getString("uf"));
-                uf.setText(busca.getString("cidade"));
-                cidade.setText(busca.getString("rua"));
-                bairro.setText(busca.getString("numero"));
-                numero_Casa.setText(busca.getString("bairro"));
+                uf.setText(busca.getString("uf"));
+                cidade.setText(busca.getString("cidade"));
+                rua.setText(busca.getString("rua"));
+                numero_Casa.setText(busca.getString("numero"));                
+                bairro.setText(busca.getString("bairro"));
+                
             }
             else{
                 JOptionPane.showMessageDialog(null, "FUNCIONARIO NÃO ENCONTRADO");

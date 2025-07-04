@@ -180,7 +180,7 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Voltar);
-        Voltar.setBounds(25, 900, 90, 83);
+        Voltar.setBounds(25, 900, 90, 54);
 
         jLabel2.setBackground(new java.awt.Color(7, 25, 82));
         jLabel2.setForeground(new java.awt.Color(7, 25, 82));

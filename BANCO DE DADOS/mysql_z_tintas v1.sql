@@ -55,9 +55,6 @@ select * from tb_produto;
 INSERT INTO tb_funcionario(nome,cargo,senha)VALUES("MATHEUS","ADM","123");
 
 
-insert into tb_funcionario(nome,cargo,senha) values ("fer","adm","123");
-
-
 
 
 
