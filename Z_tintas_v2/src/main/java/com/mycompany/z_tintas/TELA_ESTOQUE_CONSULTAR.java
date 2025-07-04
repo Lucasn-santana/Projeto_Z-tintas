@@ -96,6 +96,7 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
         ExcluirProduto = new javax.swing.JButton();
         SalvarProduto = new javax.swing.JButton();
         BT_VOLTAR_ESTOQUE_CONSULTA1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -197,7 +198,7 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
             }
         });
         jPanel2.add(codHex);
-        codHex.setBounds(750, 60, 160, 60);
+        codHex.setBounds(750, 55, 160, 60);
 
         BuscarProduto.setBackground(new java.awt.Color(7, 25, 82));
         BuscarProduto.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
@@ -266,7 +267,7 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
             }
         });
         jPanel2.add(PrecoProduto);
-        PrecoProduto.setBounds(950, 60, 160, 60);
+        PrecoProduto.setBounds(950, 55, 160, 60);
 
         jLabel17.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(7, 25, 82));
@@ -293,61 +294,68 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel1.setText("CONSULTAR ESTOQUE");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/consultar estoque m.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(25, 25, 520, 62);
+        jLabel1.setBounds(25, 25, 296, 77);
 
         EditarProduto.setBackground(new java.awt.Color(235, 244, 246));
         EditarProduto.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         EditarProduto.setForeground(new java.awt.Color(7, 25, 82));
         EditarProduto.setText("EDITAR");
         EditarProduto.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        EditarProduto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         EditarProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EditarProdutoActionPerformed(evt);
             }
         });
         jPanel1.add(EditarProduto);
-        EditarProduto.setBounds(500, 900, 150, 60);
+        EditarProduto.setBounds(440, 910, 150, 60);
 
         ExcluirProduto.setBackground(new java.awt.Color(235, 244, 246));
         ExcluirProduto.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         ExcluirProduto.setForeground(new java.awt.Color(7, 25, 82));
         ExcluirProduto.setText("EXCLUIR");
         ExcluirProduto.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        ExcluirProduto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         ExcluirProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ExcluirProdutoActionPerformed(evt);
             }
         });
         jPanel1.add(ExcluirProduto);
-        ExcluirProduto.setBounds(670, 900, 150, 60);
+        ExcluirProduto.setBounds(610, 910, 150, 60);
 
         SalvarProduto.setBackground(new java.awt.Color(235, 244, 246));
         SalvarProduto.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         SalvarProduto.setForeground(new java.awt.Color(7, 25, 82));
         SalvarProduto.setText("SALVAR");
         SalvarProduto.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        SalvarProduto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         SalvarProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalvarProdutoActionPerformed(evt);
             }
         });
         jPanel1.add(SalvarProduto);
-        SalvarProduto.setBounds(840, 900, 150, 60);
+        SalvarProduto.setBounds(780, 910, 150, 60);
 
         BT_VOLTAR_ESTOQUE_CONSULTA1.setBackground(new java.awt.Color(7, 25, 82));
         BT_VOLTAR_ESTOQUE_CONSULTA1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         BT_VOLTAR_ESTOQUE_CONSULTA1.setForeground(new java.awt.Color(235, 244, 246));
-        BT_VOLTAR_ESTOQUE_CONSULTA1.setText("VOLTAR");
-        BT_VOLTAR_ESTOQUE_CONSULTA1.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        BT_VOLTAR_ESTOQUE_CONSULTA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltarr.png"))); // NOI18N
+        BT_VOLTAR_ESTOQUE_CONSULTA1.setBorder(null);
         BT_VOLTAR_ESTOQUE_CONSULTA1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BT_VOLTAR_ESTOQUE_CONSULTA1ActionPerformed(evt);
             }
         });
         jPanel1.add(BT_VOLTAR_ESTOQUE_CONSULTA1);
-        BT_VOLTAR_ESTOQUE_CONSULTA1.setBounds(25, 900, 150, 60);
+        BT_VOLTAR_ESTOQUE_CONSULTA1.setBounds(25, 900, 75, 75);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(1265, 25, 150, 150);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
@@ -484,6 +492,7 @@ public class TELA_ESTOQUE_CONSULTAR extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

@@ -50,6 +50,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
         CodHex = new javax.swing.JTextField();
         Voltar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -74,7 +75,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
         jLabel16.setText("PREÇO R$:");
         jLabel16.setToolTipText("");
         jPanel2.add(jLabel16);
-        jLabel16.setBounds(30, 320, 140, 30);
+        jLabel16.setBounds(320, 150, 140, 30);
 
         jLabel15.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(7, 25, 82));
@@ -102,7 +103,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
             }
         });
         jPanel2.add(Preco);
-        Preco.setBounds(30, 360, 160, 60);
+        Preco.setBounds(320, 190, 200, 60);
 
         NomeProduto.setBackground(new java.awt.Color(7, 25, 82));
         NomeProduto.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
@@ -143,7 +144,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
             }
         });
         jPanel2.add(Cadastrar_produto);
-        Cadastrar_produto.setBounds(400, 490, 310, 50);
+        Cadastrar_produto.setBounds(100, 330, 310, 50);
         jPanel2.add(Escolher_cor);
         Escolher_cor.setBounds(530, 140, 590, 320);
 
@@ -152,7 +153,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
         jLabel18.setText("CÓDIGO HEX");
         jLabel18.setToolTipText("");
         jPanel2.add(jLabel18);
-        jLabel18.setBounds(40, 190, 160, 30);
+        jLabel18.setBounds(30, 150, 160, 30);
 
         CodHex.setBackground(new java.awt.Color(7, 25, 82));
         CodHex.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
@@ -166,7 +167,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
             }
         });
         jPanel2.add(CodHex);
-        CodHex.setBounds(40, 230, 160, 60);
+        CodHex.setBounds(30, 190, 250, 60);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(151, 151, 1138, 593);
@@ -174,21 +175,25 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
         Voltar.setBackground(new java.awt.Color(7, 25, 82));
         Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         Voltar.setForeground(new java.awt.Color(235, 244, 246));
-        Voltar.setText("VOLTAR");
-        Voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltarr.png"))); // NOI18N
+        Voltar.setBorder(null);
         Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VoltarActionPerformed(evt);
             }
         });
         jPanel1.add(Voltar);
-        Voltar.setBounds(25, 900, 150, 60);
+        Voltar.setBounds(25, 900, 75, 75);
 
         jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel1.setText("CADASTRAR PRODUTO");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Info_cadastrar_item estoque m.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(25, 25, 540, 62);
+        jLabel1.setBounds(31, 26, 543, 77);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(1265, 25, 150, 150);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
@@ -210,8 +215,10 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
 
     private void Cadastrar_produtoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cadastrar_produtoActionPerformed
         Classe_produto produto;
+        String precoTexto = Preco.getText().replace(",", ".");
+        double preco = Double.parseDouble(precoTexto);
         produto = new Classe_produto(NomeProduto.getText(),CodHex.getText(),
-        MarcaProduto.getText()/*,Integer.parseInt(QuantidadeProduto.getText())*/,Double.parseDouble(Preco.getText()));
+        MarcaProduto.getText()/*,Integer.parseInt(QuantidadeProduto.getText())*/,preco/*Double.parseDouble(Preco.getText())*/);
         boolean x1 = false;
         /*boolean x2 = false;*/
         /*boolean x3 = false;*/
@@ -275,11 +282,14 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "O CAMPO PRECO É OBRIGATÓRIO!!!");
             }else{
                 x6 = true;
-            }
-        }catch(Exception e){
+            }           
+        }catch(NumberFormatException z){
+            JOptionPane.showMessageDialog(null, "Falha na Inserção do PRECO!!!");
+        }
+        catch(Exception e){
             JOptionPane.showMessageDialog(null, "Falha na Inserção do PRECO!!!");
             e.printStackTrace();
-        }        
+        }       
         if(x1 /*&& x2 && x3*/ && x4 && x5 && x6){
             inserirProduto(produto);
         }
@@ -345,6 +355,7 @@ public class TELA_ESTOQUE_CADASTRO extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

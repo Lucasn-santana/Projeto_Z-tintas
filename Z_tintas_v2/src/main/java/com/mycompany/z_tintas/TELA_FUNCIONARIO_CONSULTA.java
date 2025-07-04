@@ -51,6 +51,7 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
         Excluir = new javax.swing.JButton();
         Salvar = new javax.swing.JButton();
         voltar1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -154,9 +155,9 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel2.setText("Consultar Funcionário");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/consultar cadastro funcionario m.png"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(25, 25, 500, 62);
+        jLabel2.setBounds(25, 25, 589, 89);
 
         Editar.setBackground(new java.awt.Color(235, 244, 246));
         Editar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
@@ -200,15 +201,19 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
         voltar1.setBackground(new java.awt.Color(7, 25, 82));
         voltar1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         voltar1.setForeground(new java.awt.Color(235, 244, 246));
-        voltar1.setText("VOLTAR");
-        voltar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        voltar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltarr.png"))); // NOI18N
+        voltar1.setBorder(null);
         voltar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 voltar1ActionPerformed(evt);
             }
         });
         jPanel1.add(voltar1);
-        voltar1.setBounds(1120, 50, 150, 60);
+        voltar1.setBounds(25, 900, 75, 75);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(1265, 25, 150, 150);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
@@ -323,6 +328,7 @@ public class TELA_FUNCIONARIO_CONSULTA extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

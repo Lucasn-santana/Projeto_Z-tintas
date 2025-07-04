@@ -42,6 +42,7 @@ public class TELA_FUNCIONARIO_CADASTRO extends javax.swing.JFrame {
         SenhaFuncionario = new javax.swing.JTextField();
         ConfSenhaFuncionario = new javax.swing.JTextField();
         CadastroFuncionario = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1440, 1024));
@@ -55,22 +56,22 @@ public class TELA_FUNCIONARIO_CADASTRO extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel1.setText("Cadastrar Funcionário");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo cadastrar novo funcionario.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(25, 25, 510, 62);
+        jLabel1.setBounds(25, 25, 721, 77);
 
         voltar.setBackground(new java.awt.Color(7, 25, 82));
         voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         voltar.setForeground(new java.awt.Color(235, 244, 246));
-        voltar.setText("VOLTAR");
-        voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltarr.png"))); // NOI18N
+        voltar.setBorder(null);
         voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 voltarActionPerformed(evt);
             }
         });
         jPanel1.add(voltar);
-        voltar.setBounds(1120, 50, 150, 60);
+        voltar.setBounds(25, 900, 75, 75);
 
         jPanel2.setBackground(new java.awt.Color(235, 244, 246));
         jPanel2.setMaximumSize(new java.awt.Dimension(1138, 593));
@@ -176,6 +177,10 @@ public class TELA_FUNCIONARIO_CADASTRO extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(151, 151, 1138, 593);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(1265, 25, 150, 150);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
@@ -303,6 +308,7 @@ public class TELA_FUNCIONARIO_CADASTRO extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton voltar;
