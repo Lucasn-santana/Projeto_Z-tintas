@@ -68,10 +68,6 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         nomeCompleto = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
-        Editar = new javax.swing.JButton();
-        Excluir = new javax.swing.JButton();
-        Salvar = new javax.swing.JButton();
-        Voltar = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         telefone = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
@@ -79,6 +75,11 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         Procurar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        Voltar = new javax.swing.JButton();
+        Editar = new javax.swing.JButton();
+        Excluir = new javax.swing.JButton();
+        Salvar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1440, 1024));
@@ -295,58 +296,6 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
         jPanel2.add(jLabel19);
         jLabel19.setBounds(40, 20, 230, 30);
 
-        Editar.setBackground(new java.awt.Color(235, 244, 246));
-        Editar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        Editar.setForeground(new java.awt.Color(7, 25, 82));
-        Editar.setText("EDITAR");
-        Editar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Editar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EditarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(Editar);
-        Editar.setBounds(540, 250, 150, 60);
-
-        Excluir.setBackground(new java.awt.Color(235, 244, 246));
-        Excluir.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        Excluir.setForeground(new java.awt.Color(7, 25, 82));
-        Excluir.setText("EXCLUIR");
-        Excluir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Excluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExcluirActionPerformed(evt);
-            }
-        });
-        jPanel2.add(Excluir);
-        Excluir.setBounds(710, 250, 150, 60);
-
-        Salvar.setBackground(new java.awt.Color(235, 244, 246));
-        Salvar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        Salvar.setForeground(new java.awt.Color(7, 25, 82));
-        Salvar.setText("SALVAR");
-        Salvar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Salvar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalvarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(Salvar);
-        Salvar.setBounds(880, 250, 150, 60);
-
-        Voltar.setBackground(new java.awt.Color(7, 25, 82));
-        Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        Voltar.setForeground(new java.awt.Color(235, 244, 246));
-        Voltar.setText("VOLTAR");
-        Voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Voltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VoltarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(Voltar);
-        Voltar.setBounds(370, 250, 150, 60);
-
         jLabel20.setFont(new java.awt.Font("Microsoft Tai Le", 1, 25)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(7, 25, 82));
         jLabel20.setText("TELEFONE");
@@ -410,9 +359,67 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel1.setText("CONSULTAR CADASTRO");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Identificador consultar cadastro f.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(25, 25, 560, 62);
+        jLabel1.setBounds(25, 25, 560, 88);
+
+        jLabel2.setBackground(new java.awt.Color(7, 25, 82));
+        jLabel2.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(1265, 25, 150, 150);
+
+        Voltar.setBackground(new java.awt.Color(7, 25, 82));
+        Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(7, 25, 82));
+        Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltarr.png"))); // NOI18N
+        Voltar.setBorder(null);
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Voltar);
+        Voltar.setBounds(25, 900, 90, 90);
+
+        Editar.setBackground(new java.awt.Color(235, 244, 246));
+        Editar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Editar.setForeground(new java.awt.Color(7, 25, 82));
+        Editar.setText("EDITAR");
+        Editar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Editar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Editar);
+        Editar.setBounds(480, 900, 150, 60);
+
+        Excluir.setBackground(new java.awt.Color(235, 244, 246));
+        Excluir.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Excluir.setForeground(new java.awt.Color(7, 25, 82));
+        Excluir.setText("EXCLUIR");
+        Excluir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Excluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExcluirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Excluir);
+        Excluir.setBounds(650, 900, 150, 60);
+
+        Salvar.setBackground(new java.awt.Color(235, 244, 246));
+        Salvar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
+        Salvar.setForeground(new java.awt.Color(7, 25, 82));
+        Salvar.setText("SALVAR");
+        Salvar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Salvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalvarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Salvar);
+        Salvar.setBounds(820, 900, 150, 60);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1440, 1024);
@@ -578,6 +585,7 @@ public class TELA_CLIENTE_CONSULTAR extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;

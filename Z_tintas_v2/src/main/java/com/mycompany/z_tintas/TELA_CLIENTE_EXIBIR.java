@@ -75,6 +75,7 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
         LISTAR_cliente = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Voltar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -144,7 +145,7 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tabela_cliente);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(60, 100, 1160, 402);
+        jScrollPane1.setBounds(70, 100, 1160, 402);
 
         LISTAR_cliente.setBackground(new java.awt.Color(7, 25, 82));
         LISTAR_cliente.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
@@ -157,29 +158,35 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
             }
         });
         jPanel2.add(LISTAR_cliente);
-        LISTAR_cliente.setBounds(680, 20, 160, 60);
+        LISTAR_cliente.setBounds(570, 520, 160, 60);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(70, 287, 1300, 602);
 
         jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel1.setText("EXIBIR CADASTROS");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo_exibir f.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(60, 20, 460, 62);
+        jLabel1.setBounds(25, 25, 460, 88);
 
         Voltar.setBackground(new java.awt.Color(7, 25, 82));
         Voltar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
-        Voltar.setForeground(new java.awt.Color(235, 244, 246));
-        Voltar.setText("VOLTAR");
-        Voltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Voltar.setForeground(new java.awt.Color(7, 25, 82));
+        Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltarr.png"))); // NOI18N
+        Voltar.setBorder(null);
         Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VoltarActionPerformed(evt);
             }
         });
         jPanel1.add(Voltar);
-        Voltar.setBounds(25, 900, 150, 60);
+        Voltar.setBounds(25, 900, 90, 83);
+
+        jLabel2.setBackground(new java.awt.Color(7, 25, 82));
+        jLabel2.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(1265, 25, 150, 150);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1430, 1024);
@@ -239,6 +246,7 @@ public class TELA_CLIENTE_EXIBIR extends javax.swing.JFrame {
     private javax.swing.JButton Voltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

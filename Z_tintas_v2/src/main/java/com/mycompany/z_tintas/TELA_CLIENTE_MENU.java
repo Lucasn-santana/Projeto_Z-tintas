@@ -32,6 +32,7 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
         EXIBIR_CADASTROS = new javax.swing.JButton();
         BT_VOLTAR = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -43,63 +44,69 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1440, 1024));
         jPanel1.setLayout(null);
 
-        CONSULTAR_CADASTROS.setBackground(new java.awt.Color(235, 244, 246));
+        CONSULTAR_CADASTROS.setBackground(new java.awt.Color(7, 25, 82));
         CONSULTAR_CADASTROS.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         CONSULTAR_CADASTROS.setForeground(new java.awt.Color(7, 25, 82));
-        CONSULTAR_CADASTROS.setText("CONSULTAR CADASTRO");
-        CONSULTAR_CADASTROS.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CONSULTAR_CADASTROS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt_exibirCadastro f.png"))); // NOI18N
+        CONSULTAR_CADASTROS.setBorder(null);
         CONSULTAR_CADASTROS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CONSULTAR_CADASTROSActionPerformed(evt);
             }
         });
         jPanel1.add(CONSULTAR_CADASTROS);
-        CONSULTAR_CADASTROS.setBounds(67, 637, 700, 160);
+        CONSULTAR_CADASTROS.setBounds(67, 637, 700, 180);
 
-        CADASTRO_CLIENTE.setBackground(new java.awt.Color(235, 244, 246));
+        CADASTRO_CLIENTE.setBackground(new java.awt.Color(7, 25, 82));
         CADASTRO_CLIENTE.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         CADASTRO_CLIENTE.setForeground(new java.awt.Color(7, 25, 82));
-        CADASTRO_CLIENTE.setText("CADASTRAR NOVO CLIENTE");
-        CADASTRO_CLIENTE.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CADASTRO_CLIENTE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt_NovoCliente f.png"))); // NOI18N
+        CADASTRO_CLIENTE.setBorder(null);
         CADASTRO_CLIENTE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CADASTRO_CLIENTEActionPerformed(evt);
             }
         });
         jPanel1.add(CADASTRO_CLIENTE);
-        CADASTRO_CLIENTE.setBounds(67, 217, 700, 160);
+        CADASTRO_CLIENTE.setBounds(67, 217, 700, 180);
 
-        EXIBIR_CADASTROS.setBackground(new java.awt.Color(235, 244, 246));
+        EXIBIR_CADASTROS.setBackground(new java.awt.Color(7, 25, 82));
         EXIBIR_CADASTROS.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         EXIBIR_CADASTROS.setForeground(new java.awt.Color(7, 25, 82));
-        EXIBIR_CADASTROS.setText("EXIBIR CADASTROS");
-        EXIBIR_CADASTROS.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        EXIBIR_CADASTROS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt_ConsulCadastro f.png"))); // NOI18N
+        EXIBIR_CADASTROS.setBorder(null);
         EXIBIR_CADASTROS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EXIBIR_CADASTROSActionPerformed(evt);
             }
         });
         jPanel1.add(EXIBIR_CADASTROS);
-        EXIBIR_CADASTROS.setBounds(67, 427, 700, 160);
+        EXIBIR_CADASTROS.setBounds(67, 427, 700, 180);
 
         BT_VOLTAR.setBackground(new java.awt.Color(7, 25, 82));
         BT_VOLTAR.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         BT_VOLTAR.setForeground(new java.awt.Color(235, 244, 246));
-        BT_VOLTAR.setText("VOLTAR");
-        BT_VOLTAR.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BT_VOLTAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltarr.png"))); // NOI18N
+        BT_VOLTAR.setBorder(null);
         BT_VOLTAR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BT_VOLTARActionPerformed(evt);
             }
         });
         jPanel1.add(BT_VOLTAR);
-        BT_VOLTAR.setBounds(800, 460, 150, 60);
+        BT_VOLTAR.setBounds(25, 900, 80, 90);
 
         jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(235, 244, 246));
-        jLabel1.setText("CLIENTES");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InfoClientes f.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(25, 25, 300, 62);
+        jLabel1.setBounds(25, 25, 300, 80);
+
+        jLabel2.setBackground(new java.awt.Color(7, 25, 82));
+        jLabel2.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(1265, 25, 150, 150);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -189,6 +196,7 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
     private javax.swing.JButton CONSULTAR_CADASTROS;
     private javax.swing.JButton EXIBIR_CADASTROS;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

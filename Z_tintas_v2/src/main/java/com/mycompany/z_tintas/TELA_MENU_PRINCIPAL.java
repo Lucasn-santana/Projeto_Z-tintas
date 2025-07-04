@@ -33,6 +33,8 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
         bt_funcionario = new javax.swing.JButton();
         bt_vendas = new javax.swing.JButton();
         Excluir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,37 +43,37 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
         jPanel2.setMinimumSize(new java.awt.Dimension(1440, 1024));
         jPanel2.setLayout(null);
 
-        bt_cliente.setBackground(new java.awt.Color(235, 244, 246));
+        bt_cliente.setBackground(new java.awt.Color(7, 25, 82));
         bt_cliente.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         bt_cliente.setForeground(new java.awt.Color(7, 25, 82));
-        bt_cliente.setText("CLIENTE");
-        bt_cliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bt_cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botãoCliente f.png"))); // NOI18N
+        bt_cliente.setBorder(null);
         bt_cliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_clienteActionPerformed(evt);
             }
         });
         jPanel2.add(bt_cliente);
-        bt_cliente.setBounds(70, 271, 400, 210);
+        bt_cliente.setBounds(70, 277, 400, 220);
 
-        bt_catalogo.setBackground(new java.awt.Color(235, 244, 246));
+        bt_catalogo.setBackground(new java.awt.Color(7, 25, 82));
         bt_catalogo.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         bt_catalogo.setForeground(new java.awt.Color(7, 25, 82));
-        bt_catalogo.setText("CÁTALOGO");
-        bt_catalogo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bt_catalogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botãoCatálogo f.png"))); // NOI18N
+        bt_catalogo.setBorder(null);
         bt_catalogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_catalogoActionPerformed(evt);
             }
         });
         jPanel2.add(bt_catalogo);
-        bt_catalogo.setBounds(520, 271, 400, 210);
+        bt_catalogo.setBounds(520, 277, 400, 220);
 
-        bt_estoque.setBackground(new java.awt.Color(235, 244, 246));
+        bt_estoque.setBackground(new java.awt.Color(7, 25, 82));
         bt_estoque.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         bt_estoque.setForeground(new java.awt.Color(7, 25, 82));
-        bt_estoque.setText("ESTOQUE");
-        bt_estoque.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bt_estoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botãoEstoque f.png"))); // NOI18N
+        bt_estoque.setBorder(null);
         bt_estoque.setPreferredSize(new java.awt.Dimension(400, 210));
         bt_estoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,51 +81,70 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
             }
         });
         jPanel2.add(bt_estoque);
-        bt_estoque.setBounds(970, 271, 400, 210);
+        bt_estoque.setBounds(970, 277, 400, 220);
 
-        bt_funcionario.setBackground(new java.awt.Color(235, 244, 246));
+        bt_funcionario.setBackground(new java.awt.Color(7, 25, 82));
         bt_funcionario.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         bt_funcionario.setForeground(new java.awt.Color(7, 25, 82));
-        bt_funcionario.setText("FUNCIONÁRIO");
-        bt_funcionario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bt_funcionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botãoFuncionário f.png"))); // NOI18N
+        bt_funcionario.setBorder(null);
         bt_funcionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_funcionarioActionPerformed(evt);
             }
         });
         jPanel2.add(bt_funcionario);
-        bt_funcionario.setBounds(295, 531, 400, 210);
+        bt_funcionario.setBounds(295, 537, 400, 220);
 
-        bt_vendas.setBackground(new java.awt.Color(235, 244, 246));
+        bt_vendas.setBackground(new java.awt.Color(7, 25, 82));
         bt_vendas.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         bt_vendas.setForeground(new java.awt.Color(7, 25, 82));
-        bt_vendas.setText("VENDAS");
-        bt_vendas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bt_vendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botãoVendas f.png"))); // NOI18N
+        bt_vendas.setToolTipText("");
+        bt_vendas.setBorder(null);
         jPanel2.add(bt_vendas);
-        bt_vendas.setBounds(745, 531, 410, 210);
+        bt_vendas.setBounds(745, 537, 410, 220);
 
-        Excluir.setBackground(new java.awt.Color(235, 244, 246));
+        Excluir.setBackground(new java.awt.Color(7, 25, 82));
         Excluir.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         Excluir.setForeground(new java.awt.Color(7, 25, 82));
-        Excluir.setText("SAIR");
-        Excluir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botãoSair f.png"))); // NOI18N
+        Excluir.setBorder(null);
         Excluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ExcluirActionPerformed(evt);
             }
         });
         jPanel2.add(Excluir);
-        Excluir.setBounds(360, 180, 150, 60);
+        Excluir.setBounds(25, 900, 90, 90);
+
+        jLabel1.setBackground(new java.awt.Color(7, 25, 82));
+        jLabel1.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botãoMenu f.png"))); // NOI18N
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(25, 25, 230, 80);
+
+        jLabel2.setBackground(new java.awt.Color(7, 25, 82));
+        jLabel2.setForeground(new java.awt.Color(7, 25, 82));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(1265, 25, 150, 150);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -201,6 +222,8 @@ public class TELA_MENU_PRINCIPAL extends javax.swing.JFrame {
     private javax.swing.JButton bt_estoque;
     private javax.swing.JButton bt_funcionario;
     private javax.swing.JButton bt_vendas;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

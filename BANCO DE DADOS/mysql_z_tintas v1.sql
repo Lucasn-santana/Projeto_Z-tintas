@@ -39,8 +39,7 @@ create table cliente(
     nome varchar(45) not null,
     dt_nascimento date not null,
     cpf varchar(11) not null unique,
-    
-    /*cnpj varchar(14) not null unique,*/
+    telefone varchar(45) not null,
     cep varchar(8) not null,
     uf char(2) not null,
     cidade varchar(45) not null,
