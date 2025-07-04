@@ -33,6 +33,7 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
         BT_VOLTAR = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1440, 1024));
@@ -107,6 +108,10 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
         jPanel1.add(jLabel2);
         jLabel2.setBounds(1265, 25, 150, 150);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG Carrinho F.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(782, 217, 598, 570);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -197,6 +202,7 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
     private javax.swing.JButton EXIBIR_CADASTROS;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
