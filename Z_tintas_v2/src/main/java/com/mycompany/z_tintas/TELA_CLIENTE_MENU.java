@@ -48,7 +48,7 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
         CONSULTAR_CADASTROS.setBackground(new java.awt.Color(7, 25, 82));
         CONSULTAR_CADASTROS.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         CONSULTAR_CADASTROS.setForeground(new java.awt.Color(7, 25, 82));
-        CONSULTAR_CADASTROS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt_exibirCadastro f.png"))); // NOI18N
+        CONSULTAR_CADASTROS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt_ConsulCadastro f.png"))); // NOI18N
         CONSULTAR_CADASTROS.setBorder(null);
         CONSULTAR_CADASTROS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,7 +74,7 @@ public class TELA_CLIENTE_MENU extends javax.swing.JFrame {
         EXIBIR_CADASTROS.setBackground(new java.awt.Color(7, 25, 82));
         EXIBIR_CADASTROS.setFont(new java.awt.Font("Microsoft Tai Le", 1, 36)); // NOI18N
         EXIBIR_CADASTROS.setForeground(new java.awt.Color(7, 25, 82));
-        EXIBIR_CADASTROS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt_ConsulCadastro f.png"))); // NOI18N
+        EXIBIR_CADASTROS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bt_exibirCadastro f.png"))); // NOI18N
         EXIBIR_CADASTROS.setBorder(null);
         EXIBIR_CADASTROS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

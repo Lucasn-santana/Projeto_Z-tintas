@@ -86,7 +86,7 @@ public class TELA_ESTOQUE_MENU extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Voltar);
-        Voltar.setBounds(31, 900, 75, 75);
+        Voltar.setBounds(25, 900, 75, 75);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO ZTINTAS.png"))); // NOI18N
         jPanel1.add(jLabel2);
@@ -97,7 +97,7 @@ public class TELA_ESTOQUE_MENU extends javax.swing.JFrame {
         jLabel3.setBounds(830, 262, 500, 500);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1440, 1024);
+        jPanel1.setBounds(0, 0, 1440, 1070);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
